@@ -58,223 +58,223 @@
 <!-- /.navbar -->
 <!-- BEGIN .page -->
 <div class="page container">
-	<div class="row">
-		<div class="span9">
-			<!-- BEGIN .voting -->
-			<div class="voting">
-				<h2 class="title"><i class="icon icon_votes"></i>Управление опросами</h2>
-				<div class="voting__settings clearfix">
-					<!-- BEGIN .voting__type -->
-					<div class="voting__type">
-						<h2 class="title-2">Тип опроса:</h2>
-						<select>
-							<option>Все</option>
-							<option>Главная страница путешественника</option>
-							<option>Страна</option>
-							<option>Регион</option>
-							<option>Город</option>
-							<option>События</option>
-							<option>Лучшие места</option>
-							<option>Маршруты</option>
-							<option>Экскурсии</option>
-							<option>Курсы и мастер-классы</option>
-							<option>Клубы по интересам</option>
-						</select>
+	<!-- BEGIN .voting -->
+	<div class="voting">
+		<div class="row">
+			<div class="span9">
+					<h2 class="title"><i class="icon icon_votes"></i>Управление опросами</h2>
+					<div class="voting__settings clearfix">
+						<!-- BEGIN .voting__type -->
+						<div class="voting__type">
+							<h2 class="title-2">Тип опроса:</h2>
+							<select>
+								<option>Все</option>
+								<option>Главная страница путешественника</option>
+								<option>Страна</option>
+								<option>Регион</option>
+								<option>Город</option>
+								<option>События</option>
+								<option>Лучшие места</option>
+								<option>Маршруты</option>
+								<option>Экскурсии</option>
+								<option>Курсы и мастер-классы</option>
+								<option>Клубы по интересам</option>
+							</select>
+						</div>
+						<!-- /.voting__type -->
+						<!-- BEGIN .voting__history -->
+						<div class="voting__history">
+							<i class="icon icon_timer"></i>
+							<p>История завершенных опросов</p>
+							<p><a href="#">Читать</a></p>
+						</div>
+						<!-- /.voting__history -->
 					</div>
-					<!-- /.voting__type -->
-					<!-- BEGIN .voting__history -->
-					<div class="voting__history">
-						<i class="icon icon_timer"></i>
-						<p>История завершенных опросов</p>
-						<p><a href="#">Читать</a></p>
-					</div>
-					<!-- /.voting__history -->
-				</div>
-				<h2 class="title-1">Главная путешественника</h2>
-				<ul class="voting__list">
-					<li class="voting__item">
-						<h2 class="title-2">Новый опрос:</h2>
-						<div class="voting__box">
-							<div class="voting__title">
-								<textarea name="" id=""></textarea>
+					<h2 class="title-1">Главная путешественника</h2>
+					<ul class="voting__list">
+						<li class="voting__item">
+							<h2 class="title-2">Новый опрос:</h2>
+							<div class="voting__box">
+								<div class="voting__title">
+									<textarea name="" id=""></textarea>
+								</div>
+								<div class="voting__options">
+									<div>Варианты ответа:</div>
+									<ol>
+										<li>
+											<input type="text">
+											<i class="icon icon_del"></i>
+										</li>
+										<li>
+											<input type="text">
+											<i class="icon icon_del"></i>
+										</li>
+										<li>
+											<input type="text">
+										</li>
+									</ol>
+								</div>
+								<div class="voting__buttons"><button type="submit" class="btn btn-mini btn-primary">Сохранить</button></div>
+								<div class="voting__description">При этом ранее опубликованный опрос  автоматически завершается и публикуется.</div>
 							</div>
-							<div class="voting__options">
-								<div>Варианты ответа:</div>
-								<ol>
+						</li>
+						<li class="voting__item">
+							<h2 class="title-2">Открытый опрос:</h2>
+							<div class="voting__box">
+								<h2 class="voting__question">Где лучше всего развит агротуризм?</h2>
+								<ul>
 									<li>
-										<input type="text">
-										<i class="icon icon_del"></i>
+										<div class="voting__bar">
+											<div class="voting__progress" style="width: 85%;"></div>
+											<div class="voting__percentage">85%</div>
+										</div>
+										<div class="voting__answer">Франция, Прованс</div>
 									</li>
 									<li>
-										<input type="text">
-										<i class="icon icon_del"></i>
+										<div class="voting__bar">
+											<div class="voting__progress" style="width: 65%;"></div>
+											<div class="voting__percentage">65%</div>
+										</div>
+										<div class="voting__answer">Италия, Тоскана</div>
 									</li>
 									<li>
-										<input type="text">
+										<div class="voting__bar">
+											<div class="voting__progress" style="width: 35%;"></div>
+											<div class="voting__percentage">35%</div>
+										</div>
+										<div class="voting__answer">Россия, Владимирская область</div>
 									</li>
-								</ol>
+								</ul>
+								<div class="voting__buttons"><button type="submit" class="btn btn-mini btn-primary">Завершить и опубликовать</button></div>
+								<div class="voting__description">При этом ранее опубликованный опрос автоматически удаляется</div>
 							</div>
-							<div class="voting__buttons"><button type="submit" class="btn btn-mini btn-primary">Сохранить</button></div>
-							<div class="voting__description">При этом ранее опубликованный опрос  автоматически завершается и публикуется.</div>
-						</div>
-					</li>
-					<li class="voting__item">
-						<h2 class="title-2">Открытый опрос:</h2>
-						<div class="voting__box">
-							<h2 class="voting__question">Где лучше всего развит агротуризм?</h2>
-							<ul>
-								<li>
-									<div class="voting__bar">
-										<div class="voting__progress" style="width: 85%;"></div>
-										<div class="voting__percentage">85%</div>
-									</div>
-									<div class="voting__answer">Франция, Прованс</div>
-								</li>
-								<li>
-									<div class="voting__bar">
-										<div class="voting__progress" style="width: 65%;"></div>
-										<div class="voting__percentage">65%</div>
-									</div>
-									<div class="voting__answer">Италия, Тоскана</div>
-								</li>
-								<li>
-									<div class="voting__bar">
-										<div class="voting__progress" style="width: 35%;"></div>
-										<div class="voting__percentage">35%</div>
-									</div>
-									<div class="voting__answer">Россия, Владимирская область</div>
-								</li>
-							</ul>
-							<div class="voting__buttons"><button type="submit" class="btn btn-mini btn-primary">Завершить и опубликовать</button></div>
-							<div class="voting__description">При этом ранее опубликованный опрос автоматически удаляется</div>
-						</div>
-					</li>
-					<li class="voting__item">
-						<h2 class="title-2">Предыдущий опрос:</h2>
-						<div class="voting__box">
-							<h2 class="voting__question">Где лучше всего развит агротуризм?</h2>
-							<ul>
-								<li>
-									<div class="voting__bar">
-										<div class="voting__progress" style="width: 85%;"></div>
-										<div class="voting__percentage">85%</div>
-									</div>
-									<div class="voting__answer">Франция, Прованс</div>
-								</li>
-								<li>
-									<div class="voting__bar">
-										<div class="voting__progress" style="width: 65%;"></div>
-										<div class="voting__percentage">65%</div>
-									</div>
-									<div class="voting__answer">Италия, Тоскана</div>
-								</li>
-								<li>
-									<div class="voting__bar">
-										<div class="voting__progress" style="width: 35%;"></div>
-										<div class="voting__percentage">35%</div>
-									</div>
-									<div class="voting__answer">Россия, Владимирская область</div>
-								</li>
-							</ul>
-							<div class="voting__buttons"><button type="submit" class="btn btn-mini btn-primary">Удалить</button></div>
-						</div>
-					</li>
-				</ul>
+						</li>
+						<li class="voting__item">
+							<h2 class="title-2">Предыдущий опрос:</h2>
+							<div class="voting__box">
+								<h2 class="voting__question">Где лучше всего развит агротуризм?</h2>
+								<ul>
+									<li>
+										<div class="voting__bar">
+											<div class="voting__progress" style="width: 85%;"></div>
+											<div class="voting__percentage">85%</div>
+										</div>
+										<div class="voting__answer">Франция, Прованс</div>
+									</li>
+									<li>
+										<div class="voting__bar">
+											<div class="voting__progress" style="width: 65%;"></div>
+											<div class="voting__percentage">65%</div>
+										</div>
+										<div class="voting__answer">Италия, Тоскана</div>
+									</li>
+									<li>
+										<div class="voting__bar">
+											<div class="voting__progress" style="width: 35%;"></div>
+											<div class="voting__percentage">35%</div>
+										</div>
+										<div class="voting__answer">Россия, Владимирская область</div>
+									</li>
+								</ul>
+								<div class="voting__buttons"><button type="submit" class="btn btn-mini btn-primary">Удалить</button></div>
+							</div>
+						</li>
+					</ul>
 
-				<h2 class="title-1">Лучшие места</h2>
-				<ul class="voting__list">
-					<li class="voting__item">
-						<h2 class="title-2">Новый опрос:</h2>
-						<div class="voting__box">
-							<div class="voting__title">
-								<textarea name="" id=""></textarea>
+					<h2 class="title-1">Лучшие места</h2>
+					<ul class="voting__list">
+						<li class="voting__item">
+							<h2 class="title-2">Новый опрос:</h2>
+							<div class="voting__box">
+								<div class="voting__title">
+									<textarea name="" id=""></textarea>
+								</div>
+								<div class="voting__options">
+									<div>Варианты ответа:</div>
+									<ol>
+										<li>
+											<input type="text">
+											<i class="icon icon_del"></i>
+										</li>
+										<li>
+											<input type="text">
+											<i class="icon icon_del"></i>
+										</li>
+										<li>
+											<input type="text">
+										</li>
+									</ol>
+								</div>
+								<div class="voting__buttons"><button type="submit" class="btn btn-mini btn-primary">Сохранить</button></div>
+								<div class="voting__description">При этом ранее опубликованный опрос  автоматически завершается и публикуется.</div>
 							</div>
-							<div class="voting__options">
-								<div>Варианты ответа:</div>
-								<ol>
+						</li>
+						<li class="voting__item">
+							<h2 class="title-2">Открытый опрос:</h2>
+							<div class="voting__box">
+								<h2 class="voting__question">Где лучше всего развит агротуризм?</h2>
+								<ul>
 									<li>
-										<input type="text">
-										<i class="icon icon_del"></i>
+										<div class="voting__bar">
+											<div class="voting__progress" style="width: 85%;"></div>
+											<div class="voting__percentage">85%</div>
+										</div>
+										<div class="voting__answer">Франция, Прованс</div>
 									</li>
 									<li>
-										<input type="text">
-										<i class="icon icon_del"></i>
+										<div class="voting__bar">
+											<div class="voting__progress" style="width: 65%;"></div>
+											<div class="voting__percentage">65%</div>
+										</div>
+										<div class="voting__answer">Италия, Тоскана</div>
 									</li>
 									<li>
-										<input type="text">
+										<div class="voting__bar">
+											<div class="voting__progress" style="width: 35%;"></div>
+											<div class="voting__percentage">35%</div>
+										</div>
+										<div class="voting__answer">Россия, Владимирская область</div>
 									</li>
-								</ol>
+								</ul>
+								<div class="voting__buttons"><button type="submit" class="btn btn-mini btn-primary">Завершить и опубликовать</button></div>
+								<div class="voting__description">При этом ранее опубликованный опрос автоматически удаляется</div>
 							</div>
-							<div class="voting__buttons"><button type="submit" class="btn btn-mini btn-primary">Сохранить</button></div>
-							<div class="voting__description">При этом ранее опубликованный опрос  автоматически завершается и публикуется.</div>
-						</div>
-					</li>
-					<li class="voting__item">
-						<h2 class="title-2">Открытый опрос:</h2>
-						<div class="voting__box">
-							<h2 class="voting__question">Где лучше всего развит агротуризм?</h2>
-							<ul>
-								<li>
-									<div class="voting__bar">
-										<div class="voting__progress" style="width: 85%;"></div>
-										<div class="voting__percentage">85%</div>
-									</div>
-									<div class="voting__answer">Франция, Прованс</div>
-								</li>
-								<li>
-									<div class="voting__bar">
-										<div class="voting__progress" style="width: 65%;"></div>
-										<div class="voting__percentage">65%</div>
-									</div>
-									<div class="voting__answer">Италия, Тоскана</div>
-								</li>
-								<li>
-									<div class="voting__bar">
-										<div class="voting__progress" style="width: 35%;"></div>
-										<div class="voting__percentage">35%</div>
-									</div>
-									<div class="voting__answer">Россия, Владимирская область</div>
-								</li>
-							</ul>
-							<div class="voting__buttons"><button type="submit" class="btn btn-mini btn-primary">Завершить и опубликовать</button></div>
-							<div class="voting__description">При этом ранее опубликованный опрос автоматически удаляется</div>
-						</div>
-					</li>
-					<li class="voting__item">
-						<h2 class="title-2">Предыдущий опрос:</h2>
-						<div class="voting__box">
-							<h2 class="voting__question">Где лучше всего развит агротуризм?</h2>
-							<ul>
-								<li>
-									<div class="voting__bar">
-										<div class="voting__progress" style="width: 85%;"></div>
-										<div class="voting__percentage">85%</div>
-									</div>
-									<div class="voting__answer">Франция, Прованс</div>
-								</li>
-								<li>
-									<div class="voting__bar">
-										<div class="voting__progress" style="width: 65%;"></div>
-										<div class="voting__percentage">65%</div>
-									</div>
-									<div class="voting__answer">Италия, Тоскана</div>
-								</li>
-								<li>
-									<div class="voting__bar">
-										<div class="voting__progress" style="width: 35%;"></div>
-										<div class="voting__percentage">35%</div>
-									</div>
-									<div class="voting__answer">Россия, Владимирская область</div>
-								</li>
-							</ul>
-							<div class="voting__buttons"><button type="submit" class="btn btn-mini btn-primary">Удалить</button></div>
-						</div>
-					</li>
-				</ul>
+						</li>
+						<li class="voting__item">
+							<h2 class="title-2">Предыдущий опрос:</h2>
+							<div class="voting__box">
+								<h2 class="voting__question">Где лучше всего развит агротуризм?</h2>
+								<ul>
+									<li>
+										<div class="voting__bar">
+											<div class="voting__progress" style="width: 85%;"></div>
+											<div class="voting__percentage">85%</div>
+										</div>
+										<div class="voting__answer">Франция, Прованс</div>
+									</li>
+									<li>
+										<div class="voting__bar">
+											<div class="voting__progress" style="width: 65%;"></div>
+											<div class="voting__percentage">65%</div>
+										</div>
+										<div class="voting__answer">Италия, Тоскана</div>
+									</li>
+									<li>
+										<div class="voting__bar">
+											<div class="voting__progress" style="width: 35%;"></div>
+											<div class="voting__percentage">35%</div>
+										</div>
+										<div class="voting__answer">Россия, Владимирская область</div>
+									</li>
+								</ul>
+								<div class="voting__buttons"><button type="submit" class="btn btn-mini btn-primary">Удалить</button></div>
+							</div>
+						</li>
+					</ul>
 			</div>
-			<!-- /.voting -->
 		</div>
 	</div>
+	<!-- /.voting -->
 </div>
 <!-- /.page -->
 
