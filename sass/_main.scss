@@ -1006,11 +1006,34 @@ a{
 
 
 
-
-
-
-
-
+.manage-user{
+	margin-bottom: 50px;
+}
+	.manage-user__in{
+		@extend %b_grey;
+		padding: 30px 30px 200px;
+		margin-bottom: 30px;
+	}
+	.manage-user__content{
+		margin-bottom: 30px;
+		.checkbox{
+			margin-left: 25px;
+		}
+	}
+	.manage-user__title{
+		display: block;
+		margin-bottom: 22px;
+		font-size: 16px;
+		font-weight: bold;
+		color: #5d5d5d;
+		line-height: 1;
+	}
+	.manage-user__buttons{
+		text-align: right;
+		.btn{
+			margin-left: 10px;
+		}
+	}
 
 
 

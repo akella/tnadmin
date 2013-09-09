@@ -1929,7 +1929,7 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 
 .requests__item, .suggestions__table, .photosets__in, .actions__table, .manage-places__item { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.42); -moz-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.42); box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.42); border: 1px solid #cbcbcb; background-color: #fff; padding: 20px; }
 
-.tags__item, .actions__in { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.42); -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.42); box-shadow: 0 2px 5px rgba(0, 0, 0, 0.42); border: 1px solid #a1a1a1; background-color: #e3e3e3; text-shadow: 0 1px 0 white; padding: 20px; }
+.tags__item, .actions__in, .manage-user__in { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.42); -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.42); box-shadow: 0 2px 5px rgba(0, 0, 0, 0.42); border: 1px solid #a1a1a1; background-color: #e3e3e3; text-shadow: 0 1px 0 white; padding: 20px; }
 
 .icon { display: inline-block; vertical-align: middle; }
 
@@ -2304,3 +2304,15 @@ a:hover, a:focus { color: #5e558b; text-decoration: underline; outline: 0; }
 .manage-places__delete:hover { cursor: pointer; }
 
 .manage-places__create { margin-bottom: 25px; }
+
+.manage-user { margin-bottom: 50px; }
+
+.manage-user__in { padding: 30px 30px 200px; margin-bottom: 30px; }
+
+.manage-user__content { margin-bottom: 30px; }
+.manage-user__content .checkbox { margin-left: 25px; }
+
+.manage-user__title { display: block; margin-bottom: 22px; font-size: 16px; font-weight: bold; color: #5d5d5d; line-height: 1; }
+
+.manage-user__buttons { text-align: right; }
+.manage-user__buttons .btn { margin-left: 10px; }
