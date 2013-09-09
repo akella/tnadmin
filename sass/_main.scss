@@ -1,21 +1,4 @@
 // Normally mainpage styles
-%b{
-	@include border-radius(5px);
-	@include box-sizing(border-box);
-	@include box-shadow(1px 2px 5px rgba(0,0,0,.42));
-	border: 1px solid #cbcbcb;
-	background-color: #fff;
-	padding: 20px;
-}
-%b_grey{
-	@include border-radius(5px);
-	@include box-sizing(border-box);
-	@include box-shadow(0 2px 5px rgba(0,0,0,.42));
-	border: 1px solid #a1a1a1;
-	background-color: #e3e3e3;
-	@include text-shadow(0 1px 0 #fff);
-	padding: 20px;
-}
 a{
 	color: #5e558b;
 	text-decoration: none;
@@ -26,61 +9,6 @@ a{
 		outline: 0;
 	}
 }
-.icon{
-	display: inline-block;
-	vertical-align: middle;
-}
-	.icon_votes{
-		@include s(votes);
-	}
-	.icon_blocked{
-		@include s(blocked);
-	}
-	.icon_moderation{
-		@include s(moderation);
-	}
-	.icon_content{
-		@include s(content);
-	}
-	.icon_manage{
-		@include s(manage);
-	}
-	.icon_stats{
-		@include s(stats);
-	}
-	.icon_del{
-		@include s(del);
-	}
-	.icon_timer{
-		@include s(timer);
-	}
-	.icon_portfolio{
-		@include s(portfolio);
-	}
-	.icon_knowledge{
-		@include s(knowledge);
-	}
-	.icon_request{
-		@include s(request);
-	}
-	.icon_eng{
-		@include s(eng);
-	}
-	.icon_delete{
-		@include s(delete);
-	}
-	.icon_search{
-		@include s(search);
-	}
-	.icon_photo{
-		@include s(photo);
-	}
-	.icon_docs{
-		@include s(docs);
-	}
-	.icon_cal{
-		@include s(cal);
-	}
 .title{
 	margin: 10px 0 25px;
 	font-family: inherit;
@@ -925,7 +853,7 @@ a{
 			margin-left: 3px;
 		}
 		span{
-			min-width: 35px;
+			min-width: 15px;
 			display: inline-block;
 		}
 		.field_small{
@@ -940,6 +868,10 @@ a{
 			@extend %clr;
 			label{
 				float: left;
+				margin-left: 10px;
+				&:first-child{
+					margin-left: 0;
+				}
 			}
 		}
 		label{
@@ -969,19 +901,108 @@ a{
 			background-color: #e3e3e3;
 		}
 		tbody{
-			
+
 		}
 	}
 
 
 
+.manage-places{
+	margin-bottom: 50px;
+}
+	.manage-places__search{
+		margin-bottom: 30px;
+		.form-search{
+			margin-bottom: 0;
+		}
+	}
+	.manage-places__search-field{
+		margin-right: 15px;
+		width: 666px;
+	}
+	.manage-places__create{
+		.icon{
+			margin-left: 5px;
+		}
+	}
+	.manage-places__results{
 
-
-
-
-
-
-
+	}
+	.list-types{
+		list-style-type: none;
+		margin-left: -20px;
+		margin-bottom: 30px;
+		@extend %clr;
+	}
+	.list-types__item{
+		float: left;
+		margin-left: 20px;
+	}
+	.manage-places__list{
+		list-style-type: none;
+		margin: 0;
+	}
+	.manage-places__item{
+		position: relative;
+		@extend %clr;
+		@extend %b;
+		padding: 15px 30px;
+		margin-top: 15px;
+		&:first-child{
+			margin-top: 0;
+		}
+		p{
+			line-height: 1;
+			margin-bottom: .3em;
+		}
+	}
+	.manage-places__pic{
+		float: left;
+		width: 163px;
+		overflow: hidden;
+		img{
+			display: block;
+		}
+	}
+	.manage-places__info{
+		float: left;
+		width: 310px;
+		margin-left: 30px;
+	}
+	.manage-places__title{
+		font-size: 18px;
+		color: #7872bb;
+		font-weight: normal;
+		line-height: 1;
+		margin: 0;
+		margin-bottom: 0.3em;
+		a{
+			color: inherit;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+	.manage-places__type{
+		color: #424242;
+	}
+	.manage-places__meta{
+		float: left;
+	}
+	.manage-places__delete{
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		display: block;
+		@include s(del2);
+		&:hover{
+			cursor: pointer;
+		}
+	}
+	.manage-places__create{
+		margin-bottom: 25px;
+	}
 
 
 
