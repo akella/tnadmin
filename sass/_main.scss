@@ -78,6 +78,9 @@ a{
 	.icon_docs{
 		@include s(docs);
 	}
+	.icon_cal{
+		@include s(cal);
+	}
 .title{
 	margin: 10px 0 25px;
 	font-family: inherit;
@@ -109,23 +112,41 @@ a{
 	line-height: 1.4;
 }
 .field{
-	text-align: right;
+	@extend %clr;
 	margin-bottom: 15px;
-	input,select{
-		height: 30px;
-		width: 205px;
-		margin-bottom: 0;
-		@include box-sizing(border-box);
-		margin-left: 3px;
-	}
-	span{
-		min-width: 35px;
-		display: inline-block;
-	}
-	&.field_small{
-		input{
-			width: 80px;
+	&.field_mod{
+		.radio input[type="radio"],
+		.checkbox input[type="checkbox"]{
+			margin-left: -18px;
+			margin-top: 8px;
 		}
+		.radio{
+			float: left;
+		}
+		span{
+			float: left;
+			input{
+				margin-left: 6px;
+			}
+		}
+		label{
+			line-height: 30px;
+			height: 30px;
+		}
+	}
+	input{
+		margin-bottom: 0;
+	}
+	.radio{
+		margin-bottom: 0;
+	}
+	.radio input[type="radio"],
+	.checkbox input[type="checkbox"]{
+		margin-top: 3px;
+		margin-left: -18px;
+	}
+	label{
+		margin-bottom: 0;
 	}
 }
 .button{
@@ -161,6 +182,10 @@ a{
 	margin: 0;
 	a{
 		color: #645882;
+		@extend %hide-text;
+		@include s(logo);
+		display: inline-block;
+		vertical-align: middle;
 	}
 }
 .header__other{
@@ -672,12 +697,27 @@ a{
 	}
 	.tags__controls{
 		overflow: hidden;
+		font-size: 14px;
 	}
-	.tags__language{
-
-	}
-	.tags__langversion{
-		margin-bottom: 5px;
+	.tags__lang{
+		@extend %clr;
+		margin-bottom: 15px;
+		div{
+			float: left;
+			margin-left: 30px;
+			&:first-child{
+				margin-left: 0;
+			}
+			span{
+				margin-right: 6px;
+			}
+		}
+		input{
+			margin-bottom: 0;
+		}
+		.icon{
+			margin-left: 6px;
+		}
 	}
 	.tags__langeng{
 		display: inline-block;
@@ -823,15 +863,22 @@ a{
 		}
 	}
 	.photosets__delete{
-		@include s(delete);
-		@extend %hide-text;
-		float: right;
+		text-align: right;
 		margin-bottom: 5px;
-		&:hover{
-			cursor: pointer;
+		line-height: 1;
+		i{
+			display: inline-block;
+			@include s(delete);
+			@include opacity(.6);
+			@include transition(linear .3s all);
+			&:hover{
+				cursor: pointer;
+				@include opacity(1);
+			}
 		}
 	}
 	.photosets__media{
+		@extend %clr;
 		width: 196px;
 		height: 142px;
 		overflow: hidden;
@@ -863,11 +910,40 @@ a{
 	}
 	.actions__col{
 		float: left;
-		width: 320px;
-		margin-left: 85px;
+		text-align: right;
+		width: 355px;
+		margin-left: 60px;
 		margin-bottom: 20px;
 		&:last-child{
 			margin-bottom: 0;
+		}
+		input,select{
+			height: 30px;
+			width: 205px;
+			margin-bottom: 0;
+			@include box-sizing(border-box);
+			margin-left: 3px;
+		}
+		span{
+			min-width: 35px;
+			display: inline-block;
+		}
+		.field_small{
+			input{
+				width: 65px;
+			}
+			.icon{
+				margin-left: 5px;
+			}
+		}
+		.field_date{
+			@extend %clr;
+			label{
+				float: left;
+			}
+		}
+		label{
+			font-size: 12px;
 		}
 	}
 	.actions__buttons{

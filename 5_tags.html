@@ -66,51 +66,57 @@
 					<ul class="tags__list">
 						<li class="tags__item">
 							<div class="tags__info">
-								<div class="tags__pic">
+								<a href="#" class="tags__pic">
 									<img src="img/pic-3.jpg" alt="pic">
-								</div>
+								</a>
 								<div class="tags__meta">
 									<div class="tags__author"><a href="#">Иванов Иван Степанович</a></div>
 									<div class="tags__details">Маршрут: <a href="#">«Поход на урал»</a></div>
 								</div>
 							</div>
 							<div class="tags__controls">
-								<div class="tags__language">
+								<div class="field">
 									<label class="checkbox">
 									  <input type="checkbox" value="">
 									  Английский тэг
 									</label>
 								</div>
-								<div class="tags__new">
-									<h2 class="title-3">Новый тэг:</h2>
-									<div class="tags__langversion">
-										<input type="text" placeholder=" Альпинизм">
-										<div class="tags__langeng">
-											Английская версия:
-											<input type="text" placeholder=" Alpinism">
-											<div class="tags__langswitch">
-												<i class="icon icon_eng"></i>
-											</div>
-										</div>
+								<h2 class="title-3">Новый тэг:</h2>
+								<div class="tags__lang">
+									<div>
+										<input type="text" placeholder="Альпинизм">
 									</div>
-									<div class="tags__options">
-										<label class="radio">
-										  <input type="radio" name="optionsRadios" checked>
-										  Подтвердить
-										</label>
-										<label class="radio">
-										  <input type="radio" name="optionsRadios">
-										  Отклонить
-										</label>
-										<label class="radio">
-										  <input type="radio" name="optionsRadios">
-										  <span>Заменить на:</span> <input type="text" value="">
-										</label>
-										<label class="radio">
-										  <input type="radio" name="optionsRadios">
-										  <span>Тэг-синоним:</span> <input type="text" value="">
-										</label>
+									<div>
+										<span>Английская версия:</span>
+										<input type="text" placeholder="Alpinism">
+										<i class="icon icon_eng"></i>
 									</div>
+								</div>
+								<div class="field">
+									<label class="radio">
+									  <input type="radio" name="optionsRadios" checked>
+									  Подтвердить
+									</label>
+								</div>
+								<div class="field">
+									<label class="radio">
+									  <input type="radio" name="optionsRadios">
+									  Отклонить
+									</label>
+								</div>
+								<div class="field field_mod">
+									<label class="radio">
+									  <input type="radio" name="optionsRadios">
+									  Заменить на:
+									</label>
+									<span><input type="text" value=""></span>
+								</div>
+								<div class="field field_mod">
+									<label class="radio">
+										<input type="radio" name="optionsRadios">
+										Тэг-синоним:
+									</label>
+									<span><input type="text" value=""></span>
 								</div>
 							</div>
 						</li>
