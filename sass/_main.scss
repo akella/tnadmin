@@ -828,7 +828,9 @@ a{
 	}
 
 .actions{
-	margin-bottom: 50px;
+	.manage__btn{
+		margin-bottom: 30px;
+	}
 }
 	.actions__in{
 		@extend %clr;
@@ -856,52 +858,30 @@ a{
 			min-width: 15px;
 			display: inline-block;
 		}
-		.field_small{
-			input{
-				width: 65px;
-			}
-			.icon{
-				margin-left: 5px;
-			}
-		}
-		.field_date{
-			@extend %clr;
-			label{
-				float: left;
-				margin-left: 10px;
-				&:first-child{
-					margin-left: 0;
-				}
-			}
-		}
 		label{
 			font-size: 12px;
 		}
 	}
-	.actions__buttons{
-		text-align: right;
-		margin-bottom: 30px;
+	// .actions__buttons{
+	// 	text-align: right;
+	// 	margin-bottom: 30px;
+	// }
+	.field_small{
+		input{
+			width: 62px;
+		}
+		.icon{
+			margin-left: 5px;
+		}
 	}
-	.actions__table{
-		@extend %b;
-		padding: 0;
-		.table{
-			margin-bottom: 0;
-			th,td{
-				text-align: center;
+	.field_date{
+		@extend %clr;
+		label{
+			float: left;
+			margin-left: 10px;
+			&:first-child{
+				margin-left: 0;
 			}
-			th{
-				border-bottom: 1px solid #a1a1a1;
-			}
-			td{
-				height: 20px;
-			}
-		}
-		thead{
-			background-color: #e3e3e3;
-		}
-		tbody{
-
 		}
 	}
 
@@ -1158,11 +1138,11 @@ a{
 			&.is-active, &:hover{
 				color: #fff;
 				background-color: #7872bb;
-				a{
+				span{
 					color: #fff;
 				}
 			}
-			a{
+			span{
 				color: #5b5b5b;
 				text-decoration: none;
 				padding: 0 10px;
@@ -1170,9 +1150,9 @@ a{
 		}
 	}
 
-
-
-
+.manage-admins{
+	margin-bottom: 50px;
+}
 
 
 
