@@ -1,0 +1,462 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>TN</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<script src="js/jquery.js"></script>
+	<script src="js/jscrollpane.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/common.js"></script>
+	<style>
+		section{
+			border: 10px solid green;
+			padding: 20px 60px 60px 60px;
+			margin-bottom: 1px;
+		}
+		.s{
+			font-family: "Comic sans",arial,sans-serif;
+			margin-bottom: 40px;
+			font-size: 30px;
+		}
+	</style>
+</head>
+<body>
+<pre>
+	@todo
+	1. Main menu drop
+</pre>
+<section>
+	<h1>Меню для мест</h1>
+	<!-- BEGIN Inner menu -->
+	<ul class="inner-menu">
+		<li class="is-active"><a href="#"><span>Все</span></a></li>
+		<li><a href="#"><span><ins>Достопримечате-</ins>льности</span></a></li>
+		<li><a href="#"><span><ins>Природные</ins> красоты</span></a></li>
+		<li class="is-current inner-menu_item-drop"><a href="#"><span><ins>Активный</ins> и экстремальный отдых</span></a>
+			<ul class="inner-menu__in-list">
+				<li><a href="#"><span><ins>Дикий отдых</ins>(палатки)</span></a></li>
+				<li><a href="#"><span>Охота</span></a></li>
+				<li><a href="#"><span>Рыбалка</span></a></li>
+				<li><a href="#"><span><ins>Горные лыжи</ins>и сноуборд</span></a></li>
+				<li><a href="#"><span>Дайвинг</span></a></li>
+				<li><a href="#"><span>Серфинг</span></a></li>
+				<li><a href="#"><span>Альпинизм</span></a></li>
+				<li><a href="#"><span>Спелеология</span></a></li>
+				<li><a href="#"><span>Рафтинг</span></a></li>
+				<li><a href="#"><span>Другое</span></a></li>
+				<li><a href="#"><span>Все</span></a></li>
+			</ul>
+		</li>
+		<li><a href="#"><span><ins>Релакс</ins> и пляжный отдых</span></a></li>
+		<li class="inner-menu_item-drop"><a href="#"><span><ins>Городские</ins> развлечения</span></a>
+			<ul class="inner-menu__in-list">
+				<li class="is-current"><a href="#"><span><ins>Кафе, бары,</ins>рестораны</span></a></li>
+				<li><a href="#"><span>Шопинг</span></a></li>
+				<li><a href="#"><span><ins>Клубы,</ins>ночная жизнь</span></a></li>
+				<li><a href="#"><span><ins>Музеи, выставки</ins>театры</span></a></li>
+				<li><a href="#"><span>Все</span></a></li>
+			</ul>
+		</li>
+		<li class="inner-menu_item-drop"><a href="#"><span><ins>Отдых</ins> с детьми</span></a>
+			<ul class="inner-menu__in-list">	
+				<li><a href="#"><span>Аквапарки</span></a></li>
+				<li><a href="#"><span><ins>Зоопарки</ins>и океанариумы</span></a></li>
+				<li class="is-current"><a href="#"><span><ins>Парки</ins>аттракционов</span></a></li>
+				<li><a href="#"><span>Цирк</span></a></li>
+				<li><a href="#"><span>Другое</span></a></li>
+				<li><a href="#"><span>Все</span></a></li>
+			</ul>
+		</li>
+		<li><a href="#"><span><ins>Маленькие</ins> красивые городки</span></a></li>
+		<li class="inner-menu_item-drop"><a href="#"><span><ins>Специфика</ins> региона</span></a>
+			<ul class="inner-menu__in-list">	
+				<li><a href="#"><span>Этно-туризм</span></a></li>
+				<li><a href="#"><span>Агри-туризм</span></a></li>
+				<li class="is-current"><a href="#"><span><ins>Дегустация местных</ins>напитков и продуктов</span></a></li>
+				<li><a href="#"><span><ins>Народные</ins>промыслы и искусства</span></a></li>
+				<li><a href="#"><span><ins>Флора</ins>и фауна</span></a></li>
+				<li><a href="#"><span>Все остальное</span></a></li>
+				<li><a href="#"><span>Все</span></a></li>
+			</ul>
+		</li>
+		<li class="inner-menu_item-drop"><a href="#"><span>Прочее</span></a>
+			<ul class="inner-menu__in-list">	
+				<li><a href="#"><span><ins>Свадебные</ins>церемонии</span></a></li>
+				<li><a href="#"><span><ins>Места для</ins>фотосъемок</span></a></li>
+				<li class="is-current"><a href="#"><span><ins>Мистические</ins>места</span></a></li>
+				<li><a href="#"><span>Другое</span></a></li>
+				<li><a href="#"><span>Все</span></a></li>
+			</ul>
+		</li>
+	</ul>
+	<!-- END Inner menu -->
+	<h1>Меню для мероприятий</h1>
+	<!-- BEGIN Inner menu -->
+	<ul class="inner-menu">
+		<li><a href="#"><span>Все</span></a></li>
+		<li class="is-current inner-menu_item-drop"><a href="#"><span><ins>Иностранные</ins>языки</span></a>
+			<ul class="inner-menu__in-list">
+				<li><a href="#"><span>Английский</span></a></li>
+				<li><a href="#"><span>Испанский</span></a></li>
+				<li><a href="#"><span>Французский</span></a></li>
+				<li><a href="#"><span>Итальянский</span></a></li>
+				<li><a href="#"><span>Немецкий</span></a></li>
+				<li><a href="#"><span>Японский</span></a></li>
+				<li><a href="#"><span>Китайский</span></a></li>
+				<li><a href="#"><span>Русский</span></a></li>
+				<li><a href="#"><span><ins>Другие</ins>языки</span></a></li>
+				<li><a href="#"><span>Все</span></a></li>
+			</ul>
+		</li>
+		<li class="inner-menu_item-drop"><a href="#"><span><ins>Спортивно-</ins>экстремальные</span></a>
+			<ul class="inner-menu__in-list">
+				<li><a href="#"><span>Охота</span></a></li>
+				<li><a href="#"><span>Рыбалка</span></a></li>
+				<li><a href="#"><span><ins>Горные лыжи</ins>и сноуборд</span></a></li>
+				<li><a href="#"><span>Дайвинг</span></a></li>
+				<li><a href="#"><span>Серфинг</span></a></li>
+				<li><a href="#"><span>Рафтинг</span></a></li>
+				<li><a href="#"><span>Единоборства</span></a></li>
+				<li><a href="#"><span><ins>Парапланеризм,</ins>парашют</span></a></li>
+				<li><a href="#"><span>Другое</span></a></li>
+				<li><a href="#"><span>Все</span></a></li>
+			</ul>
+		</li>
+		<li><a href="#"><span>Кулинарные</span></a></li>
+		<li><a href="#"><span>Танцевальные</span></a></li>
+		<li class="inner-menu_item-drop"><a href="#"><span>Творческие</span></a>
+			<ul class="inner-menu__in-list">	
+				<li><a href="#"><span>Рисование</span></a></li>
+				<li><a href="#"><span>Рукоделие</span></a></li>
+				<li class="is-current"><a href="#"><span><ins>Народные промыслы</ins>и ремесла</span></a></li>
+				<li><a href="#"><span>Другое</span></a></li>
+				<li><a href="#"><span>Все</span></a></li>
+			</ul>
+		</li>
+		<li class="is-active inner-menu_item-drop"><a href="#"><span><ins>«Дорогие</ins>удовольствия»</span></a>
+			<ul class="inner-menu__in-list">	
+				<li><a href="#"><span>Яхтинг</span></a></li>
+				<li><a href="#"><span>Гольф</span></a></li>
+				<li class="is-current"><a href="#"><span><ins>Большой</ins>теннис</span></a></li>
+				<li><a href="#"><span>Другое</span></a></li>
+				<li><a href="#"><span>Все</span></a></li>
+			</ul>
+		</li>
+		<li class="inner-menu_item-drop"><a href="#"><span>Тренинги</span></a>
+			<ul class="inner-menu__in-list">	
+				<li><a href="#"><span>Психологические</span></a></li>
+				<li><a href="#"><span><ins>Бизнес-</ins>тренинги</span></a></li>
+				<li><a href="#"><span>Все</span></a></li>
+			</ul>
+		</li>
+		<li class="inner-menu_item-drop"><a href="#"><span>Восток</span></a>
+			<ul class="inner-menu__in-list">	
+				<li><a href="#"><span>Йога</span></a></li>
+				<li><a href="#"><span>Цигун</span></a></li>
+				<li class="is-current"><a href="#"><span><ins>Восточные</ins>единоборства</span></a></li>
+				<li><a href="#"><span>Икебана</span></a></li>
+				<li><a href="#"><span>Бонсаи</span></a></li>
+				<li><a href="#"><span><ins>Чайная</ins>церемония</span></a></li>
+				<li><a href="#"><span>Фен-шуй</span></a></li>
+				<li><a href="#"><span>Другое</span></a></li>
+				<li><a href="#"><span>Все</span></a></li>
+			</ul>
+		</li>
+	</ul>
+	<!-- END Inner menu -->
+</section>
+<section>
+	<!-- BEGIN block -->
+	<div class="block">
+		<div class="scroll" style="height:200px">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio veritatis earum tempora iste quis? Adipisci, voluptatem, ratione, voluptatum, omnis magnam repellat facere eligendi cupiditate fugit nemo ab itaque delectus corporis.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio veritatis earum tempora iste quis? Adipisci, voluptatem, ratione, voluptatum, omnis magnam repellat facere eligendi cupiditate fugit nemo ab itaque delectus corporis.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio veritatis earum tempora iste quis? Adipisci, voluptatem, ratione, voluptatum, omnis magnam repellat facere eligendi cupiditate fugit nemo ab itaque delectus corporis.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio veritatis earum tempora iste quis? Adipisci, voluptatem, ratione, voluptatum, omnis magnam repellat facere eligendi cupiditate fugit nemo ab itaque delectus corporis.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio veritatis earum tempora iste quis? Adipisci, voluptatem, ratione, voluptatum, omnis magnam repellat facere eligendi cupiditate fugit nemo ab itaque delectus corporis.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio veritatis earum tempora iste quis? Adipisci, voluptatem, ratione, voluptatum, omnis magnam repellat facere eligendi cupiditate fugit nemo ab itaque delectus corporis.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio veritatis earum tempora iste quis? Adipisci, voluptatem, ratione, voluptatum, omnis magnam repellat facere eligendi cupiditate fugit nemo ab itaque delectus corporis.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio veritatis earum tempora iste quis? Adipisci, voluptatem, ratione, voluptatum, omnis magnam repellat facere eligendi cupiditate fugit nemo ab itaque delectus corporis.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio veritatis earum tempora iste quis? Adipisci, voluptatem, ratione, voluptatum, omnis magnam repellat facere eligendi cupiditate fugit nemo ab itaque delectus corporis.</p>
+		</div>
+	</div>
+	<!-- END block -->
+</section>
+<section>
+	<!-- BEGIN .user-actions -->
+	<div class="user-actions">
+		<ul class="user-actions__list">
+			<li><a href="#">Сообщение<i class="user-actions__mess"></i></a></li>
+			<li><a href="#">Добавить в друзья<i class="user-actions__addf"></i></a></li>
+			<li><a href="#">Подать заявку<i class="user-actions__invf"></i></a></li>
+			<li><a href="#">Махнем?;)<i class="user-actions__gogo"></i></a></li>
+			<li><a href="#">Отправить сердечко<i class="user-actions__hear"></i></a></li>
+			<li><a href="#">+1 Лайка<i class="user-actions__like"></i></a></li>
+			<li><a href="#">В избранное<i class="user-actions__fave"></i></a></li>
+			<li><a href="#">Сообщить о нарушениях<i class="user-actions__repo"></i></a></li>
+			<li><a href="#">Написать отзыв<i class="user-actions__comm"></i></a></li>
+			<li><a href="#">Заблокировать<i class="user-actions__bloc"></i></a></li>
+		</ul>
+	</div>
+	<!-- END .user-actions -->
+	<!-- BEGIN .user-actions-dropdown -->
+	<div class="user-actions-dropdown is-open">
+		<div class="user-actions">
+			<div class="user-actions__head">
+				<a href="#">Сообщение<i class="user-actions__mess"></i></a>
+			</div>
+			<ul class="user-actions__list">
+				<li><a href="#">Сообщение<i class="user-actions__mess"></i></a></li>
+				<li><a href="#">Добавить в друзья<i class="user-actions__addf"></i></a></li>
+				<li><a href="#">Подать заявку<i class="user-actions__invf"></i></a></li>
+				<li><a href="#">Махнем?;)<i class="user-actions__gogo"></i></a></li>
+				<li><a href="#">Отправить сердечко<i class="user-actions__hear"></i></a></li>
+				<li><a href="#">+1 Лайка<i class="user-actions__like"></i></a></li>
+				<li><a href="#">В избранное<i class="user-actions__fave"></i></a></li>
+				<li><a href="#">Сообщить о нарушениях<i class="user-actions__repo"></i></a></li>
+				<li><a href="#">Написать отзыв<i class="user-actions__comm"></i></a></li>
+				<li><a href="#">Заблокировать<i class="user-actions__bloc"></i></a></li>
+			</ul>
+			<div class="user-actions__socials">
+				<!-- BEGIN .social -->
+				<div class="social">
+					<a class="social__fb" href="#"></a>
+					<a class="social__tw" href="#"></a>
+					<a class="social__vk" href="#"></a>
+					<a class="social__gp" href="#"></a>
+				</div>
+				<!-- END .social -->
+			</div>
+		</div>
+	</div>
+	<!-- END .user-actions-dropdown -->
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<!-- BEGIN .user-actions-dropdown -->
+	<div class="user-actions-dropdown">
+		<div class="user-actions">
+			<div class="user-actions__head">
+				<a href="#">Сообщение<i class="user-actions__mess"></i></a>
+			</div>
+			<ul class="user-actions__list">
+				<li><a href="#">Сообщение<i class="user-actions__mess"></i></a></li>
+				<li><a href="#">Добавить в друзья<i class="user-actions__addf"></i></a></li>
+				<li><a href="#">Подать заявку<i class="user-actions__invf"></i></a></li>
+				<li><a href="#">Махнем?;)<i class="user-actions__gogo"></i></a></li>
+				<li><a href="#">Отправить сердечко<i class="user-actions__hear"></i></a></li>
+				<li><a href="#">+1 Лайка<i class="user-actions__like"></i></a></li>
+				<li><a href="#">В избранное<i class="user-actions__fave"></i></a></li>
+				<li><a href="#">Сообщить о нарушениях<i class="user-actions__repo"></i></a></li>
+				<li><a href="#">Написать отзыв<i class="user-actions__comm"></i></a></li>
+				<li><a href="#">Заблокировать<i class="user-actions__bloc"></i></a></li>
+			</ul>
+			<div class="user-actions__socials">
+				<!-- BEGIN .social -->
+				<div class="social">
+					<a class="social__fb" href="#"></a>
+					<a class="social__tw" href="#"></a>
+					<a class="social__vk" href="#"></a>
+					<a class="social__gp" href="#"></a>
+				</div>
+				<!-- END .social -->
+			</div>
+		</div>
+	</div>
+	<!-- END .user-actions-dropdown -->
+</section>
+<section>
+	<div class="button">Найти<input type="submit" value="Найти"></div>
+	<div class="button button_average">Найти<input type="submit" value="Найти"></div>
+	<div class="button button_reject">Найти<input type="submit" value="Найти"></div>
+	<div class="button button_average button_reject">Найти<input type="submit" value="Найти"></div>
+	<div class="button button_accepted">Приняли<input type="button" value="Приняли"></div>
+	<div class="button button_rejected">Отказались<input type="button" value="Отказались"></div>
+	<div class="button button_reject button_small">Отписаться<input type="submit" value="Отписаться"></div>
+	<div class="button button_large">Найти<input type="submit" value="Найти"></div>
+</section>
+<section>
+	<div class="s">.sitemenu</div>
+	<div class="sitemenu"><div class="sitemenu__in">
+		<ul>
+			<li><a class="is-active" href="#">Путешественник<span></span></a></li>
+			<li><a href="#">Гид<span></span></a></li>
+			<li><a href="#">Коуч<span></span></a></li>
+		</ul>
+	</div></div>
+</section>
+	
+<!-- ================================== -->
+<section>
+	<div class="s">Tabs content</div>
+	<!-- BEGIN tabs -->
+	<div class="tabs">
+		<ul class="tabs__nav">
+			<li class="is-active"><a href="#"><span>Лента</span><i></i></a></li>
+			<li><a href="#"><span>Блоги и форумы</span><i></i></a></li>
+		</ul>
+		<div class="tabs__content">
+			<div class="tabs__item">
+				tab content
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<label class="checkbox"><input type="checkbox" checked><i></i>Отображать только клубы, созданные мной</label>
+	<label class="checkbox"><input type="checkbox"><i></i>Отображать только клубы, созданные мной</label>
+	<label class="radiobox"><input type="radio" checked><i></i>Отображать только клубы, созданные мной</label>
+	<label class="radiobox"><input type="radio"><i></i>Отображать только клубы, созданные мной</label>
+	<br>
+	<div class="select js-select">
+		<span>Активный отдых<i></i></span>
+		<ul>
+			<li>Активный отдых</li>
+			<li>Активный отдых 1</li>
+			<li>Самый активный отдых из самых активных</li>
+			<li>Активный отдых 3</li>
+			<li>Активный отдых 4</li>
+			<li>Активный отдых 5</li>
+		</ul>
+	</div>
+	<br>
+	<ul class="tags-list">
+		<li>Фестиваль<i></i></li>
+		<li>Open air<i></i></li>
+	</ul>
+</section>
+
+<section>
+	<!-- BEGIN .filter -->
+	<div class="filter">
+		<div class="filter__row">
+			<div class="filter__item">
+				<div class="filter__item-in">
+					<div class="filter__title">Всё (10)</div>
+				</div>							
+			</div>
+			<div class="filter__item is-active">
+				<div class="filter__item-in">
+					<div class="filter__title">Статьи и рассказы (5)</div>
+					<div class="filter__select js-select">
+						<span>Все статьи<i></i></span>
+						<ul>
+							<li>Все статьи</li>
+							<li>Рассказы</li>
+							<li>Советы</li>
+							<li>Отзывы</li>
+						</ul>
+					</div>
+					<i class="filter__plus"></i>
+				</div>							
+			</div>
+			<div class="filter__item">
+				<div class="filter__item-in">
+					<div class="filter__title">Советы и отзывы (32)</div>
+					<div class="filter__select js-select">
+						<span>Все статьи<i></i></span>
+						<ul>
+							<li>Все статьи</li>
+							<li>Рассказы</li>
+							<li>Советы</li>
+							<li>Отзывы</li>
+						</ul>
+					</div>
+					<i class="filter__plus"></i>
+				</div>							
+			</div>
+			<div class="filter__item">
+				<div class="filter__item-in">
+					<div class="filter__title">Вопросы и ответы (2)</div>
+					<div class="filter__select js-select">
+						<span>Все статьи<i></i></span>
+						<ul>
+							<li>Все статьи</li>
+							<li>Рассказы</li>
+							<li>Советы</li>
+							<li>Отзывы</li>
+						</ul>
+					</div>
+					<i class="filter__plus"></i>
+				</div>							
+			</div>
+			<div class="filter__item">
+				<div class="filter__item-in">
+					<div class="filter__title">Дискуссии (1)</div>
+					<div class="filter__select js-select">
+						<span>Все статьи<i></i></span>
+						<ul>
+							<li>Все статьи</li>
+							<li>Рассказы</li>
+							<li>Советы</li>
+							<li>Отзывы</li>
+						</ul>
+					</div>
+					<i class="filter__plus"></i>
+				</div>							
+			</div>
+		</div>
+		<div class="filter__row">
+			<div class="filter__item is-active">
+				<div class="filter__item-in">
+					<div class="filter__title">Самое популярное</div>
+					<div class="filter__select js-select">
+						<span>За все время<i></i></span>
+						<ul>
+							<li>За все время</li>
+							<li>За месяц</li>
+							<li>За неделю</li>
+							<li>За год</li>
+						</ul>
+					</div>
+					<i class="filter__plus"></i>
+				</div>							
+			</div>
+			<div class="filter__item">
+				<div class="filter__item-in">
+					<div class="filter__title">По дате публикации</div>
+				</div>		
+				<div class="filter__new">(+2 новых темы)</div>					
+			</div>
+			<div class="filter__item">
+				<div class="filter__item-in">
+					<div class="filter__title">Прочитанные</div>
+				</div>		
+				<div class="filter__new">(+7 новых<br>комментариев)</div>
+			</div>					
+		</div>
+		<div class="filter__row">
+			<div class="filter__search">
+				<div class="filter__search-txt">
+					<input type="text">
+				</div>						
+				<div class="button">Искать<input type="submit" value="Искать"></div>
+			</div>
+			<div class="filter__tags">
+				<div class="button">Облако тегов<input type="submit" value="Облако тегов"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END .filter -->
+</section>
+</body>
+</html>

@@ -1,0 +1,823 @@
+//variables
+$viol: #8b7caf
+$viold: #625682
+$green: #56a205
+$bc: #e5e5e5
+
+// generic block with shadow
+%block
+	position: relative
+	border: 1px solid #cbcbcb
+	border-radius: 6px
+	+background-clip(padding-box)
+	background-color: #fff
+	+box-shadow(0 2px 5px rgba(0, 0, 0, 0.42))
+	margin-bottom: 15px
+	padding: 17px 10px 10px 10px
+	display: block
+	+box-sizing(border-box)
+	&.block_nomargin
+		padding: 0
+.block
+	@extend %block
+%block_grey
+	@extend %block
+	border: 1px solid #a1a1a1
+	background-color: #e3e3e3
+	@include text-shadow(0 1px 0 #fff)
+.block_grey
+	@extend %block_grey
+
+%margin
+	margin-bottom: 40px
+.margin
+	@extend %margin
+
+//buttons
+.buttons
+	text-align: right
+	.btn
+		margin-left: 10px
+		&:first-child
+			margin-left: 0
+
+//titles
+.title
+	font-size: 16px
+	color: #000
+	margin: 0 0 25px
+	a
+		color: inherit
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+	i
+		display: inline-block
+		vertical-align: middle
+		margin-right: 10px
+		@each $s in notebook, dic, net, pics, search, tick, warning, docs, blocked, blocked-obj
+			&.icon_#{nth($s, 1)}
+				+s(h-#{nth($s, 1)})
+.title-2
+	font-size: 14px
+	font-weight: bold
+	margin-top: 0
+.h2
+	color: #5d5d5d
+	font-size: 16px
+	font-weight: bold
+	margin-top: 0
+	margin-bottom: 10px
+	line-height: 1.4
+.h3
+	color: $green
+	font-size: 14px
+	font-weight: bold
+	line-height: 1.4
+	margin-top: 0
+
+//list-types
+.list-types
+	@extend %clr
+	margin-left: -10px
+	li
+		float: left
+		margin-left: 10px
+
+//page
+.page
+	margin-bottom: 50px
+	font-size: 12px
+	a
+		color: #5e558b
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+
+.btn
+	i
+		display: inline-block
+		vertical-align: middle
+		margin-left: 5px
+		&.icon_plus
+			+s(plus)
+.calendar
+	+s(cal)
+	display: inline-block
+	vertical-align: middle
+	border: 0
+	margin-left: 5px
+
+//site-menu
+.site-menu
+	@extend %margin
+	.site-menu__item
+		position: relative
+		margin-top: 30px
+		padding: 20px 0 0 70px
+		&:first-child
+			margin-top: 0
+		i
+			display: block
+			position: absolute
+			left: 0
+			top: 0
+			content: ""
+			@each $s in blocked, moderation, content, user, stats
+				&.icon_#{nth($s, 1)}
+					+s(s-#{nth($s, 1)})
+		h2
+			margin: 0 0 15px
+			line-height: 1.4
+			color: #000
+			font-size: 18px
+			font-weight: bold
+			a
+				color: inherit
+		ul
+			margin-left: 0
+
+//vote
+.vote
+	.vote__toolbar
+		margin-bottom: 90px
+	.vote__type
+		select
+			margin-bottom: 0
+	.vote__type-title
+		display: inline-block
+		vertical-align: middle
+		line-height: 0
+		margin: 0 10px 0 0
+	.vote__history
+		text-align: right
+		color: #343434
+		i
+			+s(clock)
+			display: inline-block
+			vertical-align: middle
+			margin-right: 10px
+		a
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+	.vote__items
+		font-size: 0
+		[class*="span"]
+			display: inline-block
+			vertical-align: top
+			float: none
+			font-size: 0
+			margin-bottom: 40px
+	.vote__meta
+		font-size: 12px
+		margin-bottom: 17px
+		p
+			margin-bottom: 0
+			color: #5d5d5d
+
+//vote-result
+.vote-result
+	@extend %block
+	margin-bottom: 0
+	padding: 10px
+	min-height: 225px
+	font-size: 12px
+	strong
+		display: block
+		line-height: 1.4
+		margin-bottom: 10px
+	ul
+		margin: 0
+	li
+		position: relative
+		margin-bottom: 10px
+		text-align: right
+		list-style-type: none
+		line-height: 1
+		color: #5e5e5e
+		@extend %clr
+	em
+		float: left
+		height: 8px
+		margin: 1px 0 5px
+		border: 1px solid #ababab
+		position: absolute
+		right: 35px
+		left: 0
+	span
+		display: block
+		clear: both
+		margin-top: 5px
+		text-align: left
+		font-size: 12px
+		color: #000
+	i
+		float: left
+		height: 8px
+		background: $viol
+	textarea
+		width: 100%
+		+box-sizing(border-box)
+		resize: none
+	p
+		line-height: 1.4
+	form
+		margin-bottom: 10px
+		.help-inline
+			display: inline-block
+			clear: none
+			margin-top: 0
+			padding: 0 3px 0 0
+			min-width: 20px
+			text-align: center
+		.close
+			float: none
+			margin: -4px 0 0 5px
+		input
+			width: 170px
+
+.request
+	@extend %margin
+	ul.request__list
+		margin: 0 0 20px 0
+	li.request__item
+		position: relative
+		@extend %block
+		@extend %clr
+		+box-sizing(border-box)
+		padding: 15px 20px 20px
+		margin-bottom: 15px
+		height: 240px
+	.request__title
+		line-height: 1
+		font-weight: bold
+		margin-top: 0
+		margin-bottom: 15px
+		font-size: 14px
+		color: #60568b
+		a
+			text-decoration: none
+			color: inherit
+			&:hover
+				text-decoration: underline
+	.request__author
+		float: left
+		width: 215px
+		margin-right: 20px
+	.request__userpic
+		margin-right: 10px
+		img
+			border: 1px solid #bcbcbc
+	.request__author-info
+		overflow: hidden
+	.request__author-name
+		line-height: 1
+		color: #000
+		font-size: 12px
+		font-weight: bold
+		margin-top: 0
+		margin-bottom: 5px
+		a
+			color: inherit
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+	.request__date
+		line-height: 1
+		margin-bottom: 15px
+	.request__author-stats
+		@extend %clr
+		margin-left: -10px
+		li
+			float: left
+			margin-left: 10px
+			text-align: center
+		a
+			display: block
+		i
+			display: inline-block
+			&.icon_knowledge
+				+s(knowledge)
+			&.icon_portfolio
+				+s(portfolio)
+		span
+			display: block
+			text-align: center
+			line-height: 1
+	.request__media
+		overflow: hidden
+	.request__pic
+		margin-right: 10px
+	.request__content
+		overflow: hidden
+	.request__article
+		line-height: 1.4
+		h3
+			font-size: 14px
+			font-weight: bold
+			color: #000
+			line-height: 1
+			margin: 0 0 10px
+			a
+				color: inherit
+				text-decoration: none
+				&:hover
+					text-decoration: underline
+	.request__excerpt
+		max-height: 65px
+		overflow: hidden
+		margin-bottom: 10px
+	.request__toolbar
+		position: absolute
+		right: 20px
+		bottom: 6px
+		.radio
+			font-size: 12px
+			font-weight: bold
+			color: #a3a3a3
+			input[type="radio"]
+				margin-top: 2px
+			&.radio_accept
+				color: #514a9d
+			&.radio_alert
+				color: #ae1212
+
+//photosets
+.photosets
+	@extend %margin
+	.photosets__in
+		@extend %block
+		+box-sizing(border-box)
+		padding: 25px 17px 20px
+	.photosets__list
+		margin-bottom: 0
+		[class*="span"]
+			margin-bottom: 15px
+	.photosets__item
+		// margin-bottom: 15px
+		padding: 5px
+		border: 1px solid #c3c3c3
+		+border-radius(3px)
+	.photosets__close
+		line-height: 1
+		margin-top: -7px
+	.photosets__caption
+		text-align: center
+		h3
+			white-space: nowrap
+			-ms-text-overflow: ellipsis
+			text-overflow: ellipsis
+			overflow: hidden
+			font-size: 12px
+			color: #000
+			font-weight: normal
+			line-height: 1.4
+			margin: 0
+			a
+				text-decoration: none
+				color: inherit
+				&:hover
+					text-decoration: underline
+	.photosets__add
+		margin-bottom: 15px
+
+//geo
+.geo
+	@extend %margin
+	.geo__search-field
+		margin-right: 10px
+	.geo__result
+		margin-top: 20px
+	.geo__list
+		li
+			@extend %clr
+			@extend %block
+			padding: 10px 30px
+			position: relative
+			margin-top: 15px
+			margin-bottom: 0
+			&:first-child
+				margin-top: 0
+			.close
+				position: absolute
+				top: 1px
+				right: 8px
+	.geo__content
+		margin-left: 0
+	.geo__pic
+		width: 165px
+		min-height: 1px
+		margin-right: 30px
+	.geo__info
+		overflow: hidden
+		line-height: 1.2
+	.geo__title
+		color: #7771bb
+		font-size: 18px
+		font-weight: normal
+		margin-top: 0
+		line-height: 1
+		margin-bottom: 4px
+		a
+			color: inherit
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+	.geo__type
+		color: #424242
+		margin-bottom: 4px
+	.geo__rates
+		margin-bottom: 4px
+
+.manage-user
+	@extend %margin
+	.manage-user__in
+	.manage-user__form
+		@extend %block_grey
+		padding: 30px 30px 150px
+		.h2
+			margin-bottom: 20px
+		fieldset
+			margin-bottom: 20px
+			.checkbox
+				font-size: 12px
+				margin-left: 25px
+				font-weight: bold
+
+.manage
+	@extend %margin
+	.manage__content_group
+		@extend %block_grey
+		padding: 25px 50px
+		margin-top: 20px
+	.manage__group-table
+		th,td
+			border: 0
+			position: relative
+			font-size: 14px
+			text-align: center
+			&:first-child
+				text-align: left
+		thead
+			th
+				font-size: 16px
+				font-weight: bold
+				color: #5d5d5d
+				padding-bottom: 40px
+		a
+			color: #7872bb
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+		.icon_delete
+			+s(del)
+		button
+			display: inline-block
+			vertical-align: middle
+			border: 0
+	.manage__status
+		position: relative
+		&:before
+			position: absolute
+			top: 0
+			left: -25px
+			content: ""
+			+s(arrow)
+
+.suggestions
+	@extend %margin
+	.suggestions__table
+		@extend %b
+		padding: 0
+		margin-top: 25px
+		font-size: 12px
+		color: #605685
+		thead
+			font-size: 14px
+			color: #000
+			th
+				text-align: center
+	.suggestions__field
+		border: 1px solid #adadad
+		+border-radius(5px)
+		+box-sizing(border-box)
+		padding: 5px 10px
+		font-size: 12px
+		color: #858585
+		p
+			line-height: 1.4
+			margin-top: 8px
+			margin-bottom: 0
+			&:first-child
+				margin-top: 0
+	.suggestions__buttons
+		text-align: right
+		.btn
+			margin-left: 20px
+	.table-bordered
+		border: 1px solid #cbcbcb
+		+box-shadow(0 2px 5px rgba(0,0,0,.42))
+		th,td
+			border: 1px solid #dedede
+			border-width: 1px 0 0 1px
+		th
+			line-height: 40px
+
+.tags
+	@extend %margin
+	.tags__content
+		@extend %block_grey
+		@extend %clr
+		padding: 20px
+	.tags__media
+	.tags__pic
+		width: 75px
+		margin-right: 20px
+	.tags__info
+		overflow: hidden
+	.tags__author
+		a
+			color: #000
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+	.tags__details
+		a
+			color: #504b96
+			font-size: 14px
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+	.tags__language
+		display: inline-block
+		vertical-align: top
+		.controls
+			float: left
+			margin-left: 30px
+		.help-inline
+			float: left
+			margin-right: 10px
+			padding: 0
+			height: 30px
+			line-height: 30px
+			font-size: 12px
+		input
+			font-size: 12px
+		.tags__icon
+			&.icon_eng
+				+s(lang_en)
+				display: inline-block
+				vertical-align: top
+				margin-top: 8px
+				margin-left: 10px
+	.tags__inline
+		display: inline-block
+		vertical-align: top
+		margin-right: 10px
+		input[type="radio"]
+			margin-top: 2px
+.stop-words
+	@extend %margin
+	.stop-words__list
+		@extend %clr
+		margin-left: 0
+		li
+			float: left
+			margin-left: 10px
+			&:first-child
+				margin-left: 0
+			i.close
+				margin-top: -3px
+.dropwords
+	margin-bottom: 30px
+	p
+		font-size: 14px
+	input
+		width: 100%
+		+box-sizing(border-box)
+		height: 30px
+		margin-bottom: 0
+		font-size: 12px
+	.dropwords__list
+		@extend %block_grey
+		margin-top: -2px
+		+border-radius(0 0 6px 6px)
+		padding: 0 0 20px
+		-webkit-box-shadow: none
+		box-shadow: none
+		ul
+			margin: 0
+		li
+			padding: 0 15px
+			height: 20px
+			line-height: 20px
+			&:hover,&.is-active
+				cursor: default
+				background-color: #7872bb
+				color: #fff
+				text-shadow: none
+
+.tags-syn
+	@extend %margin
+	.tags-syn__form
+		legend
+			font-size: 14px
+			font-weight: normal
+			border: 0
+			line-height: 1.2
+		fieldset
+			margin-bottom: 30px
+
+.user-history
+	@extend %margin
+.blocked
+	@extend %margin
+
+.filters
+	margin-bottom: 30px
+	.filters__in
+		margin-bottom: 30px
+	.filters__content
+		@extend %block_grey
+	.filters__date
+		display: inline-block
+		margin-bottom: 0
+		vertical-align: middle
+		padding-left: 20px
+		input
+			width: 60px
+		span
+			display: inline-block
+			width: 130px
+			text-align: right
+	.filters__table
+		.filters__table-in
+			@extend %block_grey
+			padding: 0
+		.table
+			margin-bottom: 0
+			th,td
+				text-align: center
+			th
+				border-bottom: 1px solid #a1a1a1
+				+text-shadow(0 1px 0 rgba(255,255,255,.75))
+			td
+				text-align: center
+				height: 20px
+		thead
+			background-color: #e3e3e3
+	.filters__age
+		label
+			display: inline-block
+			vertical-align: top
+			margin-right: 5px
+		.control-label
+			margin-right: 20px
+		span
+			padding-top: 5px
+
+.results
+	@extend %block
+	padding: 0
+	min-width: 1099px
+	-ms-overflow-x: scroll
+	overflow-x: scroll
+	table
+		margin-bottom: 0
+		table-layout: fixed
+		th
+			font-size: 14px
+			font-weight: bold
+			vertical-align: top
+			text-align: center
+			border-bottom: 1px solid #cbcbcb
+			padding: 15px 8px
+		td
+			border: 0
+		th,td
+			width: 274px
+			+box-sizing(border-box)
+			&.colspan2
+				width: 548px
+	.results__object
+	.results__object-pic
+		width: 75px
+		margin: 0 10px 10px 0
+	.results__object-info
+		line-height: 1.2
+		p
+			line-height: 1.2
+			margin-bottom: 2px
+	.results__object-name
+		font-weight: bold
+
+	.results__history
+		.results__object-pic
+			width: 50px
+	.results__history-in
+		width: 230px
+	.results__history-stats
+		font-weight: bold
+		font-size: 12px
+		color: #605685
+		line-height: 1.2
+		span
+			display: inline-block
+			margin-left: 20px
+			&:first-child
+				margin-left: 0
+	.results__history-thread
+		margin-left: 0
+		margin-bottom: 0
+		li
+			border-top: 1px solid #dedede
+			padding: 10px 0
+			.badge
+				display: block
+				text-transform: uppercase
+				background: 0
+				padding: 0
+				color: #000
+				font-size: 12px
+				font-weight: bold
+				margin-bottom: 10px
+				+text-shadow(0 0 0)
+				&.badge_success
+					color: #56a205
+	.results__history-content
+	.results__history-userpic
+		width: 50px
+		height: 50px
+		margin: 0 10px 10px 0
+	.results__history-userinfo
+		line-height: 1.2
+		p
+			margin-bottom: 3px
+	.results__history-comment
+		line-height: 1.2
+		clear: both
+	.results__history-userstats
+		color: #616161
+	.results__history-username
+		font-size: 12px
+		color: #605685
+		font-weight: bold
+		line-height: 1
+		a
+			color: #605685
+		&.marked
+			color: #ae1212
+			a
+				color: #ae1212
+		span
+			display: block
+	.results__history-meta
+		clear: both
+		margin-bottom: 15px
+		p
+			line-height: 1.4
+			margin-bottom: 0
+		.h3
+			font-size: 12px
+	.results__actions
+	.results__actions-in
+		padding: 10px
+		background: #fafafa
+		+border-radius(4px)
+		margin-bottom: 15px
+		label
+			font-size: 12px
+			color: #717171
+			span
+				input
+					margin-bottom: 0
+					margin-left: 5px
+		.radio input[type="radio"],
+		.checkbox input[type="checkbox"]
+			margin-top: 3px
+	.results__date
+		&.radio input[type="radio"],
+		&.checkbox input[type="checkbox"]
+			margin-top: 6px
+	.results__actions-message
+		h2
+			font-size: 12px
+			font-weight: bold
+			line-height: 1.2
+			margin-top: 0
+			margin-bottom: 10px
+		textarea
+			+box-sizing(border-box)
+			width: 100%
+			resize: none
+
+
+
+
+
+
+
+
+
+

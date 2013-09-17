@@ -3,89 +3,84 @@
 <!--[if gt IE 8]><!--><html><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Template</title>
+	<title>cPanel</title>
 	<meta name="viewport" content="width=device-width"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<script src="js/app.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/jscrollpane.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/common.js"></script>
 </head>
 <body>
-<!-- BEGIN .header -->
-<header class="header container">
-	<div class="row">
-		<div class="span3">
-			<h1 class="logo"><a href="#">TheProject</a></h1>
-		</div>
-		<div class="span9 pull-right">
-			<!-- BEGIN .header__other -->
-			<div class="header__other clearfix">
-				<!-- BEGIN .settings -->
-				<div class="settings">
-					<a href="#" title="Настройки"></a>
-				</div>
-				<!-- /.settings -->
-				<!-- BEGIN .language -->
-				<nav class="language">
-					<a href="#" title="Русский" class="language__ru is-active"><i></i></a>
-					<a href="#" title="Английский" class="language__en"><i></i></a>
-				</nav>
-				<!-- /.language -->
-				<!-- BEGIN .user -->
-				<div class="user">
-					<div class="user__name">Admin</div>
-					<div class="user__signout"><button type="submit" class="btn btn-mini btn-inverse">Выход</button></div>
-				</div>
-				<!-- /.user -->
-			</div>
-			<!-- /.header__other -->
-		</div>
-	</div>
-</header>
-<!-- /.header -->
-<!-- BEGIN .navbar -->
-<div class="navbar">
-	<div class="navbar-inner">
+	<!-- BEGIN .header -->
+	<div class="header">
 		<div class="container">
-			<ul class="nav">
-				<li><a href="#">Заблокированные</a></li>
-				<li><a href="#">Модерация</a></li>
-				<li><a href="#">Управление контентом</a></li>
-				<li><a href="#">Управление админами</a></li>
-				<li><a href="#">Статистика</a></li>
-			</ul>
+			<div class="row">
+				<a href="#" class="header__logo span3">TravellersNests</a>
+				<div class="header__other span9 pull-right">
+					<div class="user">
+						<div class="user__name">Admin</div>
+						<div class="user__signout"><button type="submit" class="btn btn-mini btn-inverse">Выход</button></div>
+					</div>
+					<div class="language">
+						<a href="#" title="Русский" class="language__ru is-active"><i></i></a>
+						<a href="#" title="Английский" class="language__en"><i></i></a>
+					</div>
+					<div class="settings">
+						<a href="#" title="Настройки"></a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
-<!-- /.navbar -->
-<!-- BEGIN .page -->
-<div class="page container">
-	<!-- BEGIN .control -->
-	<div class="control">
-		<div class="row">
-			<div class="control__menu span6">
-					<div class="control__item">
-						<h2 class="title"><i class="icon icon_blocked"></i>Заблокированные пользователи и объекты</h2>
-						<ul class="control__list">
+	<!-- /.header -->
+	<!-- BEGIN .navbar -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+				<ul class="nav">
+					<li><a href="#">Заблокированные</a></li>
+					<li><a href="#">Модерация</a></li>
+					<li><a href="#">Управление контентом</a></li>
+					<li><a href="#">Управление админами</a></li>
+					<li><a href="#">Статистика</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /.navbar -->
+	<!-- BEGIN .page -->
+	<div class="page">
+		<div class="container">
+			<!-- BEGIN .site-menu -->
+			<div class="site-menu row">
+				<div class="site-menu__col span6">
+					<div class="site-menu__item">
+						<h2><a href="#">Заблокированные пользователи и объекты</a></h2>
+						<ul>
 							<li><a href="#">Список заблокированных пользователей</a></li>
 							<li><a href="#">Список заблокированных объектов</a></li>
 						</ul>
+						<i class="icon_blocked"></i>
 					</div>
-					<div class="control__item">
-						<h2 class="title"><i class="icon icon_moderation"></i>Модерация</h2>
-						<ul class="control__list">
+					<div class="site-menu__item">
+						<h2><a href="#">Модерация</a></h2>
+						<ul>
 							<li><a href="#">Запросы на получение профессионального статуса</a></li>
 							<li><a href="#">Постмодерация тегов</a></li>
 							<li><a href="#">Жалобы на пользовательский контент</a></li>
 							<li><a href="#">Жалобы на пользователей</a></li>
 							<li><a href="#">Жалобы на крупные тур.объекты/клубы</a></li>
 						</ul>
+						<i class="icon_moderation"></i>
 					</div>
-					<div class="control__item">
-						<h2 class="title"><i class="icon icon_content"></i>Управление контентом</h2>
-						<ul class="control__list">
+					<div class="site-menu__item">
+						<h2><a href="#">Управление контентом</a></h2>
+						<ul>
 							<li><a href="#">Роботы рассылок</a></li>
 							<li><a href="#">Управление подсказками поиска</a></li>
 							<li><a href="#">Управление топами</a></li>
-							<li><a href="#">Управление фототестом</a></li>
+							<li><a href="#">Управление фотосетом</a></li>
 							<li><a href="#">Управление опросами</a></li>
 							<li><a href="#">Управление стоп-словами</a></li>
 							<li><a href="#">Управление тэгами-синонимами</a></li>
@@ -93,308 +88,178 @@
 							<li><a href="#">Список клубов администрации</a></li>
 							<li><a href="#">Список клубов  без администратора</a></li>
 						</ul>
+						<i class="icon_content"></i>
 					</div>
+				</div>
+				<div class="site-menu__col span6">
+					<div class="site-menu__item">
+						<h2><a href="#">Управление административными пользователями</a></h2>
+						<ul>
+							<li><a href="#">Список административных пользователей</a></li>
+							<li><a href="#">Управление группами прав пользователей</a></li>
+							<li><a href="#">История действий административного пользователя</a></li>
+						</ul>
+						<i class="icon_user"></i>
+					</div>
+					<div class="site-menu__item">
+						<h2><a href="#">Статистика</a></h2>
+						<ul>
+							<li><a href="#">Статистика-контроль</a></li>
+							<li><a href="#">Статистика-маркетинг</a></li>
+							<li><a href="#">Статистика-финансы</a></li>
+						</ul>
+						<i class="icon_stats"></i>
+					</div>
+				</div>
 			</div>
-			<div class="control__menu span6">
-				<div class="control__item">
-					<h2 class="title"><i class="icon icon_manage"></i>Управление административными пользователями</h2>
-					<ul class="control__list">
-						<li><a href="#">Список административных пользователей</a></li>
-						<li><a href="#">Управление группами прав пользователей</a></li>
-						<li><a href="#">История действий административного пользователя</a></li>
+			<!-- /.site-menu -->
+			<!-- BEGIN .vote -->
+			<div class="vote row">
+				<div class="span12">
+					<h2 class="title"><i class="icon_notebook"></i>История завершенных опросов</h2>
+					<ul class="vote__items row">
+						<li class="span3">
+							<div class="vote__meta">
+								<p>Завершен: 13.05.2013</p>
+								<p>Опрошенных: 567</p>
+								<p>Тип: страна</p>
+							</div>
+							<div class="vote-result">
+								<strong>Какие из Карибских островов вам нравятся больше всего?</strong>
+								<ul>
+									<li><em><i style="width: 85%"></i></em>85%<span>Антигуа и Барбуда</span></li>
+									<li><em><i style="width: 65%"></i></em>65%<span>Барбадос</span></li>
+									<li><em><i style="width: 35%"></i></em>35%<span>Доминика</span></li>
+									<li><em><i style="width: 15%"></i></em>15%<span>Сент-Барт</span></li>
+								</ul>
+							</div>
+						</li>
+						<li class="span3">
+							<div class="vote__meta">
+								<p>Завершен: 13.05.2013</p>
+								<p>Опрошенных: 567</p>
+								<p>Тип: страна</p>
+							</div>
+							<div class="vote-result">
+								<strong>Какие из Карибских островов вам нравятся больше всего?</strong>
+								<ul>
+									<li><em><i style="width: 85%"></i></em>85%<span>Антигуа и Барбуда</span></li>
+									<li><em><i style="width: 65%"></i></em>65%<span>Барбадос</span></li>
+									<li><em><i style="width: 35%"></i></em>35%<span>Доминика</span></li>
+									<li><em><i style="width: 35%"></i></em>35%<span>Доминика</span></li>
+									<li><em><i style="width: 35%"></i></em>35%<span>Доминика</span></li>
+									<li><em><i style="width: 35%"></i></em>35%<span>Доминика</span></li>
+									<li><em><i style="width: 15%"></i></em>15%<span>Сент-Барт</span></li>
+								</ul>
+							</div>
+						</li>
+						<li class="span3">
+							<div class="vote__meta">
+								<p>Завершен: 13.05.2013</p>
+								<p>Опрошенных: 567</p>
+								<p>Тип: страна</p>
+							</div>
+							<div class="vote-result">
+								<strong>Какие из Карибских островов вам нравятся больше всего?</strong>
+								<ul>
+									<li><em><i style="width: 85%"></i></em>85%<span>Антигуа и Барбуда</span></li>
+									<li><em><i style="width: 65%"></i></em>65%<span>Барбадос</span></li>
+									<li><em><i style="width: 35%"></i></em>35%<span>Доминика</span></li>
+									<li><em><i style="width: 15%"></i></em>15%<span>Сент-Барт</span></li>
+								</ul>
+							</div>
+						</li>
+						<li class="span3">
+							<div class="vote__meta">
+								<p>Завершен: 13.05.2013</p>
+								<p>Опрошенных: 567</p>
+								<p>Тип: страна</p>
+							</div>
+							<div class="vote-result">
+								<strong>Какие из Карибских островов вам нравятся больше всего?</strong>
+								<ul>
+									<li><em><i style="width: 85%"></i></em>85%<span>Антигуа и Барбуда</span></li>
+									<li><em><i style="width: 65%"></i></em>65%<span>Барбадос</span></li>
+									<li><em><i style="width: 35%"></i></em>35%<span>Доминика</span></li>
+									<li><em><i style="width: 15%"></i></em>15%<span>Сент-Барт</span></li>
+								</ul>
+							</div>
+						</li>
+						<li class="span3">
+							<div class="vote__meta">
+								<p>Завершен: 13.05.2013</p>
+								<p>Опрошенных: 567</p>
+								<p>Тип: страна</p>
+							</div>
+							<div class="vote-result">
+								<strong>Какие из Карибских островов вам нравятся больше всего?</strong>
+								<ul>
+									<li><em><i style="width: 85%"></i></em>85%<span>Антигуа и Барбуда</span></li>
+									<li><em><i style="width: 65%"></i></em>65%<span>Барбадос</span></li>
+									<li><em><i style="width: 35%"></i></em>35%<span>Доминика</span></li>
+									<li><em><i style="width: 15%"></i></em>15%<span>Сент-Барт</span></li>
+								</ul>
+							</div>
+						</li>
+						<li class="span3">
+							<div class="vote__meta">
+								<p>Завершен: 13.05.2013</p>
+								<p>Опрошенных: 567</p>
+								<p>Тип: страна</p>
+							</div>
+							<div class="vote-result">
+								<strong>Какие из Карибских островов вам нравятся больше всего?</strong>
+								<ul>
+									<li><em><i style="width: 85%"></i></em>85%<span>Антигуа и Барбуда</span></li>
+									<li><em><i style="width: 65%"></i></em>65%<span>Барбадос</span></li>
+									<li><em><i style="width: 35%"></i></em>35%<span>Доминика</span></li>
+									<li><em><i style="width: 15%"></i></em>15%<span>Сент-Барт</span></li>
+								</ul>
+							</div>
+						</li>
+						<li class="span3">
+							<div class="vote__meta">
+								<p>Завершен: 13.05.2013</p>
+								<p>Опрошенных: 567</p>
+								<p>Тип: страна</p>
+							</div>
+							<div class="vote-result">
+								<strong>Какие из Карибских островов вам нравятся больше всего?</strong>
+								<ul>
+									<li><em><i style="width: 85%"></i></em>85%<span>Антигуа и Барбуда</span></li>
+									<li><em><i style="width: 65%"></i></em>65%<span>Барбадос</span></li>
+									<li><em><i style="width: 35%"></i></em>35%<span>Доминика</span></li>
+									<li><em><i style="width: 15%"></i></em>15%<span>Сент-Барт</span></li>
+								</ul>
+							</div>
+						</li>
+						<li class="span3">
+							<div class="vote__meta">
+								<p>Завершен: 13.05.2013</p>
+								<p>Опрошенных: 567</p>
+								<p>Тип: страна</p>
+							</div>
+							<div class="vote-result">
+								<strong>Какие из Карибских островов вам нравятся больше всего?</strong>
+								<ul>
+									<li><em><i style="width: 85%"></i></em>85%<span>Антигуа и Барбуда</span></li>
+									<li><em><i style="width: 65%"></i></em>65%<span>Барбадос</span></li>
+									<li><em><i style="width: 35%"></i></em>35%<span>Доминика</span></li>
+									<li><em><i style="width: 15%"></i></em>15%<span>Сент-Барт</span></li>
+								</ul>
+							</div>
+						</li>
 					</ul>
 				</div>
-				<div class="control__item">
-					<h2 class="title"><i class="icon icon_stats"></i>Статистика</h2>
-					<ul class="control__list">
-						<li><a href="#">Статистика-контроль</a></li>
-						<li><a href="#">Статистика-маркетинг</a></li>
-						<li><a href="#">Статистика-финансы</a></li>
-					</ul>
-				</div>
 			</div>
-		</div>
-	</div>
-	<!-- /.control -->
-	<!-- BEGIN .voting -->
-	<div class="voting">
-		<div class="row">
-			<div class="span12">
-					<h2 class="title"><i class="icon icon_votes"></i>История завершенных опросов</h2>
-					<ul class="voting__list">
-						<li class="voting__item">
-							<div class="voting__meta">
-								<p>Завершен: 13.05.2013</p>
-								<p>Опрошенных: 567</p>
-								<p>Тип: страна</p>
-							</div>
-							<div class="voting__box">
-								<h2 class="voting__question">Где лучше всего развит агротуризм?</h2>
-								<ul>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 85%;"></div>
-											<div class="voting__percentage">85%</div>
-										</div>
-										<div class="voting__answer">Франция, Прованс</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 65%;"></div>
-											<div class="voting__percentage">65%</div>
-										</div>
-										<div class="voting__answer">Италия, Тоскана</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 35%;"></div>
-											<div class="voting__percentage">35%</div>
-										</div>
-										<div class="voting__answer">Россия, Владимирская область</div>
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li class="voting__item">
-							<div class="voting__meta">
-								<p>Завершен: 11.05.2013</p>
-								<p>Опрошенных: 567</p>
-								<p>Тип: событие</p>
-							</div>
-							<div class="voting__box">
-								<h2 class="voting__question">Где лучше всего развит агротуризм?</h2>
-								<ul>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 85%;"></div>
-											<div class="voting__percentage">85%</div>
-										</div>
-										<div class="voting__answer">Франция, Прованс</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 65%;"></div>
-											<div class="voting__percentage">65%</div>
-										</div>
-										<div class="voting__answer">Италия, Тоскана</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 35%;"></div>
-											<div class="voting__percentage">35%</div>
-										</div>
-										<div class="voting__answer">Россия, Владимирская область</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 30%;"></div>
-											<div class="voting__percentage">30%</div>
-										</div>
-										<div class="voting__answer">Украина, Крым</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 15%;"></div>
-											<div class="voting__percentage">15%</div>
-										</div>
-										<div class="voting__answer">Украина, Азов</div>
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li class="voting__item">
-							<div class="voting__meta">
-								<p>Завершен: 13.05.2013</p>
-								<p>Опрошенных: 567</p>
-								<p>Тип: страна</p>
-							</div>
-							<div class="voting__box">
-								<h2 class="voting__question">Где лучше всего развит агротуризм?</h2>
-								<ul>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 85%;"></div>
-											<div class="voting__percentage">85%</div>
-										</div>
-										<div class="voting__answer">Франция, Прованс</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 65%;"></div>
-											<div class="voting__percentage">65%</div>
-										</div>
-										<div class="voting__answer">Италия, Тоскана</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 35%;"></div>
-											<div class="voting__percentage">35%</div>
-										</div>
-										<div class="voting__answer">Россия, Владимирская область</div>
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li class="voting__item">
-							<div class="voting__meta">
-								<p>Завершен: 13.05.2013</p>
-								<p>Опрошенных: 567</p>
-								<p>Тип: страна</p>
-							</div>
-							<div class="voting__box">
-								<h2 class="voting__question">Где лучше всего развит агротуризм?</h2>
-								<ul>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 85%;"></div>
-											<div class="voting__percentage">85%</div>
-										</div>
-										<div class="voting__answer">Франция, Прованс</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 65%;"></div>
-											<div class="voting__percentage">65%</div>
-										</div>
-										<div class="voting__answer">Италия, Тоскана</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 35%;"></div>
-											<div class="voting__percentage">35%</div>
-										</div>
-										<div class="voting__answer">Россия, Владимирская область</div>
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li class="voting__item">
-							<div class="voting__meta">
-								<p>Завершен: 13.05.2013</p>
-								<p>Опрошенных: 567</p>
-								<p>Тип: страна</p>
-							</div>
-							<div class="voting__box">
-								<h2 class="voting__question">Где лучше всего развит агротуризм?</h2>
-								<ul>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 85%;"></div>
-											<div class="voting__percentage">85%</div>
-										</div>
-										<div class="voting__answer">Франция, Прованс</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 65%;"></div>
-											<div class="voting__percentage">65%</div>
-										</div>
-										<div class="voting__answer">Италия, Тоскана</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 35%;"></div>
-											<div class="voting__percentage">35%</div>
-										</div>
-										<div class="voting__answer">Россия, Владимирская область</div>
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li class="voting__item">
-							<div class="voting__meta">
-								<p>Завершен: 11.05.2013</p>
-								<p>Опрошенных: 567</p>
-								<p>Тип: событие</p>
-							</div>
-							<div class="voting__box">
-								<h2 class="voting__question">Где лучше всего развит агротуризм?</h2>
-								<ul>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 85%;"></div>
-											<div class="voting__percentage">85%</div>
-										</div>
-										<div class="voting__answer">Франция, Прованс</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 65%;"></div>
-											<div class="voting__percentage">65%</div>
-										</div>
-										<div class="voting__answer">Италия, Тоскана</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 35%;"></div>
-											<div class="voting__percentage">35%</div>
-										</div>
-										<div class="voting__answer">Россия, Владимирская область</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 30%;"></div>
-											<div class="voting__percentage">30%</div>
-										</div>
-										<div class="voting__answer">Украина, Крым</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 15%;"></div>
-											<div class="voting__percentage">15%</div>
-										</div>
-										<div class="voting__answer">Украина, Азов</div>
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li class="voting__item">
-							<div class="voting__meta">
-								<p>Завершен: 13.05.2013</p>
-								<p>Опрошенных: 567</p>
-								<p>Тип: страна</p>
-							</div>
-							<div class="voting__box">
-								<h2 class="voting__question">Где лучше всего развит агротуризм?</h2>
-								<ul>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 85%;"></div>
-											<div class="voting__percentage">85%</div>
-										</div>
-										<div class="voting__answer">Франция, Прованс</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 65%;"></div>
-											<div class="voting__percentage">65%</div>
-										</div>
-										<div class="voting__answer">Италия, Тоскана</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 35%;"></div>
-											<div class="voting__percentage">35%</div>
-										</div>
-										<div class="voting__answer">Россия, Владимирская область</div>
-									</li>
-								</ul>
-							</div>
-						</li>
-					</ul>
-			</div>
-		</div>
-	</div>
-	<!-- /.voting -->
-	<!-- BEGIN .voting -->
-	<div class="voting">
-		<div class="row">
-			<div class="span9">
-					<h2 class="title"><i class="icon icon_votes"></i>Управление опросами</h2>
-					<div class="voting__settings clearfix">
-						<!-- BEGIN .voting__type -->
-						<div class="voting__type">
-							<h2 class="title-2">Тип опроса:</h2>
+			<!-- /.vote -->
+			<!-- BEGIN .vote -->
+			<div class="vote row">
+				<div class="span9">
+					<h2 class="title"><i class="icon_notebook"></i>Управление опросами</h2>
+					<div class="vote__toolbar row">
+						<div class="vote__type span4">
+							<h3 class="vote__type-title h3">Тип опроса:</h3>
 							<select>
 								<option>Все</option>
 								<option>Главная страница путешественника</option>
@@ -409,686 +274,1906 @@
 								<option>Клубы по интересам</option>
 							</select>
 						</div>
-						<!-- /.voting__type -->
-						<!-- BEGIN .voting__history -->
-						<div class="voting__history">
-							<i class="icon icon_timer"></i>
-							<p>История завершенных опросов</p>
-							<p><a href="#">Читать</a></p>
+						<div class="vote__history span4 pull-right">
+							<i></i>История завершенных опросов<br>
+							<a href="#">читать</a>
 						</div>
-						<!-- /.voting__history -->
 					</div>
-					<h2 class="title-1">Главная путешественника</h2>
-					<ul class="voting__list">
-						<li class="voting__item">
-							<h2 class="title-2">Новый опрос:</h2>
-							<div class="voting__box">
-								<div class="voting__title">
-									<textarea name="" id=""></textarea>
-								</div>
-								<div class="voting__options">
-									<div>Варианты ответа:</div>
-									<ol>
-										<li>
-											<input type="text">
-											<i class="icon icon_del"></i>
-										</li>
-										<li>
-											<input type="text">
-											<i class="icon icon_del"></i>
-										</li>
-										<li>
-											<input type="text">
-										</li>
-									</ol>
-								</div>
-								<div class="voting__buttons"><button type="submit" class="btn btn-mini btn-primary">Сохранить</button></div>
-								<div class="voting__description">При этом ранее опубликованный опрос  автоматически завершается и публикуется.</div>
+					<h3 class="title-2">Главная путешественника</h3>
+					<ul class="vote__items row">
+						<li class="span3">
+							<h3 class="h3">Новый опрос:</h3>
+							<div class="vote-result">
+								<textarea rows="3"></textarea>
+								<p>Варианты ответа:</p>
+								<form class="form-inline">
+									<span class="help-inline">1.</span>
+									<input type="text">
+									<button class="close">&times;</button>
+								</form>
+								<form class="form-inline">
+									<span class="help-inline">2.</span>
+									<input type="text">
+									<button class="close">&times;</button>
+								</form>
+								<form class="form-inline">
+									<span class="help-inline">3.</span>
+									<input type="text">
+								</form>
+								<p>
+									<button type="submit" class="btn btn-mini btn-primary">Сохранить</button>
+								</p>
+								<p>При этом ранее опубликованный опрос автоматически завершается и публикуется.</p>
 							</div>
 						</li>
-						<li class="voting__item">
-							<h2 class="title-2">Открытый опрос:</h2>
-							<div class="voting__box">
-								<h2 class="voting__question">Где лучше всего развит агротуризм?</h2>
+						<li class="span3">
+							<h3 class="h3">Открытый опрос:</h3>
+							<div class="vote-result">
+								<strong>Какие из Карибских островов вам нравятся больше всего?</strong>
 								<ul>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 85%;"></div>
-											<div class="voting__percentage">85%</div>
-										</div>
-										<div class="voting__answer">Франция, Прованс</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 65%;"></div>
-											<div class="voting__percentage">65%</div>
-										</div>
-										<div class="voting__answer">Италия, Тоскана</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 35%;"></div>
-											<div class="voting__percentage">35%</div>
-										</div>
-										<div class="voting__answer">Россия, Владимирская область</div>
-									</li>
+									<li><em><i style="width: 85%"></i></em>85%<span>Антигуа и Барбуда</span></li>
+									<li><em><i style="width: 65%"></i></em>65%<span>Барбадос</span></li>
+									<li><em><i style="width: 35%"></i></em>35%<span>Доминика</span></li>
 								</ul>
-								<div class="voting__buttons"><button type="submit" class="btn btn-mini btn-primary">Завершить и опубликовать</button></div>
-								<div class="voting__description">При этом ранее опубликованный опрос автоматически удаляется</div>
+								<p>
+									<button type="submit" class="btn btn-mini btn-primary">Завершить и опубликовать</button>
+								</p>
+								<p>При этом ранее опубликованный опрос автоматически удаляется</p>
 							</div>
 						</li>
-						<li class="voting__item">
-							<h2 class="title-2">Предыдущий опрос:</h2>
-							<div class="voting__box">
-								<h2 class="voting__question">Где лучше всего развит агротуризм?</h2>
+						<li class="span3">
+							<h3 class="h3">Предыдущий опрос:</h3>
+							<div class="vote-result">
+								<strong>Какие из Карибских островов вам нравятся больше всего?</strong>
 								<ul>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 85%;"></div>
-											<div class="voting__percentage">85%</div>
-										</div>
-										<div class="voting__answer">Франция, Прованс</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 65%;"></div>
-											<div class="voting__percentage">65%</div>
-										</div>
-										<div class="voting__answer">Италия, Тоскана</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 35%;"></div>
-											<div class="voting__percentage">35%</div>
-										</div>
-										<div class="voting__answer">Россия, Владимирская область</div>
-									</li>
+									<li><em><i style="width: 85%"></i></em>85%<span>Антигуа и Барбуда</span></li>
+									<li><em><i style="width: 65%"></i></em>65%<span>Барбадос</span></li>
+									<li><em><i style="width: 35%"></i></em>35%<span>Доминика</span></li>
 								</ul>
-								<div class="voting__buttons"><button type="submit" class="btn btn-mini btn-primary">Удалить</button></div>
+								<p>
+									<button type="submit" class="btn btn-mini btn-primary">Удалить</button>
+								</p>
 							</div>
 						</li>
 					</ul>
-
-					<h2 class="title-1">Лучшие места</h2>
-					<ul class="voting__list">
-						<li class="voting__item">
-							<h2 class="title-2">Новый опрос:</h2>
-							<div class="voting__box">
-								<div class="voting__title">
-									<textarea name="" id=""></textarea>
-								</div>
-								<div class="voting__options">
-									<div>Варианты ответа:</div>
-									<ol>
-										<li>
-											<input type="text">
-											<i class="icon icon_del"></i>
-										</li>
-										<li>
-											<input type="text">
-											<i class="icon icon_del"></i>
-										</li>
-										<li>
-											<input type="text">
-										</li>
-									</ol>
-								</div>
-								<div class="voting__buttons"><button type="submit" class="btn btn-mini btn-primary">Сохранить</button></div>
-								<div class="voting__description">При этом ранее опубликованный опрос  автоматически завершается и публикуется.</div>
+					<h3 class="title-2">Лучшие места</h3>
+					<ul class="vote__items row">
+						<li class="span3">
+							<h3 class="h3">Новый опрос:</h3>
+							<div class="vote-result">
+								<textarea rows="3"></textarea>
+								<p>Варианты ответа:</p>
+								<form class="form-inline">
+									<span class="help-inline">1.</span>
+									<input type="text">
+									<button class="close">&times;</button>
+								</form>
+								<form class="form-inline">
+									<span class="help-inline">2.</span>
+									<input type="text">
+									<button class="close">&times;</button>
+								</form>
+								<form class="form-inline">
+									<span class="help-inline">3.</span>
+									<input type="text">
+								</form>
+								<p>
+									<button type="submit" class="btn btn-mini btn-primary">Сохранить</button>
+								</p>
+								<p>При этом ранее опубликованный опрос автоматически завершается и публикуется.</p>
 							</div>
 						</li>
-						<li class="voting__item">
-							<h2 class="title-2">Открытый опрос:</h2>
-							<div class="voting__box">
-								<h2 class="voting__question">Где лучше всего развит агротуризм?</h2>
+						<li class="span3">
+							<h3 class="h3">Открытый опрос:</h3>
+							<div class="vote-result">
+								<strong>Какие из Карибских островов вам нравятся больше всего?</strong>
 								<ul>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 85%;"></div>
-											<div class="voting__percentage">85%</div>
-										</div>
-										<div class="voting__answer">Франция, Прованс</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 65%;"></div>
-											<div class="voting__percentage">65%</div>
-										</div>
-										<div class="voting__answer">Италия, Тоскана</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 35%;"></div>
-											<div class="voting__percentage">35%</div>
-										</div>
-										<div class="voting__answer">Россия, Владимирская область</div>
-									</li>
+									<li><em><i style="width: 85%"></i></em>85%<span>Антигуа и Барбуда</span></li>
+									<li><em><i style="width: 65%"></i></em>65%<span>Барбадос</span></li>
+									<li><em><i style="width: 35%"></i></em>35%<span>Доминика</span></li>
 								</ul>
-								<div class="voting__buttons"><button type="submit" class="btn btn-mini btn-primary">Завершить и опубликовать</button></div>
-								<div class="voting__description">При этом ранее опубликованный опрос автоматически удаляется</div>
+								<p>
+									<button type="submit" class="btn btn-mini btn-primary">Завершить и опубликовать</button>
+								</p>
+								<p>При этом ранее опубликованный опрос автоматически удаляется</p>
 							</div>
 						</li>
-						<li class="voting__item">
-							<h2 class="title-2">Предыдущий опрос:</h2>
-							<div class="voting__box">
-								<h2 class="voting__question">Где лучше всего развит агротуризм?</h2>
+						<li class="span3">
+							<h3 class="h3">Предыдущий опрос:</h3>
+							<div class="vote-result">
+								<strong>Какие из Карибских островов вам нравятся больше всего?</strong>
 								<ul>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 85%;"></div>
-											<div class="voting__percentage">85%</div>
-										</div>
-										<div class="voting__answer">Франция, Прованс</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 65%;"></div>
-											<div class="voting__percentage">65%</div>
-										</div>
-										<div class="voting__answer">Италия, Тоскана</div>
-									</li>
-									<li>
-										<div class="voting__bar">
-											<div class="voting__progress" style="width: 35%;"></div>
-											<div class="voting__percentage">35%</div>
-										</div>
-										<div class="voting__answer">Россия, Владимирская область</div>
-									</li>
+									<li><em><i style="width: 85%"></i></em>85%<span>Антигуа и Барбуда</span></li>
+									<li><em><i style="width: 65%"></i></em>65%<span>Барбадос</span></li>
+									<li><em><i style="width: 35%"></i></em>35%<span>Доминика</span></li>
 								</ul>
-								<div class="voting__buttons"><button type="submit" class="btn btn-mini btn-primary">Удалить</button></div>
+								<p>
+									<button type="submit" class="btn btn-mini btn-primary">Удалить</button>
+								</p>
 							</div>
 						</li>
 					</ul>
-			</div>
-		</div>
-	</div>
-	<!-- /.voting -->
-	<!-- BEGIN .requests -->
-	<div class="requests">
-		<div class="row">
-			<div class="span12">
-				<h2 class="title"><i class="icon icon_request"></i>Запросы на получение профессионального статуса (35)</h2>
-				<ul class="requests__list">
-					<li class="requests__item">
-						<h2 class="requests__title">Заявка на получение статуса «Гид»</h2>
-						<div class="requests__content">
-							<div class="requests__user">
-								<a href="#" class="requests__userpic">
-									<img src="img/userpic.jpg" alt="userpic">
-								</a>
-								<div class="requests__userinfo">
-									<h2 class="requests__username" title="Александра Симонова"><a href="#">Александра Симонова</a></h2>
-									<div class="requests__date">
-										сегодня в 12:05
-									</div>
-									<ul class="requests__stats">
-										<li>
-											<a href="#">
-												<i class="icon icon_portfolio"></i>
-												<div>125</div>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<i class="icon icon_knowledge"></i>
-												<div>54</div>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="requests__info">
-								<div class="requests__pic"><a href="#"><img src="img/pic-1.jpg" alt="pic"></a></div>
-								<div class="requests__article">
-									<h2 class="requests__article-title"><a href="#">Замок Нойшванштайн</a></h2>
-									<ul class="requests__tags">
-										<li><a href="#">Лучшее место</a></li>
-									</ul>
-									<div class="requests__text">
-										<p>Замок Нойшванштайн стоит на месте двух крепостей, переднего и заднего Швангау. Король Людвиг || приказал на этом месте путем взрыва скалы опустить плато приблизительно на 8 метров и создать тем самым место для постройки «сказочногодворца». После строительства дороги и прокладки турбопровода 5 сентября 1869 года был заложен первый камень для строительства. После строительства дороги и прокладки турбопровода 5 сентября 1869 года был заложен первый камень для строительства</p>
-									</div>
-									<div class="requests__rating">Рейтинг: 239</div>
-									<div class="requests__photos"><a href="#">Загружено фото: 25</a></div>
-									<div class="requests__action">
-										<label class="radio requests__alert inline">
-										  <input type="radio" name="optionsRadios">
-										  Не мой язык
-										</label>
-										<label class="radio requests__accept inline">
-										  <input type="radio" name="optionsRadios">
-										  Подтвердить
-										</label>
-										<label class="radio requests__deny inline">
-										  <input type="radio" name="optionsRadios">
-										  Отклонить
-										</label>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="requests__item">
-						<h2 class="requests__title">Заявка на получение статуса «Гид»</h2>
-						<div class="requests__content">
-							<div class="requests__user">
-								<a href="#" class="requests__userpic">
-									<img src="img/userpic-1.jpg" alt="userpic">
-								</a>
-								<div class="requests__userinfo">
-									<h2 class="requests__username" title="Григорий Федорцов"><a href="#">Григорий Федорцов</a></h2>
-									<div class="requests__date">
-										сегодня в 10:00
-									</div>
-									<ul class="requests__stats">
-										<li>
-											<a href="#">
-												<i class="icon icon_portfolio"></i>
-												<div>125</div>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<i class="icon icon_knowledge"></i>
-												<div>54</div>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="requests__info">
-								<div class="requests__pic"><a href="#"><img src="img/pic-2.jpg" alt="pic"></a></div>
-								<div class="requests__article">
-									<h2 class="requests__article-title"><a href="#">Озера, горы и сказочные деревушки Южной Баварии</a></h2>
-									<ul class="requests__tags">
-										<li><a href="#">Лучшее место</a></li>
-									</ul>
-									<div class="requests__text">
-										<p>Замок Нойшванштайн стоит на месте двух крепостей, переднего и заднего Швангау. Король Людвиг || приказал на этом месте путем взрыва скалы опустить плато приблизительно на 8 метров и создать тем самым место для постройки «сказочногодворца». После строительства дороги и прокладки турбопровода 5 сентября 1869 года был заложен первый камень для строительства. После строительства дороги и прокладки турбопровода 5 сентября 1869 года был заложен первый камень для строительства</p>
-									</div>
-									<div class="requests__rating">Рейтинг: 239</div>
-									<div class="requests__photos"><a href="#">Загружено фото: 25</a></div>
-									<div class="requests__action">
-										<label class="radio requests__alert inline">
-										  <input type="radio" name="optionsRadios2">
-										  Не мой язык
-										</label>
-										<label class="radio requests__accept inline">
-										  <input type="radio" name="optionsRadios2">
-										  Подтвердить
-										</label>
-										<label class="radio requests__deny inline">
-										  <input type="radio" name="optionsRadios2">
-										  Отклонить
-										</label>
-									</div>
-								</div>
-							</div>
-						</div>
-					</li>
-				</ul>
-				<div class="requests__load">
-					<button type="submit" class="btn btn-large">Загрузить следующие заявки</button>
 				</div>
 			</div>
-		</div>
-	</div>
-	<!-- /.requests -->
-	<!-- BEGIN .tags -->
-	<div class="tags">
-		<div class="row">
-			<div class="span12">
-					<h2 class="title"><i class="icon icon_request"></i>Постмодерация тэгов</h2>
-					<ul class="tags__list">
-						<li class="tags__item">
-							<div class="tags__info">
-								<div class="tags__pic">
-									<img src="img/pic-3.jpg" alt="pic">
+			<!-- /.vote -->
+			<!-- BEGIN .request -->
+			<div class="request">
+				<h2 class="title"><i class="icon_tick"></i>Запросы на получение профессионального статуса (35)</h2>
+				<div class="row">
+					<div class="span12">
+						<ul class="request__list">
+							<li class="request__item">
+								<h3 class="request__title">Заявка на получение статуса «Гид»</h3>
+								<div class="request__author">
+									<a class="request__userpic pull-left" href="#">
+										<img src="http://placehold.it/75x75" alt="img">
+									</a>
+									<div class="request__author-info">
+										<h3 class="request__author-name"><a href="#">Александра Колесникова</a></h3>
+										<p class="request__date">Сегодня в 12:15</p>
+										<ul class="request__author-stats">
+											<li>
+												<a href="#">
+													<i class="icon_portfolio"></i>
+													<span>85</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<i class="icon_knowledge"></i>
+													<span>120</span>
+												</a>
+											</li>
+										</ul>
+									</div>
 								</div>
-								<div class="tags__meta">
-									<div class="tags__author"><a href="#">Иванов Иван Степанович</a></div>
-									<div class="tags__details">Маршрут: <a href="#">«Поход на урал»</a></div>
-								</div>
-							</div>
-							<div class="tags__controls">
-								<div class="tags__language">
-									<label class="checkbox">
-									  <input type="checkbox" value="">
-									  Английский тэг
-									</label>
-								</div>
-								<div class="tags__new">
-									<h2 class="title-3">Новый тэг:</h2>
-									<div class="tags__langversion">
-										<input type="text" placeholder=" Альпинизм">
-										<div class="tags__langeng">
-											Английская версия:
-											<input type="text" placeholder=" Alpinism">
-											<div class="tags__langswitch">
-												<i class="icon icon_eng"></i>
+								<div class="request__media">
+									<a class="request__pic pull-left" href="#">
+										<img src="http://placehold.it/100x100" alt="img">
+									</a>
+									<div class="request__content">
+										<div class="request__article">
+											<h3><a href="#">Озера, горы и сказочные деревушки Южной Баварии</a></h3>
+											<p><a href="#">Лучшее место</a></p>
+											<div class="request__excerpt">
+												<p>Замок Нойшванштайн стоит на месте двух крепостей, переднего и заднего Швангау. Король Людвиг || приказал на этом месте путем взрыва скалы опустить плато приблизительно на 8 метров и создать тем самым место для постройки «сказочногодворца». После строительства дороги и прокладки турбопровода 5 сентября 1869 года был заложен первый камень для строительства</p>
 											</div>
+											<p><strong>Рейтинг: 785</strong></p>
+											<p><a href="#">Загружено фото: 235</a></p>
 										</div>
 									</div>
-									<div class="tags__options">
-										<label class="radio">
-										  <input type="radio" name="optionsRadios" checked>
-										  Подтвердить
-										</label>
-										<label class="radio">
-										  <input type="radio" name="optionsRadios">
-										  Отклонить
-										</label>
-										<label class="radio">
-										  <input type="radio" name="optionsRadios">
-										  <span>Заменить на:</span> <input type="text" value="">
-										</label>
-										<label class="radio">
-										  <input type="radio" name="optionsRadios">
-										  <span>Тэг-синоним:</span> <input type="text" value="">
-										</label>
+								</div>
+								<div class="request__toolbar">
+									<label class="radio radio_alert inline">
+									  <input type="radio" name="optionsRadios2">
+									  Не мой язык
+									</label>
+									<label class="radio radio_accept inline">
+									  <input type="radio" name="optionsRadios2">
+									  Подтвердить
+									</label>
+									<label class="radio inline">
+									  <input type="radio" name="optionsRadios2">
+									  Отклонить
+									</label>
+								</div>
+							</li>
+							<li class="request__item">
+								<h3 class="request__title">Заявка на получение статуса «Гид»</h3>
+								<div class="request__author">
+									<a class="request__userpic pull-left" href="#">
+										<img src="http://placehold.it/75x75" alt="img">
+									</a>
+									<div class="request__author-info">
+										<h3 class="request__author-name"><a href="#">Дарья Симонова</a></h3>
+										<p class="request__date">Сегодня в 12:15</p>
+										<ul class="request__author-stats">
+											<li>
+												<a href="#">
+													<i class="icon_portfolio"></i>
+													<span>85</span>
+												</a>
+											</li>
+											<li>
+												<a href="#">
+													<i class="icon_knowledge"></i>
+													<span>120</span>
+												</a>
+											</li>
+										</ul>
 									</div>
 								</div>
+								<div class="request__media">
+									<a class="request__pic pull-left" href="#">
+										<img src="http://placehold.it/100x100" alt="img">
+									</a>
+									<div class="request__content">
+										<div class="request__article">
+											<h3><a href="#">Замок Нойшванштайн</a></h3>
+											<p><a href="#">Лучшее место</a></p>
+											<div class="request__excerpt">
+												<p>Замок Нойшванштайн стоит на месте двух крепостей, переднего и заднего Швангау. Король Людвиг || приказал на этом месте путем взрыва скалы опустить плато приблизительно на 8 метров и создать тем самым место для постройки «сказочногодворца». После строительства дороги и прокладки турбопровода 5 сентября 1869 года был заложен первый камень для строительства</p>
+											</div>
+											<p><strong>Рейтинг: 785</strong></p>
+											<p><a href="#">Загружено фото: 235</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="request__toolbar">
+									<label class="radio radio_alert inline">
+									  <input type="radio" name="optionsRadios2">
+									  Не мой язык
+									</label>
+									<label class="radio radio_accept inline">
+									  <input type="radio" name="optionsRadios2">
+									  Подтвердить
+									</label>
+									<label class="radio inline">
+									  <input type="radio" name="optionsRadios2">
+									  Отклонить
+									</label>
+								</div>
+							</li>
+						</ul>
+						<div class="clearfix">
+							<button type="submit" class="pull-right btn btn-large">Загрузить следующие заявки</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /.request -->
+			<!-- BEGIN .photosets -->
+			<div class="photosets row">
+				<div class="span12">
+					<h2 class="title"><i class="icon_pics"></i>Управление фотосетами</h2>
+					<div class="photosets__in row-fluid">
+						<div class="photosets__add"><button class="btn btn-small btn-primary">Добавить объект</button></div>
+						<ul class="photosets__list thumbnails">
+							<li class="span3">
+								<div class="photosets__item thumbnail">
+									<button class="photosets__close close">&times;</button>
+									<img src="http://placehold.it/300x200" style="width: auto; height: auto;" alt="img">
+									<div class="photosets__caption caption">
+										<h3>Озера, горы и сказочные деревушки Южной Баварии</h3>
+									</div>
+								</div>
+							</li>
+							<li class="span3">
+								<div class="photosets__item thumbnail">
+									<button class="photosets__close close">&times;</button>
+									<img src="http://placehold.it/300x200" style="width: auto; height: auto;" alt="img">
+									<div class="photosets__caption caption">
+										<h3>Замок Нойшванштайн</h3>
+									</div>
+								</div>
+							</li>
+							<li class="span3">
+								<div class="photosets__item thumbnail">
+									<button class="photosets__close close">&times;</button>
+									<img src="http://placehold.it/300x200" style="width: auto; height: auto;" alt="img">
+									<div class="photosets__caption caption">
+										<h3>Замок Нойшванштайн</h3>
+									</div>
+								</div>
+							</li>
+							<li class="span3">
+								<div class="photosets__item thumbnail">
+									<button class="photosets__close close">&times;</button>
+									<img src="http://placehold.it/300x200" style="width: auto; height: auto;" alt="img">
+									<div class="photosets__caption caption">
+										<h3>Замок Нойшванштайн</h3>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<ul class="photosets__list thumbnails">
+							<li class="span3">
+								<div class="photosets__item thumbnail">
+									<button class="photosets__close close">&times;</button>
+									<img src="http://placehold.it/300x200" style="width: auto; height: auto;" alt="img">
+									<div class="photosets__caption caption">
+										<h3>Замок Нойшванштайн</h3>
+									</div>
+								</div>
+							</li>
+							<li class="span3">
+								<div class="photosets__item thumbnail">
+									<button class="photosets__close close">&times;</button>
+									<img src="http://placehold.it/300x200" style="width: auto; height: auto;" alt="img">
+									<div class="photosets__caption caption">
+										<h3>Замок Нойшванштайн</h3>
+									</div>
+								</div>
+							</li>
+							<li class="span3">
+								<div class="photosets__item thumbnail">
+									<button class="photosets__close close">&times;</button>
+									<img src="http://placehold.it/300x200" style="width: auto; height: auto;" alt="img">
+									<div class="photosets__caption caption">
+										<h3>Замок Нойшванштайн</h3>
+									</div>
+								</div>
+							</li>
+							<li class="span3">
+								<div class="photosets__item thumbnail">
+									<button class="photosets__close close">&times;</button>
+									<img src="http://placehold.it/300x200" style="width: auto; height: auto;" alt="img">
+									<div class="photosets__caption caption">
+										<h3>Замок Нойшванштайн</h3>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="photosets__buttons buttons">
+							<button type="submit" class="btn btn-small btn-primary">Сохранить</button>
+							<button type="submit" class="btn btn-small btn-inverse">Отменить</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /.photosets -->
+			<!-- BEGIN .geo -->
+			<div class="geo">
+				<h2 class="title"><i class="icon_net"></i>Загрузка и редактирование стран, регионов, городов</h2>
+				<form class="geo__search form-search">
+					<ul class="list-types">
+						<li class="is-active"><button class="btn btn-small btn-primary" type="button">Страна</button></li>
+						<li><button class="btn btn-small" type="button">Регион/Курорт</button></li>
+						<li><button class="btn btn-small" type="button">Город</button></li>
+					</ul>
+					<input type="text" class="geo__search-field input-xxlarge">
+					<button type="submit" class="btn btn-small btn-primary">Найти</button>
+				</form>
+				<p><button class="btn btn-small btn-success" type="button">Создать<i class="icon_plus"></i></button></p>
+				<div class="geo__result row">
+					<ul class="geo__list span9">
+						<li>
+							<button class="close">&times;</button>
+							<div class="geo__content span5">
+								<a class="geo__pic pull-left" href="#">
+									<img src="http://placehold.it/165x125" alt="img">
+								</a>
+								<div class="geo__info">
+									<h2 class="geo__title">Тоскана, Италия</h2>
+									<p class="geo__type">Регион</p>
+									<p class="geo__rates">Рейтинг (875)</p>
+								</div>
+							</div>
+							<div class="geo__meta span3 pull-right">
+								Администратор <a href="#">Артур Иванов</a>
+							</div>
+						</li>
+						<li>
+							<button class="close">&times;</button>
+							<div class="geo__content span5">
+								<a class="geo__pic pull-left" href="#">
+									<img src="http://placehold.it/165x125" alt="img">
+								</a>
+								<div class="geo__info">
+									<h2 class="geo__title">Тоскана, Италия</h2>
+									<p class="geo__type">Регион</p>
+									<p class="geo__rates">Рейтинг (875)</p>
+								</div>
+							</div>
+							<div class="geo__meta span3 pull-right">
+								Администратор <a href="#">Артур Иванов</a>
+							</div>
+						</li>
+						<li>
+							<button class="close">&times;</button>
+							<div class="geo__content span5">
+								<a class="geo__pic pull-left" href="#">
+									<img src="http://placehold.it/165x125" alt="img">
+								</a>
+								<div class="geo__info">
+									<h2 class="geo__title">Тоскана, Италия</h2>
+									<p class="geo__type">Регион</p>
+									<p class="geo__rates">Рейтинг (875)</p>
+								</div>
+							</div>
+							<div class="geo__meta span3 pull-right">
+								Администратор <a href="#">Артур Иванов</a>
 							</div>
 						</li>
 					</ul>
-					<div class="tags__buttons">
-						<button type="submit" class="btn btn-large">Выполнить и выйти</button>
-						<button type="submit" class="btn btn-large">Выполнить и загрузить следующие заявки</button>
-					</div>
+				</div>
 			</div>
-		</div>
-	</div>
-	<!-- /.tags -->
-	<!-- BEGIN .suggestions -->
-	<div class="suggestions">
-		<div class="row">
-			<div class="span12">
-					<h2 class="title"><i class="icon icon_search"></i>Управление поисковыми подсказками</h2>
-					<table class="suggestions__table table table-bordered">
-						<thead>
-							<tr>
-								<th>Вид объекта</th>
-								<th>Подвид объекта</th>
-								<th>Ключевые слова/фразы</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Лучшее место</td>
-								<td>По умолчанию</td>
-								<td>
-									<div class="suggestions__field" contenteditable="true">
-										<p>Эйфелева башня</p>
-										<p>Водопад Виктория</p>
-										<p>Сейшелы</p>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td>Достопримечательность</td>
-								<td>
-									<div class="suggestions__field" contenteditable="true">
-										<p>Замок «Нойшванштайн»</p>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td>Природные красоты</td>
-								<td>
-									<div class="suggestions__field" contenteditable="true">
-										<p>Гранд Каньон</p>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td>Отдых с детьми</td>
-								<td>
-									<div class="suggestions__field" contenteditable="true">
-										<p>Диснейленд</p>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td>Маленькие красивые городки</td>
-								<td>
-									<div class="suggestions__field" contenteditable="true">
-										<p>Фонтен де Воклюз</p>
-										<p>Грюйер</p>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>Событие</td>
-								<td>По умолчанию</td>
-								<td>
-									<div class="suggestions__field" contenteditable="true">
-										<p>Карнавал в Рио</p>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td>Фестиваль</td>
-								<td>
-									<div class="suggestions__field" contenteditable="true">
-										<p>Грушинский фестиваль</p>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td>Концерты/шоу/матчи</td>
-								<td>
-									<div class="suggestions__field" contenteditable="true">
-										<p>Концерт Мадонны</p>
-										<p>Концерт Red hot chili pappers</p>
-									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<div class="suggestions__buttons">
-						<button type="submit" class="btn btn-primary btn-small">Сохранить</button>
-						<button type="submit" class="btn btn-inverse btn-small">Отменить</button>
+			<!-- /.geo -->
+			<!-- BEGIN .manage-user -->
+			<div class="manage-user">
+				<h2 class="title"><i class="icon_docs"></i>Управление правами конкретной группы пользователей</h2>
+				<div class="manage-user__in  row">
+					<form class="manage-user__form span8">
+						<fieldset>
+							<legend class="h2">Название:</legend>
+							<input class="input-xlarge" type="text" value="Редактор сайта">
+						</fieldset>
+						<fieldset>
+							<legend class="h2">Права пользователя</legend>
+							<label class="checkbox">
+								<input type="checkbox" value="">
+								Управление роботами рассылок
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" value="">
+								Управление поисковыми подсказками
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" value="">
+								Управление топами (рейтингами)
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" value="">
+								Управление фотоcетом
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" value="">
+								Управление опросами
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" value="">
+								Управление стоп-словами
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" value="">
+								Управление тэгами-синонимами
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" value="">
+								Блокировка / разблокировка пользователей
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" value="">
+								Обработка жалоб
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" value="">
+								Удаление аккаунтов не административных пользователей
+							</label>
+						</fieldset>
+					</form>
+				</div>
+				<div class="buttons row">
+					<div class="span8">
+						<button type="submit" class="btn btn-small btn-primary">Сохранить</button>
+						<button type="submit" class="btn btn-small btn-inverse">Отменить</button>
 					</div>
+				</div>
 			</div>
-		</div>
-	</div>
-	<!-- /.suggestions -->
-	<!-- BEGIN .photosets -->
-	<div class="photosets">
-		<div class="row">
-			<div class="span12">
-					<h2 class="title"><i class="icon icon_photo"></i>Управление фотосетами</h2>
-					<div class="photosets__in">
-						<div class="photosets__buttons">
-							<div class="btn_addfile btn btn-small btn-primary">Добавить объект<input type="file"></div>
-						</div>
-						<ul class="photosets__list">
-							<li class="photosets__item">
-								<div class="photosets__delete">x</div>
-								<a href="#">
-									<div class="photosets__media"><img src="http://placehold.it/196x142" alt="img"></div>
-									<div class="photosets__info">Замок Нойшванштайн</div>
-								</a>
-							</li>
-							<li class="photosets__item">
-								<div class="photosets__delete">x</div>
-								<a href="#">
-									<div class="photosets__media"><img src="http://placehold.it/196x142" alt="img"></div>
-									<div class="photosets__info">Карнавал в Рио</div>
-								</a>
-							</li>
-							<li class="photosets__item">
-								<div class="photosets__delete">x</div>
-								<a href="#">
-									<div class="photosets__media"><img src="http://placehold.it/196x142" alt="img"></div>
-									<div class="photosets__info">Шарм-Эль-Шейх</div>
-								</a>
-							</li>
-							<li class="photosets__item">
-								<div class="photosets__delete">x</div>
-								<a href="#">
-									<div class="photosets__media"><img src="http://placehold.it/196x142" alt="img"></div>
-									<div class="photosets__info">Сейшелы</div>
-								</a>
-							</li>
-							<li class="photosets__item">
-								<div class="photosets__delete">x</div>
-								<a href="#">
-									<div class="photosets__media"><img src="http://placehold.it/196x142" alt="img"></div>
-									<div class="photosets__info">Замок Нойшванштайн</div>
-								</a>
-							</li>
-							<li class="photosets__item">
-								<div class="photosets__delete">x</div>
-								<a href="#">
-									<div class="photosets__media"><img src="http://placehold.it/196x142" alt="img"></div>
-									<div class="photosets__info">Карнавал в Рио</div>
-								</a>
-							</li>
-							<li class="photosets__item">
-								<div class="photosets__delete">x</div>
-								<a href="#">
-									<div class="photosets__media"><img src="http://placehold.it/196x142" alt="img"></div>
-									<div class="photosets__info">Шарм-Эль-Шейх</div>
-								</a>
-							</li>
-							<li class="photosets__item">
-								<div class="photosets__delete">x</div>
-								<a href="#">
-									<div class="photosets__media"><img src="http://placehold.it/196x142" alt="img"></div>
-									<div class="photosets__info">Сейшелы</div>
-								</a>
-							</li>
-						</ul>
-						<div class="photosets__buttons">
-							<button type="submit" class="btn pull-right btn-small btn-inverse">Отменить</button>
-							<button type="submit" class="btn pull-right btn-small btn-primary">Сохранить</button>
-						</div>
-					</div>
-			</div>
-		</div>
-	</div>
-	<!-- /.photosets -->
-	<!-- BEGIN .actions -->
-	<div class="actions">
-		<div class="row">
-			<div class="span12">
-					<h2 class="title"><i class="icon icon_docs"></i>История действий административного пользователя</h2>
-					<h2 class="title-4">Фильтр</h2>
-					<div class="actions__in">
-						<div class="actions__col">
-							<div class="field">
-								<span>Название объекта:</span>
-								<input type="text">
-							</div>
-							<div class="field">
-								<span>Тип действия:</span>
-								<select>
-									<option></option>
-									<option>Выберите тип действия</option>
-									<option>Или другого действия</option>
-									<option>Возможно даже этого</option>
-								</select>
-							</div>
-							<div class="field">
-								<span>ФИО админа:</span>
-								<select>
-									<option></option>
-									<option>Иванов Петр Васильевич</option>
-									<option>Петров Василий Иванович</option>
-									<option>Васильев Иван Петрович</option>
-								</select>
-							</div>
-						</div>
-						<div class="actions__col">
-							<div class="field field_small">
-								<span>Дата действия с:</span>
-								<input type="text">
-								<span>по:</span>
-								<input type="text">
-							</div>
-						</div>
-					</div>
-					<div class="actions__buttons">
-						<button class="btn btn-small btn-primary">Найти</button>
-					</div>
-					<div class="actions__table">
-						<table class="table table-striped">
+			<!-- /.manage-user -->
+			<!-- BEGIN .manage -->
+			<div class="manage">
+				<h2 class="title"><i class="icon_docs"></i>Управление группами прав пользователей</h2>
+				<p><button class="btn btn-small btn-success" type="button">Добавить новую группу</button></p>
+				<div class="row">
+					<div class="manage__content manage__content_group span5">
+						<table class="manage__group-table table">
 							<thead>
 								<tr>
-									<th>ФИО админа</th>
-									<th>Тип действия</th>
-									<th>Дата</th>
-									<th>Название объекта</th>
-									<th>Тип объекта</th>
+									<th>Роли:</th>
+									<th>Удалить</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Беликов Тимур</td>
-									<td>Удаление</td>
-									<td>13.04.2013</td>
-									<td>Замок «Найшванштайн»</td>
-									<td>Лучшее место</td>
+									<td><a class="manage__status" href="#">Супер-администратор</a></td>
+									<td><button class="icon_delete"></button></td>
 								</tr>
 								<tr>
-									<td>Татьяна Перекрестова</td>
-									<td>Редактирование</td>
-									<td>12.04.2013</td>
-									<td>Петродворец</td>
-									<td>Лучшее место</td>
+									<td><a class="manage__status" href="#">Редактор сайта</a></td>
+									<td><button class="icon_delete"></button></td>
 								</tr>
 								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
+									<td><a class="manage__status" href="#">Модератор сайта</a></td>
+									<td><button class="icon_delete"></button></td>
 								</tr>
 								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
+									<td><a class="manage__status" href="#">Администратор частного клуба</a></td>
+									<td><button class="icon_delete"></button></td>
+								</tr>
+								<tr>
+									<td><a class="manage__status" href="#">Модератор частного клуба</a></td>
+									<td><button class="icon_delete"></button></td>
+								</tr>
+								<tr>
+									<td><a class="manage__status" href="#">Член частного клуба</a></td>
+									<td><button class="icon_delete"></button></td>
+								</tr>
+								<tr>
+									<td><a class="manage__status" href="#">Путешественник</a></td>
+									<td><button class="icon_delete"></button></td>
+								</tr>
+								<tr>
+									<td><a class="manage__status" href="#">Гид</a></td>
+									<td><button class="icon_delete"></button></td>
+								</tr>
+								<tr>
+									<td><a class="manage__status" href="#">Коуч</a></td>
+									<td><button class="icon_delete"></button></td>
+								</tr>
+								<tr>
+									<td><a class="manage__status" href="#">Хост</a></td>
+									<td><button class="icon_delete"></button></td>
+								</tr>
+								<tr>
+									<td><a class="manage__status" href="#">Абориген</a></td>
+									<td><button class="icon_delete"></button></td>
+								</tr>
+								<tr>
+									<td><a class="manage__status" href="#">Переводчик</a></td>
+									<td><button class="icon_delete"></button></td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
+				</div>
 			</div>
+			<!-- /.manage -->
+			<!-- BEGIN .suggestions -->
+			<div class="suggestions">
+				<h2 class="title"><i class="icon_search"></i>Управление поисковыми подсказками</h2>
+				<table class="suggestions__table table table-bordered">
+					<thead>
+						<tr>
+							<th>Вид объекта</th>
+							<th>Подвид объекта</th>
+							<th>Ключевые слова/фразы</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Лучшее место</td>
+							<td>По умолчанию</td>
+							<td>
+								<div class="suggestions__field" contenteditable="true">
+									<p>Эйфелева башня</p>
+									<p>Водопад Виктория</p>
+									<p>Сейшелы</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Достопримечательность</td>
+							<td>
+								<div class="suggestions__field" contenteditable="true">
+									<p>Замок «Нойшванштайн»</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Природные красоты</td>
+							<td>
+								<div class="suggestions__field" contenteditable="true">
+									<p>Гранд Каньон</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Отдых с детьми</td>
+							<td>
+								<div class="suggestions__field" contenteditable="true">
+									<p>Диснейленд</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Маленькие красивые городки</td>
+							<td>
+								<div class="suggestions__field" contenteditable="true">
+									<p>Фонтен де Воклюз</p>
+									<p>Грюйер</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Событие</td>
+							<td>По умолчанию</td>
+							<td>
+								<div class="suggestions__field" contenteditable="true">
+									<p>Карнавал в Рио</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Фестиваль</td>
+							<td>
+								<div class="suggestions__field" contenteditable="true">
+									<p>Грушинский фестиваль</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Концерты/шоу/матчи</td>
+							<td>
+								<div class="suggestions__field" contenteditable="true">
+									<p>Концерт Мадонны</p>
+									<p>Концерт Red hot chili pappers</p>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="buttons">
+					<button type="submit" class="btn btn-small btn-primary">Сохранить</button>
+					<button type="submit" class="btn btn-small btn-inverse">Отменить</button>
+				</div>
+			</div>
+			<!-- /.suggestions -->
+			<!-- BEGIN .tags -->
+			<div class="tags">
+				<h2 class="title"><i class="icon_tick"></i>Постмодерация тэгов</h2>
+				<div class="tags__content">
+					<div class="row">
+						<div class="tags__media span4">
+							<a class="tags__pic pull-left" href="#">
+								<img src="http://placehold.it/75x75" alt="img">
+							</a>
+							<div class="tags__info">
+								<div class="tags__author"><a href="#">Иванов Иван Степанович</a></div>
+								<div class="tags__details">Маршрут: <a href="#">«Поход на урал»</a></div>
+							</div>
+						</div>
+						<div class="tags__meta span7">
+							<form>
+								<fieldset>
+									<label class="checkbox">
+										<input type="checkbox" value="" checked>
+										Английский тэг
+									</label>
+								</fieldset>
+								<fieldset>
+									<legend class="h2">Новый тэг:</legend>
+									<div class="tags__language controls controls-row">
+									  <input class="span2" type="text" value="Альпинизм">
+									  <div class="controls">
+									    <span class="help-inline">Английская версия:</span>
+									    <input class="span2" type="text" value="Alpinism">
+									    <i class="tags__icon icon_eng"></i>
+									  </div>
+									</div>
+									<label class="radio">
+										<input type="radio" name="optionsRadios" id="optionsRadios1" value="">
+										Подтвердить
+									</label>
+									<label class="radio">
+										<input type="radio" name="optionsRadios" id="optionsRadios2" value="">
+										Отклонить
+									</label>
+									<div class="controls">
+										<label class="tags__inline radio">
+											<input type="radio" name="optionsRadios" id="optionsRadios3" value="">
+											Заменить на:
+										</label>
+										<input type="text">
+									</div>
+									<div class="controls">
+										<label class="tags__inline radio">
+											<input type="radio" name="optionsRadios" id="optionsRadios4" value="">
+											Тэг-синоним:
+										</label>
+										<input type="text">
+									</div>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="buttons">
+					<button type="submit" class="btn btn-large">Выполнить и выйти</button>
+					<button type="submit" class="btn btn-large">Выполнить и загрузить следующие заявки</button>
+				</div>
+			</div>
+			<!-- /.tags -->
+			<!-- BEGIN .stop-words -->
+			<div class="stop-words">
+				<h2 class="title"><i class="icon_warning"></i>Управление стоп-словами</h2>
+				<div class="dropwords row">
+					<div class="span5">
+						<p>Пожалуйста, введите стоп-слово:</p>
+						<input type="text" value="Чур">
+						<div class="dropwords__list">
+							<ul>
+								<li class="is-active"><span>Добавить стоп-слово "чур"</span></li>
+								<li><span>Чурия</span></li>
+								<li><span>Чурпанутый</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h3 class="h3">Список стоп-слов:</h3>
+				<ul class="stop-words__list">
+					<li><button class="btn btn-mini disabled">Чурия<i class="close">&times;</i></button></li>
+					<li><button class="btn btn-mini disabled">ВВП<i class="close">&times;</i></button></li>
+					<li><button class="btn btn-mini disabled">Козел<i class="close">&times;</i></button></li>
+				</ul>
+			</div>
+			<!-- /.stop-words -->
+			<!-- BEGIN .tags-syn -->
+			<div class="tags-syn">
+				<h2 class="title"><i class="icon_dic"></i>Управление тэгами-синонимами</h2>
+				<div class="dropwords row">
+					<div class="span5">
+						<p>Найти/добавить тэг:</p>
+						<input type="text" value="Альп">
+						<div class="dropwords__list">
+							<ul>
+								<li><span>Альпинизм</span></li>
+								<li><span>Альпы</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<form class="tags-syn__form">
+					<fieldset class="row">
+						<div class="span3">
+							<legend>Русская версия:</legend>
+							<input type="text" value="Альпинизм">
+						</div>
+						<div class="span3">
+							<legend>Английская версия:</legend>
+							<input type="text" value="Alpinism">
+							<button class="close">&times;</button>
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend>Синонимы:</legend>
+						<div class="row">
+							<div class="span3">
+								<input type="text" value="Скалолазание">
+							</div>
+							<div class="span3">
+								<input type="text" value="Rock climbing">
+								<button class="close">&times;</button>
+							</div>
+						</div>
+						<div class="row">
+							<div class="span3">
+								<input type="text">
+							</div>
+							<div class="span3">
+								<input type="text">
+							</div>
+						</div>
+					</fieldset>
+				</form>
+				<div class="buttons row">
+					<div class="span6">
+						<button type="submit" class="btn btn-small btn-primary">Сохранить</button>
+						<button type="submit" class="btn btn-small btn-inverse">Отменить</button>
+					</div>
+				</div>
+			</div>
+			<!-- /.tags-syn -->
+			<!-- BEGIN .user-history -->
+			<div class="user-history">
+				<h2 class="title"><i class="icon_docs"></i>История действий административного пользователя</h2>
+				<div class="filters">
+					<h3 class="title-2">Фильтр</h3>
+					<div class="filters__in row">
+						<div class="filters__content span11">
+							<div class="row">
+								<div class="span5">
+									<form class="form-horizontal">
+										<div class="control-group">
+											<label class="control-label" for="inputName">Название объекта:</label>
+											<div class="controls">
+												<input type="text" id="inputName">
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="selectAction">Тип действия:</label>
+											<div class="controls">
+												<select name="" id="selectAction">
+													<option value=""></option>
+												</select>
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="selectAdmin">ФИО админа:</label>
+											<div class="controls">
+												<select name="" id="selectAdmin">
+													<option value=""></option>
+												</select>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="span5">
+									<form class="form-horizontal">
+										<div class="control-group">
+											<label class="filters__date inline">
+												<span>Дата действия с:</span>
+											  <input type="text" id="inline1">
+											  <button class="calendar"></button>
+											</label>
+											<label class="filters__date inline">
+											  по:
+											  <input type="text" id="inline2">
+											  <button class="calendar"></button>
+											</label>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="buttons span11">
+							<button type="submit" class="btn btn-small btn-primary">Найти</button>
+						</div>
+					</div>
+					<div class="filters__table row">
+						<div class="filters__table-in span11">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>ФИО админа</th>
+										<th>Тип действия</th>
+										<th>Дата</th>
+										<th>Название объекта</th>
+										<th>Тип объекта</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="#">Беликов Тимур</a></td>
+										<td>Удаление</td>
+										<td>13.04.2013</td>
+										<td><a href="#">Замок «Найшванштайн»</a></td>
+										<td>Лучшее место</td>
+									</tr>
+									<tr>
+										<td><a href="#">Татьяна Перекрестова</a></td>
+										<td>Редактирование</td>
+										<td>12.04.2013</td>
+										<td><a href="#">Петродворец</a></td>
+										<td>Лучшее место</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /.user-history -->
+			<!-- BEGIN .blocked -->
+			<div class="blocked">
+				<h2 class="title"><i class="icon_blocked"></i>Заблокированные</h2>
+				<div class="filters">
+					<h3 class="title-2">Фильтр</h3>
+					<div class="filters__in row">
+						<div class="filters__content span11">
+							<div class="row">
+								<div class="span5">
+									<form class="form-horizontal">
+										<div class="control-group">
+											<label class="control-label" for="inputName">ФИО:</label>
+											<div class="controls">
+												<input type="text" id="inputName">
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="inputGeo">Страна/Город:</label>
+											<div class="controls">
+												<input type="text" id="inputGeo">
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="selectGender">Пол:</label>
+											<div class="controls">
+												<select name="" id="selectGender">
+													<option>Мужской</option>
+													<option>Женский</option>
+												</select>
+											</div>
+										</div>
+										<div class="control-group filters__age">
+											<label for="">
+												<span  class="control-label">Возраст от:</span>
+												<input type="text" class="input-mini">
+											</label>
+											<label for="">
+												<span>до:</span>
+												<input type="text" class="input-mini">
+											</label>
+										</div>
+									</form>
+								</div>
+								<div class="span5">
+									<form class="form-horizontal">
+										<div class="control-group">
+											<label class="filters__date inline">
+												<span>Зарегистрирован с:</span>
+											  <input type="text" id="inline1">
+											  <button class="calendar"></button>
+											</label>
+											<label class="filters__date inline">
+											  по:
+											  <input type="text" id="inline2">
+											  <button class="calendar"></button>
+											</label>
+										</div>
+										<div class="control-group">
+											<label class="filters__date inline">
+												<span>Заблокирован с:</span>
+											  <input type="text" id="inline1">
+											  <button class="calendar"></button>
+											</label>
+											<label class="filters__date inline">
+											  по:
+											  <input type="text" id="inline2">
+											  <button class="calendar"></button>
+											</label>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="buttons span11">
+							<button type="submit" class="btn btn-small btn-primary">Найти</button>
+						</div>
+					</div>
+					<div class="results">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Пользователь</th>
+									<th>История жалоб на пользователя</th>
+									<th>История нарушений и блокировок</th>
+									<th>Действия по отношению к пользователю</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="results__object">
+											<a class="results__object-pic pull-left" href="#">
+												<img src="http://placehold.it/75x75" alt="img">
+											</a>
+											<div class="results__object-info">
+												<p><a href="#" class="results__object-name">Иван Савичев</a></p>
+												<p>Россия,  Москва</p>
+												<p>Путешественник (1015)</p>
+												<p>Гид (25)</p>
+												<p>Хост (58)</p>
+												<div class="results__history-meta">
+													<p>Зарегистрирован: 22.08.2013</p>
+													<p>&nbsp;</p>
+													<p>Записей в блогах: 15</p>
+													<p>Загружено фото: 784</p>
+													<p>Создано туробъектов: 23</p>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="results__history scroll" style="height:420px">
+											<div class="results__history-in">
+												<p class="results__history-stats"><span><a href="#">Всего жалоб: 4</a></span> <span><a href="#">Новых: 1</a></span></p>
+												<ul class="results__history-thread">
+													<li>
+														<div class="badge badge_success">New</div>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иванова</a></p>
+																<p class="results__history-userstats">12:15, 13.05.2013 жалоб: 10</p>
+																<p>Рассылка спама</p>
+															</div>
+															<div class="results__history-comment">
+																Посмотрите вот эту ссылку: <a href="#">http://trevelersnest.com/club/2345673.html</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username marked"><a href="#">Иван Симонов</a> <span>(модератор)</span></p>
+																<p class="results__history-userstats">10:45, 12.04.2013</p>
+																<p>Пользователь забанен до 15.04.13</p>
+															</div>
+															<div class="results__history-comment">
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username marked"><a href="#">Иван Симонов</a> <span>(модератор)</span></p>
+																<p class="results__history-userstats">10:45, 12.04.2013</p>
+																<p>Пользователь забанен до 15.04.13</p>
+															</div>
+															<div class="results__history-comment">
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+
+									</td>
+									<td>
+										<div class="results__history">
+											<div class="results__history-meta">
+												<p>Предупреждений: 0</p>
+												<p>Банов: 2, последний до 15.04.13</p>
+												<p>Блокировок: 0</p>
+											</div>
+											<div class="results__history-meta">
+												<p><strong>Жалобы на объекты, созданные
+												пользователем</strong></p>
+												<p><a href="#">2 новых</a>, <a href="#">4 всего</a></p>
+											</div>
+											<div class="results__history-meta">
+												<p><strong>Удалено пользовательских объектов:</strong> <a href="#">4</a></p>
+											</div>
+											<button type="submit" class="btn btn-small btn-primary">Написать сообщение</button>
+										</div>
+									</td>
+									<td>
+										<div class="results__actions">
+											<div class="results__actions-in">
+												<label class="radio">
+												  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+												  Разблокировать
+												</label>
+												<label class="radio">
+												  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+												  Удалить
+												</label>
+												<label class="checkbox">
+												  <input type="checkbox" value="">
+												  Также удалить все записи, комментарии и фото пользователя
+												</label>
+												<label class="results__date radio">
+												  <input type="radio" name="optionsRadios4" id="optionsRadios4" value="option4">
+												  <span>
+												  	C: <input type="text" class="input-mini">
+												  	<button class="calendar"></button>
+												  </span>
+												</label>
+												<label class="radio">
+												  <input type="radio" name="optionsRadios4" id="optionsRadios4" value="option4">
+												  За всё время
+												</label>
+												<label class="checkbox">
+												  <input type="checkbox" value="">
+												  Также удалить все туристические объекты пользователя (клубы)
+												</label>
+												<label class="results__date radio">
+												  <input type="radio" name="optionsRadios5" id="optionsRadios5" value="option5">
+												  <span>
+												  	C: <input type="text" class="input-mini">
+												  	<button class="calendar"></button>
+												  </span>
+												</label>
+												<label class="radio">
+												  <input type="radio" name="optionsRadios5" id="optionsRadios5" value="option5">
+												  За всё время
+												</label>
+											</div>
+											<div class="results__actions-message">
+												<h2>Написать пользователю:</h2>
+												<textarea rows="4"></textarea>
+												<button type="submit" class="btn btn-small btn-primary pull-right">Применить действие</button>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- /.blocked -->
+			<!-- BEGIN .blocked -->
+			<div class="blocked">
+				<h2 class="title"><i class="icon_blocked-obj"></i>Список заблокированных объектов</h2>
+				<div class="filters">
+					<div class="filters__in row">
+						<div class="filters__content span11">
+							<div class="row">
+								<div class="span5">
+									<form class="form-horizontal">
+										<div class="control-group">
+											<label class="control-label" for="inputName">ФИО админа:</label>
+											<div class="controls">
+												<input type="text" id="inputName">
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="selectLocation">Вид:</label>
+											<div class="controls">
+												<select name="" id="selectLocation">
+													<option>Лучшее место</option>
+												</select>
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="selectLocation2">Подвид:</label>
+											<div class="controls">
+												<select name="" id="selectLocation2">
+													<option>Достопримечательность</option>
+												</select>
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="inputGeos">Гео:</label>
+											<div class="controls">
+												<input type="text" id="inputGeos">
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="span5">
+									<form class="form-horizontal">
+										<div class="control-group">
+											<label class="filters__date inline">
+												<span>Создан с:</span>
+											  <input type="text" id="inline1">
+											  <button class="calendar"></button>
+											</label>
+											<label class="filters__date inline">
+											  по:
+											  <input type="text" id="inline2">
+											  <button class="calendar"></button>
+											</label>
+										</div>
+										<div class="control-group">
+											<label class="filters__date inline">
+												<span>Заблокирован с:</span>
+											  <input type="text" id="inline1">
+											  <button class="calendar"></button>
+											</label>
+											<label class="filters__date inline">
+											  по:
+											  <input type="text" id="inline2">
+											  <button class="calendar"></button>
+											</label>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="buttons span11">
+							<button type="submit" class="btn btn-small btn-primary">Найти</button>
+						</div>
+					</div>
+					<div class="results">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Объект блокировки</th>
+									<th>История жалоб</th>
+									<th>Автор (админ клуба)</th>
+									<th class="colspan2" colspan="2">Действия по отношению к заблокированному объекту</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="results__object">
+											<a class="results__object-pic pull-left" href="#">
+												<img src="http://placehold.it/75x75" alt="img">
+											</a>
+											<div class="results__object-info">
+												<p><a href="#" class="results__object-name">«Агритуризм»</a></p>
+												<p>Клуб по интересам</p>
+												<p><strong>Рейтинг (239)</strong></p>
+												<div class="results__history-meta">
+													<p>Создан: 22.08.2013</p>
+													<p>Фото: 15</p>
+													<p>Записей в блогах: 24</p>
+													<p>Прикреплено туробъектов: 3</p>
+													<p>Членов клуба: 5</p>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="results__history scroll" style="height:420px">
+											<div class="results__history-in">
+												<p class="results__history-stats"><span><a href="#">Всего жалоб: 4</a></span> <span><a href="#">Новых: 1</a></span></p>
+												<ul class="results__history-thread">
+													<li>
+														<div class="badge badge_success">New</div>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иванова</a></p>
+																<p class="results__history-userstats">12:15, 13.05.2013 жалоб: 10</p>
+																<p>Рассылка спама</p>
+															</div>
+															<div class="results__history-comment">
+																Посмотрите вот эту ссылку: <a href="#">http://trevelersnest.com/club/2345673.html</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username marked"><a href="#">Иван Симонов</a> <span>(модератор)</span></p>
+																<p class="results__history-userstats">10:45, 12.04.2013</p>
+																<p>Пользователь забанен до 15.04.13</p>
+															</div>
+															<div class="results__history-comment">
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username marked"><a href="#">Иван Симонов</a> <span>(модератор)</span></p>
+																<p class="results__history-userstats">10:45, 12.04.2013</p>
+																<p>Пользователь забанен до 15.04.13</p>
+															</div>
+															<div class="results__history-comment">
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+												</ul>
+
+
+											</div>
+										</div>
+
+									</td>
+									<td>
+										<div class="results__history">
+											<div class="results__history-meta">
+												<h3 class="h3">Клуб создан:</h3>
+												<div class="results__object">
+													<a class="results__object-pic pull-left" href="#">
+														<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+													</a>
+													<div class="results__object-info">
+														<p><a href="#" class="results__object-name">Марина Беликова</a></p>
+														<p>Россия,  Москва</p>
+														<p>Зарегистрирован: 22.08.2013</p>
+													</div>
+												</div>
+											</div>
+											<div class="results__history-meta">
+												<p>Предупреждений: 1</p>
+												<p>Банов: 2, последний до 14.05.13</p>
+												<p>Блокировок: 0</p>
+											</div>
+											<div class="results__history-meta">
+												<p><strong>Жалобы на пользователя</strong></p>
+												<p><a href="#">3 новых</a>, <a href="#">5 всего</a></p>
+											</div>
+											<div class="results__history-meta">
+												<p><strong>Удалено пользовательских объектов:</strong> <a href="#">4</a></p>
+											</div>
+											<button type="submit" class="btn btn-small btn-primary">Написать сообщение</button>
+										</div>
+									</td>
+									<td>
+										<div class="results__actions">
+											<div class="results__actions-in">
+												<label class="radio">
+												  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+												  Разблокировать
+												</label>
+												<label class="radio">
+												  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+												  Удалить
+												</label>
+												<label class="checkbox">
+												  <input type="checkbox" value="">
+												  Также удалить все записи, комментарии и фото пользователя
+												</label>
+												<label class="results__date radio">
+												  <input type="radio" name="optionsRadios4" id="optionsRadios4" value="option4">
+												  <span>
+												  	C: <input type="text" class="input-mini">
+												  	<button class="calendar"></button>
+												  </span>
+												</label>
+												<label class="radio">
+												  <input type="radio" name="optionsRadios4" id="optionsRadios4" value="option4">
+												  За всё время
+												</label>
+												<label class="checkbox">
+												  <input type="checkbox" value="">
+												  Также удалить все туристические объекты пользователя (клубы)
+												</label>
+												<label class="results__date radio">
+												  <input type="radio" name="optionsRadios5" id="optionsRadios5" value="option5">
+												  <span>
+												  	C: <input type="text" class="input-mini">
+												  	<button class="calendar"></button>
+												  </span>
+												</label>
+												<label class="radio">
+												  <input type="radio" name="optionsRadios5" id="optionsRadios5" value="option5">
+												  За всё время
+												</label>
+											</div>
+											<div class="results__actions-message">
+												<h2>Написать пользователю:</h2>
+												<textarea rows="4"></textarea>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="results__actions">
+											<div class="results__actions-in">
+												<label class="radio">
+												  <input type="radio" name="optionsRadios" id="optionsRadios7" value="option7">
+												  Разблокировать
+												</label>
+												<label class="radio">
+												  <input type="radio" name="optionsRadios" id="optionsRadios8" value="option8">
+												  Удалить
+												</label>
+											</div>
+											<button type="submit" class="btn btn-small btn-primary pull-right">Применить действие</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="results">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Объект блокировки</th>
+									<th>История жалоб</th>
+									<th>Автор (админ клуба)</th>
+									<th class="colspan2" colspan="2">Действия по отношению к заблокированному объекту</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="results__object">
+											<a class="results__object-pic pull-left" href="#">
+												<img src="http://placehold.it/75x75" alt="img">
+											</a>
+											<div class="results__object-info">
+												<p><a href="#" class="results__object-name">«Агритуризм»</a></p>
+												<p>Клуб по интересам</p>
+												<p><strong>Рейтинг (239)</strong></p>
+												<div class="results__history-meta">
+													<p>Создан: 22.08.2013</p>
+													<p>Фото: 15</p>
+													<p>Записей в блогах: 24</p>
+													<p>Прикреплено туробъектов: 3</p>
+													<p>Членов клуба: 5</p>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="results__history scroll" style="height:420px">
+											<div class="results__history-in">
+												<p class="results__history-stats"><span><a href="#">Всего жалоб: 4</a></span> <span><a href="#">Новых: 1</a></span></p>
+												<ul class="results__history-thread">
+													<li>
+														<div class="badge badge_success">New</div>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иванова</a></p>
+																<p class="results__history-userstats">12:15, 13.05.2013 жалоб: 10</p>
+																<p>Рассылка спама</p>
+															</div>
+															<div class="results__history-comment">
+																Посмотрите вот эту ссылку: <a href="#">http://trevelersnest.com/club/2345673.html</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username marked"><a href="#">Иван Симонов</a> <span>(модератор)</span></p>
+																<p class="results__history-userstats">10:45, 12.04.2013</p>
+																<p>Пользователь забанен до 15.04.13</p>
+															</div>
+															<div class="results__history-comment">
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username marked"><a href="#">Иван Симонов</a> <span>(модератор)</span></p>
+																<p class="results__history-userstats">10:45, 12.04.2013</p>
+																<p>Пользователь забанен до 15.04.13</p>
+															</div>
+															<div class="results__history-comment">
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+												</ul>
+
+
+											</div>
+										</div>
+
+									</td>
+									<td>
+										<div class="results__history">
+											<div class="results__history-meta">
+												<h3 class="h3">Клуб создан:</h3>
+												<div class="results__object">
+													<a class="results__object-pic pull-left" href="#">
+														<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+													</a>
+													<div class="results__object-info">
+														<p><a href="#" class="results__object-name">Марина Беликова</a></p>
+														<p>Россия,  Москва</p>
+														<p>Зарегистрирован: 22.08.2013</p>
+													</div>
+												</div>
+											</div>
+											<div class="results__history-meta">
+												<p>Предупреждений: 1</p>
+												<p>Банов: 2, последний до 14.05.13</p>
+												<p>Блокировок: 0</p>
+											</div>
+											<div class="results__history-meta">
+												<p><strong>Жалобы на пользователя</strong></p>
+												<p><a href="#">3 новых</a>, <a href="#">5 всего</a></p>
+											</div>
+											<div class="results__history-meta">
+												<p><strong>Удалено пользовательских объектов:</strong> <a href="#">4</a></p>
+											</div>
+											<button type="submit" class="btn btn-small btn-primary">Написать сообщение</button>
+										</div>
+									</td>
+									<td>
+										<div class="results__actions">
+											<div class="results__actions-in">
+												<label class="radio">
+												  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+												  Разблокировать
+												</label>
+												<label class="radio">
+												  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+												  Удалить
+												</label>
+												<label class="checkbox">
+												  <input type="checkbox" value="">
+												  Также удалить все записи, комментарии и фото пользователя
+												</label>
+												<label class="results__date radio">
+												  <input type="radio" name="optionsRadios4" id="optionsRadios4" value="option4">
+												  <span>
+												  	C: <input type="text" class="input-mini">
+												  	<button class="calendar"></button>
+												  </span>
+												</label>
+												<label class="radio">
+												  <input type="radio" name="optionsRadios4" id="optionsRadios4" value="option4">
+												  За всё время
+												</label>
+												<label class="checkbox">
+												  <input type="checkbox" value="">
+												  Также удалить все туристические объекты пользователя (клубы)
+												</label>
+												<label class="results__date radio">
+												  <input type="radio" name="optionsRadios5" id="optionsRadios5" value="option5">
+												  <span>
+												  	C: <input type="text" class="input-mini">
+												  	<button class="calendar"></button>
+												  </span>
+												</label>
+												<label class="radio">
+												  <input type="radio" name="optionsRadios5" id="optionsRadios5" value="option5">
+												  За всё время
+												</label>
+											</div>
+											<div class="results__actions-message">
+												<h2>Написать пользователю:</h2>
+												<textarea rows="4"></textarea>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="results__actions">
+											<div class="results__actions-in">
+												<label class="radio">
+												  <input type="radio" name="optionsRadios" id="optionsRadios7" value="option7">
+												  Разблокировать
+												</label>
+												<label class="radio">
+												  <input type="radio" name="optionsRadios" id="optionsRadios8" value="option8">
+												  Удалить
+												</label>
+											</div>
+											<button type="submit" class="btn btn-small btn-primary pull-right">Применить действие</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- /.blocked -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		</div>
 	</div>
-	<!-- /.actions -->
-</div>
-<!-- /.page -->
-
+	<!-- /.page -->
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
