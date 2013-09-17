@@ -2122,6 +2122,7 @@ ul { list-style: none; }
 .request .request__toolbar .radio input[type="radio"] { margin-top: 2px; }
 .request .request__toolbar .radio.radio_accept { color: #514a9d; }
 .request .request__toolbar .radio.radio_alert { color: #ae1212; }
+.request .request__type { color: #7872bb; }
 
 .photosets .photosets__in { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 25px 17px 20px; }
 .photosets .photosets__list { margin-bottom: 0; }
