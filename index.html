@@ -117,7 +117,7 @@
 			<div class="vote row">
 				<div class="span12">
 					<h2 class="title"><i class="icon_notebook"></i>История завершенных опросов</h2>
-					<ul class="vote__items row">
+					<ul class="list row">
 						<li class="span3">
 							<div class="vote__meta">
 								<p>Завершен: 13.05.2013</p>
@@ -257,9 +257,9 @@
 			<div class="vote row">
 				<div class="span9">
 					<h2 class="title"><i class="icon_notebook"></i>Управление опросами</h2>
-					<div class="vote__toolbar row">
-						<div class="vote__type span4">
-							<h3 class="vote__type-title h3">Тип опроса:</h3>
+					<div class="toolbar row">
+						<div class="toolbar__type span4">
+							<h3 class="toolbar__title h3">Тип опроса:</h3>
 							<select>
 								<option>Все</option>
 								<option>Главная страница путешественника</option>
@@ -280,7 +280,7 @@
 						</div>
 					</div>
 					<h3 class="title-2">Главная путешественника</h3>
-					<ul class="vote__items row">
+					<ul class="list row">
 						<li class="span3">
 							<h3 class="h3">Новый опрос:</h3>
 							<div class="vote-result">
@@ -337,7 +337,7 @@
 						</li>
 					</ul>
 					<h3 class="title-2">Лучшие места</h3>
-					<ul class="vote__items row">
+					<ul class="list row">
 						<li class="span3">
 							<h3 class="h3">Новый опрос:</h3>
 							<div class="vote-result">
@@ -1861,10 +1861,10 @@
 						<table class="table table_mod">
 							<thead>
 								<tr>
-									<th></th>
-									<th></th>
-									<th></th>
-									<th class="colspan2" colspan="2"></th>
+									<th>Объект блокировки</th>
+									<th>История жалоб</th>
+									<th>Автор (админ клуба)</th>
+									<th class="colspan2" colspan="2">Действия по отношению к заблокированному объекту</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -2467,10 +2467,11 @@
 					<table class="table table_mod">
 						<thead>
 							<tr>
-								<th></th>
-								<th></th>
-								<th></th>
-								<th></th>
+								<th>Объект жалобы</th>
+								<th>История жалоб (дата инициирования/причина/комментарий)</th>
+								<th>Пользователь (потенциальный нарушитель)</th>
+								<th>Действия по отношению к пользователю</th>
+								<th>Действия по отношению к объекту</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -2740,11 +2741,11 @@
 					<table class="table table_mod">
 						<thead>
 							<tr>
-								<th></th>
-								<th></th>
-								<th></th>
-								<th></th>
-								<th></th>
+								<th>Объект жалобы</th>
+								<th>История жалоб (дата инициирования/причина/комментарий)</th>
+								<th>Пользователь (потенциальный нарушитель)</th>
+								<th>Действия по отношению к пользователю</th>
+								<th>Действия по отношению к объекту</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -2909,11 +2910,11 @@
 					<table class="table table_mod">
 						<thead>
 							<tr>
-								<th></th>
-								<th></th>
-								<th></th>
-								<th></th>
-								<th></th>
+								<th>Объект жалобы</th>
+								<th>История жалоб (дата инициирования/причина/комментарий)</th>
+								<th>Пользователь (потенциальный нарушитель)</th>
+								<th>Действия по отношению к пользователю</th>
+								<th>Действия по отношению к объекту</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -3073,7 +3074,64 @@
 				</div>
 			</div>
 			<!-- /.complaints -->
-
+			<!-- BEGIN .top -->
+			<div class="top">
+				<h2 class="title"><i class="icon_top"></i>Управление топами</h2>
+				<div class="toolbar row">
+					<div class="toolbar__type span4">
+						<h3 class="toolbar__title h3">Тип рейтинга:</h3>
+						<select>
+							<option>Все</option>
+						</select>
+					</div>
+				</div>
+				<ul class="list row">
+					<li class="span3">
+						<div class="list__title"><span>Топ-20</span> <span class="list__input-value">Мировых ближайших мастер-классов</span><input type="text" class="list__input" value="Мировых ближайших мастер-классов" disabled><i class="list_edit icon_edit"></i></div>
+						<div class="list__in">
+							<ul class="list__content">
+								<li>
+									<div class="list__position">
+										100
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Другая жизнь»</a></div>
+										<input type="text" class="list__info-input" value="«Другая жизнь»">
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="span3 is-editable">
+						<div class="list__title"><span>Топ-20</span> <span class="list__input-value">Мировых ближайших мастер-классов</span> <input type="text" class="list__input" value="Мировых ближайших мастер-классов"><i class="list_edit icon_edit"></i></div>
+						<div class="list__in">
+							<ul class="list__content">
+								<li>
+									<div class="list__position">
+										100
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Другая жизнь»</a></div>
+										<input type="text" class="list__info-input" value="«Другая жизнь»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class="is-active"><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class=""><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item">
+													<input type="text" value="http://agroturism.ru/929737892">
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- /.top -->
 
 
 

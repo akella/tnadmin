@@ -47,4 +47,26 @@ $(document).click(function() {
 	$('.js-select').removeClass('is-open');	
 });
 
+//tabs
+$('.sitemenu__in ul li a').click(function() {
+	if (!$(this).hasClass('is-active')) {
+		$(this).parent().parent().find('a').removeClass('is-active');
+		$(this).addClass('is-active');
+	};
+})
+$('.tabs__nav li').click(function() {
+	if (!$(this).hasClass('is-active')) {
+		$(this).parent().find('li').removeClass('is-active');
+		$(this).addClass('is-active');
+		return false;
+	};
+})
+
+// sidebar list drop
+$('.is-drop-up').click(function() {
+	$(this).toggleClass('is-drop-down');
+	$(this).next().slideToggle();
+})
+
+
 });

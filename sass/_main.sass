@@ -55,7 +55,7 @@ $bc: #e5e5e5
 		display: inline-block
 		vertical-align: middle
 		margin-right: 10px
-		@each $s in notebook, dic, net, pics, search, tick, warning, docs, blocked, blocked-obj, complaints
+		@each $s in notebook, dic, net, pics, search, tick, warning, docs, blocked, blocked-obj, complaints, top
 			&.icon_#{nth($s, 1)}
 				+s(h-#{nth($s, 1)})
 .title-2
@@ -137,18 +137,18 @@ $bc: #e5e5e5
 		ul
 			margin-left: 0
 
+.toolbar
+	margin-bottom: 90px
+.toolbar__type
+	select
+		margin-bottom: 0
+.toolbar__title
+	display: inline-block
+	vertical-align: middle
+	line-height: 0
+	margin: 0 10px 0 0
 //vote
 .vote
-	.vote__toolbar
-		margin-bottom: 90px
-	.vote__type
-		select
-			margin-bottom: 0
-	.vote__type-title
-		display: inline-block
-		vertical-align: middle
-		line-height: 0
-		margin: 0 10px 0 0
 	.vote__history
 		text-align: right
 		color: #343434
@@ -161,14 +161,6 @@ $bc: #e5e5e5
 			text-decoration: underline
 			&:hover
 				text-decoration: none
-	.vote__items
-		font-size: 0
-		[class*="span"]
-			display: inline-block
-			vertical-align: top
-			float: none
-			font-size: 0
-			margin-bottom: 40px
 	.vote__meta
 		font-size: 12px
 		margin-bottom: 17px
@@ -434,7 +426,6 @@ $bc: #e5e5e5
 
 .manage-user
 	@extend %margin
-	.manage-user__in
 	.manage-user__form
 		@extend %block_grey
 		padding: 30px 30px 150px
@@ -532,7 +523,6 @@ $bc: #e5e5e5
 		@extend %block_grey
 		@extend %clr
 		padding: 20px
-	.tags__media
 	.tags__pic
 		width: 75px
 		margin-right: 20px
@@ -715,9 +705,11 @@ $bc: #e5e5e5
 		&.table_mod
 			th
 				padding: 0
+				font-size: 0
+				height: 0
+				line-height: 0
 			td
 				border: 0
-	.results__object
 	.results__object-pic
 		width: 75px
 		margin: 0 10px 10px 0
@@ -762,7 +754,6 @@ $bc: #e5e5e5
 				+text-shadow(0 0 0)
 				&.badge_success
 					color: #56a205
-	.results__history-content
 	.results__history-userpic
 		width: 50px
 		height: 50px
@@ -807,7 +798,6 @@ $bc: #e5e5e5
 			margin-bottom: 0
 		.h3
 			font-size: 12px
-	.results__actions
 	.results__actions-in
 		padding: 10px
 		background: #fafafa
@@ -845,8 +835,207 @@ $bc: #e5e5e5
 	.list-types
 		margin-bottom: 30px
 
+//top
+.top
+	@extend %margin
 
+.list
+	font-size: 0
+	li[class*="span"]
+		display: inline-block
+		vertical-align: top
+		float: none
+		font-size: 0
+		margin-bottom: 40px
+		&.is-editable
+			.list__title
+				padding-right: 0
+			.list__input-value
+				display: none
+			.list__input,
+			.list__info-input
+				margin: 0
+				font-size: 100%
+				vertical-align: middle
+				*overflow: visible
+				line-height: normal
+				display: block
+				height: 30px
+				padding: 4px 6px
+				margin-top: 10px
+				margin-bottom: 0
+				font-size: 12px
+				line-height: 20px
+				font-weight: normal
+				color: #555555
+				+box-sizing(border-box)
+				width: 100%
+				+border-radius(4px)
+				vertical-align: middle
+				background-color: #ffffff
+				border: 1px solid #cccccc
+				-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+				-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+				-webkit-transition: border linear .2s, box-shadow linear .2s
+				-moz-transition: border linear .2s, box-shadow linear .2s
+				-o-transition: border linear .2s, box-shadow linear .2s
+				transition: border linear .2s, box-shadow linear .2s
+				&:focus
+					border-color: rgba(82, 168, 236, 0.8)
+					outline: 0
+					outline: thin dotted \9
+					-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)
+					-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)
+					box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6)
+			.list__info-input
+				color: #61557e
+				margin-top: 0
+			.list__info-value
+				display: none
+			.list__content
+				li
+					margin-bottom: 0
+			.list__position
+				line-height: 30px
+				height: 30px
+			//tabs 
+			.tabs
+				display: block
+				margin-top: 5px
+				.tabs__nav
+					@extend %clr
+					margin: 0
+					// overflow: hidden
+					li
+						position: relative
+						float: left
+						height: 21px
+						margin-right: -4px
+						list-style-type: none
+						overflow: hidden
+						z-index: 20
+						padding: 0
+						&:first-child
+							span
+								+si(tabs_left)
+							&.is-active
+								span
+									font-weight: bold
+									+si(tabs_left)
+						&.is-active
+							overflow: visible
+							z-index: 25
+							span
+								font-weight: bold
+								+si(tabs_left-a)
+							i
+								+s(tabs_right-a)
+						& + li
+							z-index: 19
+						& + li + li
+							z-index: 18
+						& + li + li + li
+							z-index: 17
+						& + li + li + li +li
+							z-index: 16
+						& + li + li + li +li + li
+							z-index: 15
+						& + li + li + li +li + li + li
+							z-index: 14
+						& + li + li + li +li + li + li + li
+							z-index: 13
+					a
+						position: relative
+						float: left
+						height: 24px
+						line-height: 24px
+						font-weight: normal
+						color: #645781
+						font-size: 12px
+						text-decoration: none
+					span, i
+						float: left
+					span
+						position: relative
+						padding-left: 10px
+						+si(tabs_left-a)
+					i
+						+s(tabs_right-a)
+						z-index: 5
+						margin-left: -10px
+			.tabs__content
+				@extend %block
+				border: 1px solid #adadad
+				box-shadow: none
+				border-radius: 3px 3px 3px 3px
+				padding: 4px
+				input
+					width: 100%
+					+box-sizing(border-box)
+					margin: 0
+					font-size: 11px
+					+border-radius(3px)
+					&:focus
+						box-shadow: none
 
+	.list__in
+		@extend %block
+		font-size: 12px
+		margin-bottom: 0
+	.list_edit
+		position: absolute 
+		top: -8px
+		right: 0
+		display: inline-block
+		vertical-align: middle
+		&:hover
+			cursor: pointer
+		&.icon_edit
+			+s(edit)
+	.list__title
+		font-size: 14px
+		color: #56a205
+		font-weight: bold
+		position: relative
+		padding-right: 45px
+		margin-bottom: 10px
+	.list__input
+		display: none
+		border: 0
+		box-shadow: none
+		width: auto
+		padding: 0
+		margin: 0
+		font-size: 14px
+		height: auto
+		line-height: 1.4
+		font-weight: bold
+		vertical-align: top
+		color: #56a205
+		&[disabled]
+			cursor: default
+			background-color: inherit
+	.list__content
+		margin: 0
+		padding: 0
+		li
+			padding-left: 40px
+			position: relative
+			line-height: 1.4
+			margin-bottom: 10px
+	.list__position
+		position: absolute
+		top: 0
+		left: 0
+		width: 35px
+		text-align: right
+	.list__info-value
+		color: #61557e
+	.list__info-input
+		display: none
+	.tabs
+		display: none 
 
 
 
