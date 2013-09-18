@@ -55,7 +55,7 @@ $bc: #e5e5e5
 		display: inline-block
 		vertical-align: middle
 		margin-right: 10px
-		@each $s in notebook, dic, net, pics, search, tick, warning, docs, blocked, blocked-obj
+		@each $s in notebook, dic, net, pics, search, tick, warning, docs, blocked, blocked-obj, complaints
 			&.icon_#{nth($s, 1)}
 				+s(h-#{nth($s, 1)})
 .title-2
@@ -683,9 +683,19 @@ $bc: #e5e5e5
 	@extend %block
 	padding: 0
 	min-width: 1099px
-	-ms-overflow-x: scroll
-	overflow-x: scroll
-	table
+	-ms-overflow-x: auto
+	overflow-x: auto
+	label
+		font-size: 12px
+		color: #717171
+		span
+			input
+				margin-bottom: 0
+				margin-left: 5px
+	.radio input[type="radio"],
+	.checkbox input[type="checkbox"]
+		margin-top: 3px
+	.table
 		margin-bottom: 0
 		table-layout: fixed
 		th
@@ -693,15 +703,20 @@ $bc: #e5e5e5
 			font-weight: bold
 			vertical-align: top
 			text-align: center
-			border-bottom: 1px solid #cbcbcb
 			padding: 15px 8px
-		td
 			border: 0
+		td
+			border-top: 1px solid #cbcbcb
 		th,td
 			width: 274px
 			+box-sizing(border-box)
 			&.colspan2
 				width: 548px
+		&.table_mod
+			th
+				padding: 0
+			td
+				border: 0
 	.results__object
 	.results__object-pic
 		width: 75px
@@ -758,7 +773,16 @@ $bc: #e5e5e5
 			margin-bottom: 3px
 	.results__history-comment
 		line-height: 1.2
+		margin-top: 10px
 		clear: both
+		.stop-word
+			color: #ff0000
+	.results__history-more
+		margin-top: 10px
+		a
+			text-decoration: underline
+			&:hover
+				text-decoration: none
 	.results__history-userstats
 		color: #616161
 	.results__history-username
@@ -776,6 +800,7 @@ $bc: #e5e5e5
 			display: block
 	.results__history-meta
 		clear: both
+		margin-top: 10px
 		margin-bottom: 15px
 		p
 			line-height: 1.4
@@ -788,16 +813,16 @@ $bc: #e5e5e5
 		background: #fafafa
 		+border-radius(4px)
 		margin-bottom: 15px
-		label
-			font-size: 12px
-			color: #717171
-			span
-				input
-					margin-bottom: 0
-					margin-left: 5px
-		.radio input[type="radio"],
-		.checkbox input[type="checkbox"]
-			margin-top: 3px
+		// label
+		// 	font-size: 12px
+		// 	color: #717171
+		// 	span
+		// 		input
+		// 			margin-bottom: 0
+		// 			margin-left: 5px
+		// .radio input[type="radio"],
+		// .checkbox input[type="checkbox"]
+		// 	margin-top: 3px
 	.results__date
 		&.radio input[type="radio"],
 		&.checkbox input[type="checkbox"]
@@ -814,7 +839,11 @@ $bc: #e5e5e5
 			width: 100%
 			resize: none
 
-
+//complaints
+.complaints
+	@extend %margin
+	.list-types
+		margin-bottom: 30px
 
 
 
