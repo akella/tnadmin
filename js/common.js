@@ -21,8 +21,8 @@ function select() {
 	var el_title = el.find('span');
 	var item = el.find('li');
 	var list = el.find('ul');
-	el_title.click(function() {	
-		if ($(this).parent().hasClass('is-open')) {
+	el_title.click(function() {
+        if ($(this).parent().hasClass('is-open')) {
 			$(this).parent().removeClass('is-open');
 		}
 		else {
@@ -37,14 +37,14 @@ function select() {
 		el.removeClass('is-open');
 	});
 	el_title.click(function(event){
-	  event.stopPropagation();
+		event.stopPropagation();
 	});
 };
 select();
 
 //click document
 $(document).click(function() {
-	$('.js-select').removeClass('is-open');	
+	$('.js-select').removeClass('is-open');
 });
 
 //tabs
