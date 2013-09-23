@@ -55,7 +55,7 @@ $bc: #e5e5e5
 		display: inline-block
 		vertical-align: middle
 		margin-right: 10px
-		@each $s in notebook, dic, net, pics, search, tick, warning, docs, blocked, blocked-obj, complaints, top
+		@each $s in notebook, dic, net, pics, search, tick, warning, docs, blocked, blocked-obj, complaints, top, sending
 			&.icon_#{nth($s, 1)}
 				+s(h-#{nth($s, 1)})
 .title-2
@@ -1036,20 +1036,20 @@ $bc: #e5e5e5
 							// 	+si(tabs_left-a)
 							// i
 							// 	+s(tabs_right-a)
-						&.tabs__nav_object-btn.is-active
-							overflow: visible
-							z-index: 25
-							span
-								font-weight: bold
-							a
-								color: #000
-							a
-								color: #fff
-							span
-								font-weight: bold
-								+si(tabs_left-a)
-							i
-								+s(tabs_right-a)
+						// &.tabs__nav_object-btn.is-active
+						// 	overflow: visible
+						// 	z-index: 25
+						// 	span
+						// 		font-weight: bold
+						// 	a
+						// 		color: #000
+						// 	a
+						// 		color: #fff
+						// 	span
+						// 		font-weight: bold
+						// 		+si(tabs_left-a)
+						// 	i
+						// 		+s(tabs_right-a)
 						& + li
 							z-index: 19
 						& + li + li
@@ -1133,13 +1133,16 @@ $bc: #e5e5e5
 					top: 4px
 					right: 6px
 			.tabs__object_btn
-				background-color: #8a79b4
 				text-align: center
 				.object-btn
-					background: none
+					background-color: #8a79b4
 					border: 0
+					padding: 0 10px
+					border-radius: 5px
 					color: #fff
 					font-size: 12px
+					height: 22px
+					line-height: 22px
 			.tabs__item
 				padding: 4px
 				position: relative
@@ -1250,5 +1253,214 @@ $bc: #e5e5e5
 
 .is-hidden
 	display: none
+
+.sending
+	@extend %margin
+	.checkbox
+		font-size: 12px 
+	//tabs
+	.tabs
+		display: block
+		margin-top: 5px
+		.tabs__nav
+			@extend %clr
+			margin: 0 0 0 20px 
+			// overflow: hidden
+			li
+				position: relative
+				float: left
+				height: 21px
+				margin-right: -4px
+				list-style-type: none
+				overflow: hidden
+				z-index: 20
+				padding: 0
+				&:first-child
+					span
+						+si(tabs_left-g)
+					i
+						+s(tabs_right-a1-g)
+					&.is-active
+						span
+							+si(tabs_left-g)
+						a
+							color: #000
+						i
+							+s(tabs_right-a1-g)
+				&.is-active
+					overflow: visible
+					z-index: 25
+					span
+						font-weight: normal
+					a
+						color: #000
+					// a
+					// 	color: #fff
+					// span
+					// 	font-weight: bold
+					// 	+si(tabs_left-a)
+					// i
+					// 	+s(tabs_right-a)
+				// &.tabs__nav_object-btn.is-active
+				// 	overflow: visible
+				// 	z-index: 25
+				// 	span
+				// 		font-weight: bold
+				// 	a
+				// 		color: #000
+				// 	a
+				// 		color: #fff
+				// 	span
+				// 		font-weight: bold
+				// 		+si(tabs_left-a)
+				// 	i
+				// 		+s(tabs_right-a)
+				& + li
+					z-index: 19
+				& + li + li
+					z-index: 18
+				& + li + li + li
+					z-index: 17
+				& + li + li + li +li
+					z-index: 16
+				& + li + li + li +li + li
+					z-index: 15
+				& + li + li + li +li + li + li
+					z-index: 14
+				& + li + li + li +li + li + li + li
+					z-index: 13
+			a
+				position: relative
+				float: left
+				height: 24px
+				line-height: 24px
+				font-weight: normal
+				color: #5d5d5d
+				font-size: 12px
+				text-decoration: none
+			span, i
+				float: left
+			span
+				position: relative
+				padding-left: 13px
+				+si(tabs_left-a1-g)
+			i
+				+s(tabs_right-a1-g)
+				z-index: 5
+				margin-left: -10px
+	.tabs__content
+		@extend %block
+		background-color: #e4e4e4
+		border: 1px solid #a1a1a1
+		-webkit-box-shadow: none
+		box-shadow: none
+		border-radius: 3px 3px 3px 3px
+		padding: 10px 25px
+		+text-shadow(0 1px 0 rgba(255,255,255,.75))
+	.sending__news
+		margin: 0
+		line-height: 1.4
+		font-size: 12px
+		li
+			margin-bottom: 15px
+	.sending__add
+		display: inline-block
+		+s(plus_btn)
+		background-color: none
+		border: 0
+		margin-bottom: 5px
+	.sending__table
+		margin-bottom: 0px
+		table-layout: fixed
+		td
+			border: 0
+			padding: 0 0 0 15px
+			width: 350px
+			form
+				margin-bottom: 0
+			&.sending__datetime
+				width: 175px
+				padding: 0
+		.filters__time
+			label
+				display: inline-block
+				vertical-align: top
+				font-size: 12px
+			.input-mini
+				width: 26px
+			input
+				font-size: 12px
+				text-align: center
+		.control-group
+			margin-bottom: 5px
+		.control-label
+			width: 45px
+			font-size: 12px
+			margin-right: 5px
+		.controls
+			margin-left: 50px
+			input
+				width: 77px
+				font-size: 12px
+				text-align: center
+		.form-textarea
+			.control-label
+				width: 100px
+				margin: 0
+				line-height: 1
+			.controls
+				margin-left: 110px
+			textarea
+				width: 100%
+				+box-sizing(border-box)
+				resize: none
+		.sending__position
+			padding-left: 38px
+		.sending__position-in
+			width: 30px
+			height: 35px
+			position: relative
+			button
+				position: absolute
+				background-color: none
+				border: 0
+			.sending__position-close
+				+s(iclose)
+				left: 0
+				top: 50%
+				margin-top: -5px
+			.sending__position-up
+				top: 0
+				right: 0
+				+s(iup)
+			.sending__position-down
+				right: 0
+				bottom: 0
+				+s(idown)
+
+.b-pagination
+	text-align: right
+	li
+		display: inline-block
+		font-size: 16px
+		color: #7872bb
+		margin-left: 5px
+		&.is-active
+			a
+				text-decoration: underline
+				&:hover
+					text-decoration: none
+		a
+			color: inherit
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+
+
+
+
+
+
+
 
 
