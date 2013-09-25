@@ -3895,6 +3895,12 @@
 															<span>:</span>
 															<input type="text" class="input-mini" value="45">
 														</label>
+														<label for="">
+															<select>
+																<option value="AM">AM</option>
+																<option value="PM">PM</option>
+															</select>
+														</label>
 													</div>
 												</form>
 											</td>
@@ -3921,7 +3927,7 @@
 											<td class="sending__position">
 												<div class="sending__position-in">
 													<button class="sending__position-close"></button>
-													<button class="sending__position-up"></button>
+													<button class="sending__position-up is-hidden"></button>
 													<button class="sending__position-down"></button>
 												</div>
 											</td>
@@ -3955,65 +3961,11 @@
 															<span>:</span>
 															<input type="text" class="input-mini" value="45">
 														</label>
-													</div>
-												</form>
-											</td>
-											<td>
-												<form class="form-horizontal form-textarea">
-													<div class="control-group">
-														<label class="control-label">Русский текст:</label>
-														<div class="controls">
-															<textarea rows="3"></textarea>
-														</div>
-													</div>
-												</form>
-											</td>
-											<td>
-												<form class="form-horizontal form-textarea">
-													<div class="control-group">
-														<label class="control-label">Английский текст:</label>
-														<div class="controls">
-															<textarea rows="3"></textarea>
-														</div>
-													</div>
-												</form>
-											</td>
-											<td class="sending__position">
-												<div class="sending__position-in">
-													<button class="sending__position-close"></button>
-													<button class="sending__position-up"></button>
-													<button class="sending__position-down"></button>
-												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-								<label class="checkbox">
-									<input type="checkbox" value="" checked>
-									Отправить на e-mail
-								</label>
-							</li>
-							<li>
-								<button class="sending__add"></button>
-								<table class="sending__table table">
-									<tbody>
-										<tr>
-											<td class="sending__datetime">
-												<form class="form-horizontal">
-													<div class="control-group">
-														<label class="control-label" for="inputDate">Дата:</label>
-														<div class="controls">
-															<input type="text" id="inputDate" value="13/08/2013"> <button class="calendar"></button>
-														</div>
-													</div>
-													<div class="control-group filters__time">
 														<label for="">
-															<span class="control-label">Время:</span>
-															<input type="text" class="input-mini" value="13">
-														</label>
-														<label for="">
-															<span>:</span>
-															<input type="text" class="input-mini" value="45">
+															<select>
+																<option value="AM">AM</option>
+																<option value="PM">PM</option>
+															</select>
 														</label>
 													</div>
 												</form>
@@ -4075,6 +4027,12 @@
 															<span>:</span>
 															<input type="text" class="input-mini" value="45">
 														</label>
+														<label for="">
+															<select>
+																<option value="AM">AM</option>
+																<option value="PM">PM</option>
+															</select>
+														</label>
 													</div>
 												</form>
 											</td>
@@ -4103,6 +4061,72 @@
 													<button class="sending__position-close"></button>
 													<button class="sending__position-up"></button>
 													<button class="sending__position-down"></button>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<label class="checkbox">
+									<input type="checkbox" value="" checked>
+									Отправить на e-mail
+								</label>
+							</li>
+							<li>
+								<button class="sending__add"></button>
+								<table class="sending__table table">
+									<tbody>
+										<tr>
+											<td class="sending__datetime">
+												<form class="form-horizontal">
+													<div class="control-group">
+														<label class="control-label" for="inputDate">Дата:</label>
+														<div class="controls">
+															<input type="text" id="inputDate" value="13/08/2013"> <button class="calendar"></button>
+														</div>
+													</div>
+													<div class="control-group filters__time">
+														<label for="">
+															<span class="control-label">Время:</span>
+															<input type="text" class="input-mini" value="13">
+														</label>
+														<label for="">
+															<span>:</span>
+															<input type="text" class="input-mini" value="45">
+														</label>
+														<label for="">
+															<select>
+																<option value="AM">AM</option>
+																<option value="PM">PM</option>
+															</select>
+														</label>
+													</div>
+												</form>
+											</td>
+											<td>
+												<form class="form-horizontal form-textarea">
+													<div class="control-group">
+														<label class="control-label">Русский текст:</label>
+														<div class="controls">
+															<textarea rows="3"></textarea>
+														</div>
+													</div>
+												</form>
+											</td>
+											<td>
+												<form class="form-horizontal form-textarea">
+													<div class="control-group">
+														<label class="control-label">Английский текст:</label>
+														<div class="controls">
+															<textarea rows="3"></textarea>
+														</div>
+													</div>
+												</form>
+											</td>
+											<td class="sending__position">
+												<div class="sending__position-in">
+													<button class="sending__position-close"></button>
+													<button class="sending__position-up"></button>
+													<button class="sending__position-down is-hidden"></button>
 												</div>
 											</td>
 										</tr>
@@ -4125,15 +4149,379 @@
 						<li><a href="#">2</a></li>
 						<li><a href="#">3</a></li>
 						<li><a href="#">4</a></li>
-						<li>...</li>
-						<li><a href="#">12</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">6</a></li>
+						<li><a href="#">7</a></li>
+						<li><a href="#">8</a></li>
+						<li><a href="#">9</a></li>
+						<li><a href="#">10</a></li>
 					</ul>
 				</div>
 			</div>
 			<!-- /.sending -->
-
-
-
+			<!-- BEGIN .country -->
+			<div class="country">
+				<h2 class="title"><i class="icon_net"></i>Редактирование страны</h2>
+				<div class="row">
+					<div class="span9">
+						<table class="country__table table table-striped">
+							<thead>
+								<th>Подзаголовок</th>
+								<th>Текст</th>
+								<th>Фото</th>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Название страны</td>
+									<td><input type="text"></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Фото</td>
+									<td>
+										<div class="country__pic">
+											<img src="http://placehold.it/100x100" alt="img">
+										</div>
+										<button class="btn_viol">Загрузить фото</button>
+									</td>
+									<td></td>
+								</tr>
+								<tr class="country__table-subtitle">
+									<td>Основная информация</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Столица</td>
+									<td><input type="text" class="country__geo-input"><i class="icon_geo"></i></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Виза</td>
+									<td><input type="text"></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Язык</td>
+									<td><textarea rows="3">Государственным языком страны является английский, однако большинство населения знает французский, а в отдалённых районах распространённость французского крайне мала</textarea></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Валюта</td>
+									<td><input type="text"></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Стоимость бигмака</td>
+									<td>
+										<div class="country__table-price">
+											<input type="text">
+											<select>
+												<option>USD</option>
+											</select>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Стоимость литра бензина</td>
+									<td>
+										<div class="country__table-price">
+											<input type="text">
+											<select>
+												<option>USD</option>
+											</select>
+										</div>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Часовой пояс</td>
+									<td>
+										<select>
+											<option>UTC+5:30</option>
+										</select>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Код для погоды</td>
+									<td><textarea rows="3"></textarea></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Код для карты</td>
+									<td><textarea rows="3"></textarea></td>
+									<td></td>
+								</tr>
+								<tr class="country__table-subtitle">
+									<td>Справочная</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Язык</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Деньги</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Время</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Связь</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Телефон основных служб</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Религия</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr class="country__table-subtitle">
+									<td>Документы</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Визы</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Консульства</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Страховка</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Прививки</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Таможенные правила</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr class="country__table-subtitle">
+									<td>Безопасность</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Обычаи и традиции</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Ограничения и табу</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr class="country__table-subtitle">
+									<td>Кухня и напитки</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr class="country__table-subtitle">
+									<td>Шопинг и покупки в подарок</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr class="country__table-subtitle">
+									<td>Транспорт и дороги</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr class="country__table-subtitle">
+									<td>Природа и климат</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr class="country__table-subtitle">
+									<td>Курорты и регионы</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Общая статья</td>
+									<td><textarea rows="3"></textarea></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Список</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr class="country__table-subtitle">
+									<td>Города</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Крупные горда</td>
+									<td><textarea rows="3"></textarea></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Маленькие городки</td>
+									<td><textarea rows="3"></textarea></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Список</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr class="country__table-subtitle">
+									<td>Лучшие места</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Общая информация</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Достопримечательности</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Природные красоты</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Активный и экстермальный отдых</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Пляжный отдых, природные лечебницы</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Отдых с детьми</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Отдых и лечение для инвалидов</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Прочее</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr class="country__table-subtitle">
+									<td>Лучшие места</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Общая статья</td>
+									<td><textarea rows="3"></textarea></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr>
+									<td>Список</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+								<tr class="country__table-subtitle">
+									<td>Маршруты</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>Общая статья</td>
+									<td><textarea rows="3"></textarea></td>
+									<td>
+										<div class="gallery">
+											<ul>
+												<li>
+													<div class="gallery__pic">
+														<img src="http://placehold.it/63x63" alt="img">
+													</div>
+													<button class="gallery__nav gallery__next"></button>
+													<button class="gallery__nav gallery__prev"></button>
+													<button class="gallery__nav gallery__close"></button>
+												</li>
+												<li>
+													<div class="gallery__pic">
+														<img src="http://placehold.it/63x63" alt="img">
+													</div>
+													<button class="gallery__nav gallery__next"></button>
+													<button class="gallery__nav gallery__prev"></button>
+													<button class="gallery__nav gallery__close"></button>
+												</li>
+												<li>
+													<div class="gallery__pic">
+														<img src="http://placehold.it/63x63" alt="img">
+													</div>
+													<button class="gallery__nav gallery__next"></button>
+													<button class="gallery__nav gallery__prev"></button>
+													<button class="gallery__nav gallery__close"></button>
+												</li>
+												<li>
+													<div class="gallery__pic">
+														<img src="http://placehold.it/63x63" alt="img">
+													</div>
+													<button class="gallery__nav gallery__next"></button>
+													<button class="gallery__nav gallery__prev"></button>
+													<button class="gallery__nav gallery__close"></button>
+												</li>
+												<li>
+													<div class="gallery__pic">
+														<img src="http://placehold.it/63x63" alt="img">
+													</div>
+													<button class="gallery__nav gallery__next"></button>
+													<button class="gallery__nav gallery__prev"></button>
+													<button class="gallery__nav gallery__close"></button>
+												</li>
+												<li class="gallery__add">
+													<input type="file">
+												</li>
+											</ul>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>Список</td>
+									<td><input type="text"></td>
+									<td><div class="country__upload"><button class="btn_white">Прикрепить фото</button></div></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="buttons">
+							<button type="submit" class="btn btn-small btn-primary">Сохранить</button>
+							<button type="submit" class="btn btn-small btn-inverse">Отменить</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /.country -->
 
 
 
