@@ -2419,7 +2419,7 @@ ul { list-style: none; }
 .sending .sending__table .form-textarea .control-label { width: 100px; margin: 0; line-height: 1; }
 .sending .sending__table .form-textarea .controls { margin-left: 110px; }
 .sending .sending__table .form-textarea textarea { width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; resize: none; }
-.sending .sending__table .sending__position { padding-left: 38px; }
+.sending .sending__table .sending__position { padding-left: 38px; width: 100px; }
 .sending .sending__table .sending__position-in { width: 30px; height: 35px; position: relative; }
 .sending .sending__table .sending__position-in button { position: absolute; background-color: none; border: 0; }
 .sending .sending__table .sending__position-in .sending__position-close { background: url('../img/icons-sfa723d31ce.png') 0 -2985px no-repeat; width: 10px; height: 10px; left: 0; top: 50%; margin-top: -5px; }
