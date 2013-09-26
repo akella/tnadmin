@@ -1462,156 +1462,247 @@ $bc: #e5e5e5
 
 .country
 	@extend %margin
-
-.country__table
-	@extend %block
-	display: table
-	padding: 0
-	th,td
-		width: 33%
-		padding: 8px 18px 8px 8px
-	th
-		background-color: #d6d6d6
-		font-size: 16px
-		font-weight: bold
-		@include text-shadow(0 1px 0 rgba(255,255,255,.75))
-		text-align: center
-		border-bottom: 5px solid #fff
-		padding: 24px 8px
-		&:first-child
-			text-align: right
-	td
-		color: #000
-		font-size: 14px
-		font-weight: bold
-		border: 0
-		&:first-child
-			text-align: right
-	tbody > tr:nth-child(odd) > td,
-	tbody > tr:nth-child(odd) > th
-		background-color: #e0e0e0
-	input,
-	textarea,
-	select
-		width: 100%
-		+box-sizing(border-box)
-	input
-		margin-bottom: 0
-		height: 30px
-		line-height: 30px
-	textarea
-		margin-bottom: 0
-		resize: none
-		font-size: 12px
-	select
-		margin-bottom: 0
-	.country__table-subtitle
+	.country__table
+		@extend %block
+		+border-radius(0px)
+		display: table
+		padding: 0
+		th,td
+			width: 33%
+			padding: 8px 18px 8px 8px
+		th
+			background-color: #d6d6d6
+			font-size: 16px
+			font-weight: bold
+			@include text-shadow(0 1px 0 rgba(255,255,255,.75))
+			text-align: center
+			border-bottom: 5px solid #fff
+			padding: 24px 8px
+			&:first-child
+				text-align: right
 		td
-			background-color: #a4a4a4 !important
-			color: #fff
+			color: #000
 			font-size: 14px
 			font-weight: bold
-			border-bottom: 5px solid #fff
-	.country__table-price
-		input
-			width: 126px
-			margin-right: 10px
-		select
-			width: 65px
-	.country__geo-input
-		width: 85% !important
-		float: left
-	.icon_geo
-		float: right
-		margin-top: 6px
-	.country__pic
-		display: inline-block
-		vertical-align: top
-		margin-right: 10px
-		width: 100px
-		overflow: hidden
-	.btn_viol
-		display: inline-block
-		vertical-align: top
-		+border-radius(5px)
-		background-color: #7b73b7
-		color: #fff
-		font-size: 12px
-		font-weight: bold
-		padding: 0 18px
-		line-height: 24px
-		height: 24px
-		border: 0
-	.btn_white
-		display: inline-block
-		vertical-align: top
-		+border-radius(5px)
-		background-color: #fff
-		color: #412f86
-		font-size: 12px
-		font-weight: bold
-		padding: 0 13px
-		line-height: 24px
-		height: 24px
-		border: 1px solid #aeaeae
-	.gallery
-		width: 210px
-		ul
-			margin: -10px 0 0 -10px
-			@extend %clr
-		li
-			float: left
-			position: relative
-			margin: 10px 0 0 10px
-			background-color: #ccc
-			width: 63px
-			height: 63px
-			overflow: hidden
-			&.gallery__add
-				line-height: 63px
-				color: #7672a1
-				text-align: center
-				font-size: 40px
-				font-weight: bold
-				&:hover
-					cursor: pointer
-				&:before
-					content: "+"
-				input[type="file"]
-					visibility: hidden
-		.gallery__nav
-			display: block
-			background: none
 			border: 0
-		.gallery__next
-			position: absolute
-			bottom: 0
-			right: 0
-			+s(g-next)
-		.gallery__prev
-			position: absolute
-			bottom: 0
-			left: 0
-			+s(g-prev)
-		.gallery__close
-			position: absolute
-			top: 0
-			right: 0
-			+s(g-close)
-	.country__upload
-		text-align: center
+			&:first-child
+				text-align: right
+		tbody > tr:nth-child(odd) > td,
+		tbody > tr:nth-child(odd) > th
+			background-color: #e0e0e0
+		input,
+		textarea,
+		select
+			width: 100%
+			+box-sizing(border-box)
+		input
+			margin-bottom: 0
+			height: 30px
+			line-height: 30px
+		textarea
+			margin-bottom: 0
+			resize: none
+			font-size: 12px
+		select
+			margin-bottom: 0
+		.country__table-subtitle
+			td
+				background-color: #a4a4a4 !important
+				color: #fff
+				font-size: 14px
+				font-weight: bold
+				border-bottom: 5px solid #fff
+		.country__table-price
+			input
+				width: 126px
+				margin-right: 10px
+			select
+				width: 65px
+		.country__geo-input
+			width: 85% !important
+			float: left
+		.icon_geo
+			float: right
+			margin-top: 6px
+		.country__pic
+			display: inline-block
+			vertical-align: top
+			margin-right: 10px
+			width: 100px
+			overflow: hidden
+		.btn_viol
+			display: inline-block
+			vertical-align: top
+			+border-radius(5px)
+			background-color: #7b73b7
+			color: #fff
+			font-size: 12px
+			font-weight: bold
+			padding: 0 18px
+			line-height: 24px
+			height: 24px
+			border: 0
+		.btn_white
+			display: inline-block
+			vertical-align: top
+			+border-radius(5px)
+			background-color: #fff
+			color: #412f86
+			font-size: 12px
+			font-weight: bold
+			padding: 0 13px
+			line-height: 24px
+			height: 24px
+			border: 1px solid #aeaeae
+		.gallery
+			width: 210px
+			ul
+				margin: -10px 0 0 -10px
+				@extend %clr
+			li
+				float: left
+				position: relative
+				margin: 10px 0 0 10px
+				background-color: #ccc
+				width: 63px
+				height: 63px
+				overflow: hidden
+				&.gallery__add
+					line-height: 63px
+					color: #7672a1
+					text-align: center
+					font-size: 40px
+					font-weight: bold
+					&:hover
+						cursor: pointer
+					&:before
+						content: "+"
+					input[type="file"]
+						visibility: hidden
+			.gallery__nav
+				display: block
+				background: none
+				border: 0
+			.gallery__next
+				position: absolute
+				bottom: 0
+				right: 0
+				+s(g-next)
+			.gallery__prev
+				position: absolute
+				bottom: 0
+				left: 0
+				+s(g-prev)
+			.gallery__close
+				position: absolute
+				top: 0
+				right: 0
+				+s(g-close)
+		.country__upload
+			text-align: center
 
 
-
-
-
-
-
-
-
-
-
-
+.manage-admin
+	@extend %margin
+	.manage-admin__content
+		min-width: 1099px
+		-ms-overflow-x: auto
+		overflow-x: auto
+		margin-bottom: 15px
+	// .manage-admin__table_results
+	// 	position: relative
+	// 	.buttons
+	// 		position: absolute
+	// 		right: 0
+	// 		bottom: 0
+	.manage-admin__table
+		// min-width: 1099px
+		// -ms-overflow-x: auto
+		// overflow-x: auto
+		// padding-bottom: 20px
+		table
+			border: 1px solid #a1a1a1
+			table-layout: fixed
+			min-width: 1099px
+			-ms-overflow-x: auto
+			overflow-x: auto
+			margin-bottom: 10px
+		th,
+		td
+			width: 162px
+			text-align: center
+			vertical-align: middle
+		th
+			background-color: #d2d2d2
+			color: #000
+			font-family: "Arial"
+			font-size: 13px
+			font-weight: bold
+			+text-shadow(0 1px 0 rgba(255,255,255,.75))
+			border-bottom: 1px solid #a1a1a1
+			&:first-child
+				text-align: center
+		td
+			border: 0
+		&.manage-admin__table_mod
+			table
+				margin-bottom: 20px
+				border: none
+			// @extend %block
+			// padding: 0
+			// th
+			// 	&:first-child
+			// 		text-align: left
+			th
+				font-weight: normal
+				font-size: 12px
+				background-color: #fff
+				text-shadow: none
+				border: none
+		.manage-admin__btn
+			width: 65px
+		.manage-admin__regdate
+			width: 342px
+			label
+				display: inline-block
+				font-size: 12px
+				margin-left: 5px
+				&:first-child
+					margin-left: 0
+			input
+				width: 80px !important
+				font-size: 12px
+				margin-left: 5px !important
+		.manage-admin__name
+			width: 184px
+		input[type="text"]
+			margin: 0
+			height: 30px
+			line-height: 30px
+			+box-sizing(border-box)
+			width: 100%
+		input[type="checkbox"]
+			margin: 0
+		// .table-striped tbody > tr:nth-child(even) > td, .table-striped tbody > tr:nth-child(even) > th
+		// background-color: #eee
+		// .table-striped tbody > tr:nth-child(odd) > td, .table-striped tbody > tr:nth-child(odd) > th
+		// background-color: #eee
+		.table-striped tbody > tr:nth-child(odd) > td,
+		.table-striped tbody > tr:nth-child(odd) > th
+			background-color: #fff
+		.table-striped tbody > tr:nth-child(even) > td,
+		.table-striped tbody > tr:nth-child(even) > th
+			background-color: #dfdfdf
+		.manage-admin__close
+			border: 0
+			background-color: none
+			+s(t-close)
+			display: inline-block
+		.manage-admin__history
+			border: 0
+			background-color: none
+			display: inline-block
+			+s(t-hist)
 
 
 
