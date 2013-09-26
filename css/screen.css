@@ -2169,10 +2169,10 @@ ul { list-style: none; }
 .manage .manage__status { position: relative; }
 .manage .manage__status:before { position: absolute; top: 0; left: -25px; content: ""; background: url('../img/icons-s7f6b4f0111.png') 0 -2095px no-repeat; width: 16px; height: 16px; }
 
-.suggestions .suggestions__table { padding: 0; margin-top: 25px; font-size: 12px; color: #605685; }
+.suggestions .suggestions__table { table-layout: fixed; padding: 0; margin-top: 25px; font-size: 12px; color: #605685; }
 .suggestions .suggestions__table thead { font-size: 14px; color: black; }
 .suggestions .suggestions__table thead th { text-align: center; }
-.suggestions .suggestions__field { border: 1px solid #adadad; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 5px 10px; font-size: 12px; color: #858585; }
+.suggestions .suggestions__field { border: 1px solid #adadad; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 5px 10px; font-size: 12px; color: #858585; width: 100%; }
 .suggestions .suggestions__field p { line-height: 1.4; margin-top: 8px; margin-bottom: 0; }
 .suggestions .suggestions__field p:first-child { margin-top: 0; }
 .suggestions .suggestions__buttons { text-align: right; }
@@ -2408,11 +2408,11 @@ ul { list-style: none; }
 .sending .sending__table { margin-bottom: 0px; table-layout: fixed; }
 .sending .sending__table td { border: 0; padding: 0 0 0 15px; width: 350px; }
 .sending .sending__table td form { margin-bottom: 0; }
-.sending .sending__table td.sending__datetime { width: 175px; padding: 0; }
+.sending .sending__table td.sending__datetime { width: 195px; padding: 0; }
 .sending .sending__table .filters__time label { display: inline-block; vertical-align: top; font-size: 12px; }
 .sending .sending__table .filters__time .input-mini { width: 15px; }
 .sending .sending__table .filters__time input { font-size: 12px; }
-.sending .sending__table .filters__time select { margin-left: 5px; width: 45px; font-size: 10px; text-transform: uppercase; }
+.sending .sending__table .filters__time select { margin-left: 5px; width: auto; font-size: 12px; text-transform: uppercase; }
 .sending .sending__table .control-group { margin-bottom: 5px; }
 .sending .sending__table .control-label { width: 45px; font-size: 12px; margin-right: 5px; }
 .sending .sending__table .controls { margin-left: 50px; }
@@ -2447,10 +2447,13 @@ ul { list-style: none; }
 .country .country__table select { margin-bottom: 0; }
 .country .country__table .country__table-subtitle td { background-color: #a4a4a4 !important; color: white; font-size: 14px; font-weight: bold; border-bottom: 5px solid white; }
 .country .country__table .country__table-price input { width: 126px; margin-right: 10px; }
-.country .country__table .country__table-price select { width: 65px; }
-.country .country__table .country__geo-input { width: 85% !important; float: left; }
+.country .country__table .country__table-price select { width: auto; }
+.country .country__table .country__geo-input { width: 90% !important; float: left; }
 .country .country__table .icon_geo { float: right; margin-top: 6px; }
 .country .country__table .country__pic { display: inline-block; vertical-align: top; margin-right: 10px; width: 100px; overflow: hidden; }
+.country .country__table .country__field { width: 400px; border: 1px solid #adadad; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 5px 10px; font-size: 12px; color: black; font-weight: normal; background-color: white; min-height: 28px; }
+.country .country__table .country__field p { line-height: 1.4; margin-top: 8px; margin-bottom: 0; }
+.country .country__table .country__field p:first-child { margin-top: 0; }
 .country .country__table .btn_viol { display: inline-block; vertical-align: top; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; background-color: #7b73b7; color: white; font-size: 12px; font-weight: bold; padding: 0 18px; line-height: 24px; height: 24px; border: 0; }
 .country .country__table .btn_white { display: inline-block; vertical-align: top; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; background-color: white; color: #412f86; font-size: 12px; font-weight: bold; padding: 0 13px; line-height: 24px; height: 24px; border: 1px solid #aeaeae; }
 .country .country__table .gallery { width: 210px; }
@@ -2464,6 +2467,7 @@ ul { list-style: none; }
 .country .country__table .gallery .gallery__next { position: absolute; bottom: 0; right: 0; background: url('../img/icons-s7f6b4f0111.png') 0 -3175px no-repeat; width: 13px; height: 13px; }
 .country .country__table .gallery .gallery__prev { position: absolute; bottom: 0; left: 0; background: url('../img/icons-s7f6b4f0111.png') 0 -3086px no-repeat; width: 13px; height: 13px; }
 .country .country__table .gallery .gallery__close { position: absolute; top: 0; right: 0; background: url('../img/icons-s7f6b4f0111.png') 0 -2680px no-repeat; width: 14px; height: 14px; }
+.country .country__table .gallery .is-hidden { display: none; }
 .country .country__table .country__upload { text-align: center; }
 
 .manage-admin .manage-admin__content { min-width: 1099px; -ms-overflow-x: auto; overflow-x: auto; margin-bottom: 15px; }

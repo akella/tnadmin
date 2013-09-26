@@ -481,6 +481,7 @@ $bc: #e5e5e5
 .suggestions
 	@extend %margin
 	.suggestions__table
+		table-layout: fixed
 		@extend %b
 		padding: 0
 		margin-top: 25px
@@ -498,6 +499,7 @@ $bc: #e5e5e5
 		padding: 5px 10px
 		font-size: 12px
 		color: #858585
+		width: 100%
 		p
 			line-height: 1.4
 			margin-top: 8px
@@ -1379,7 +1381,7 @@ $bc: #e5e5e5
 			form
 				margin-bottom: 0
 			&.sending__datetime
-				width: 175px
+				width: 195px
 				padding: 0
 		.filters__time
 			label
@@ -1392,8 +1394,8 @@ $bc: #e5e5e5
 				font-size: 12px
 			select
 				margin-left: 5px
-				width: 45px
-				font-size: 10px
+				width: auto
+				font-size: 12px
 				text-transform: uppercase
 		.control-group
 			margin-bottom: 5px
@@ -1517,9 +1519,9 @@ $bc: #e5e5e5
 				width: 126px
 				margin-right: 10px
 			select
-				width: 65px
+				width: auto
 		.country__geo-input
-			width: 85% !important
+			width: 90% !important
 			float: left
 		.icon_geo
 			float: right
@@ -1530,6 +1532,23 @@ $bc: #e5e5e5
 			margin-right: 10px
 			width: 100px
 			overflow: hidden
+		.country__field
+			width: 400px
+			border: 1px solid #adadad
+			+border-radius(5px)
+			+box-sizing(border-box)
+			padding: 5px 10px
+			font-size: 12px
+			color: #000
+			font-weight: normal
+			background-color: #FFF
+			min-height: 28px
+			p
+				line-height: 1.4
+				margin-top: 8px
+				margin-bottom: 0
+				&:first-child
+					margin-top: 0
 		.btn_viol
 			display: inline-block
 			vertical-align: top
@@ -1598,6 +1617,8 @@ $bc: #e5e5e5
 				top: 0
 				right: 0
 				+s(g-close)
+			.is-hidden
+				display: none
 		.country__upload
 			text-align: center
 
