@@ -1,0 +1,258 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>tnadmin</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<script src="js/jquery.js"></script>
+	<script src="js/jscrollpane.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+	<!-- BEGIN .header -->
+	<div class="header">
+		<div class="container">
+			<div class="row">
+				<a href="#" class="header__logo span3">TravellersNests</a>
+				<div class="header__other span9 pull-right">
+					<div class="user">
+						<div class="user__name">Admin</div>
+						<div class="user__signout"><button type="submit" class="btn btn-mini btn-inverse">Выход</button></div>
+					</div>
+					<div class="language">
+						<a href="#" title="Русский" class="language__ru is-active"><i></i></a>
+						<a href="#" title="Английский" class="language__en"><i></i></a>
+					</div>
+					<div class="settings">
+						<a href="#" title="Настройки"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.header -->
+	<!-- BEGIN .navbar -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+				<ul class="nav">
+					<li>
+						<a href="#">Заблокированные</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Список заблокированных пользователей</a></li>
+								<li><a href="#">Список заблокированных объектов</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Модерация</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Запросы на получение профессионального статуса</a></li>
+								<li><a href="#">Постмодерация тегов</a></li>
+								<li><a href="#">Жалобы на пользовательский контент</a></li>
+								<li><a href="#">Жалобы на пользователей</a></li>
+								<li><a href="#">Жалобы на крупные тур.объекты/клубы</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Управление контентом</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Роботы рассылок</a></li>
+								<li><a href="#">Управление подсказками поиска</a></li>
+								<li><a href="#">Управление топами</a></li>
+								<li><a href="#">Управление фототестом</a></li>
+								<li><a href="#">Управление опросами</a></li>
+								<li><a href="#">Управление стоп-словами</a></li>
+								<li><a href="#">Управление тэгами-синонимами</a></li>
+								<li><a href="#">Загрузка и редактирование стран, регионов, городов</a></li>
+								<li><a href="#">Список клубов администрации</a></li>
+								<li><a href="#">Список клубов без администратора</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Управление админами</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Список административных пользователей</a></li>
+								<li><a href="#">Управление группами прав пользователей</a></li>
+								<li><a href="#">История действий административного пользователя</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Статистика</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Статистика-контроль</a></li>
+								<li><a href="#">Статистика-маркетинг</a></li>
+								<li><a href="#">Статистика-финансы</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /.navbar -->
+
+	<!-- BEGIN .page -->
+	<div class="page">
+		<div class="container">
+
+			<!-- BEGIN .vote -->
+			<div class="vote row">
+				<div class="span9">
+					<h2 class="title"><i class="icon_notebook"></i>Управление опросами</h2>
+					<div class="toolbar row">
+						<div class="toolbar__type span4">
+							<h3 class="toolbar__title h3">Тип опроса:</h3>
+							<select>
+								<option>Все</option>
+								<option>Главная страница путешественника</option>
+								<option>Страна</option>
+								<option>Регион</option>
+								<option>Город</option>
+								<option>События</option>
+								<option>Лучшие места</option>
+								<option>Маршруты</option>
+								<option>Экскурсии</option>
+								<option>Курсы и мастер-классы</option>
+								<option>Клубы по интересам</option>
+							</select>
+						</div>
+						<div class="vote__history span4 pull-right">
+							<i></i>История завершенных опросов<br>
+							<a href="#">читать</a>
+						</div>
+					</div>
+					<h3 class="title-2">Главная путешественника</h3>
+					<ul class="list row">
+						<li class="span3">
+							<h3 class="h3">Новый опрос:</h3>
+							<div class="vote-result">
+								<textarea rows="3"></textarea>
+								<p>Варианты ответа:</p>
+								<form class="form-inline">
+									<span class="help-inline">1.</span>
+									<input type="text">
+									<button class="close">&times;</button>
+								</form>
+								<form class="form-inline">
+									<span class="help-inline">2.</span>
+									<input type="text">
+									<button class="close">&times;</button>
+								</form>
+								<form class="form-inline">
+									<span class="help-inline">3.</span>
+									<input type="text">
+								</form>
+								<p>
+									<button type="submit" class="btn btn-mini btn-primary">Сохранить</button>
+								</p>
+								<p>При этом ранее опубликованный опрос автоматически завершается и публикуется.</p>
+							</div>
+						</li>
+						<li class="span3">
+							<h3 class="h3">Открытый опрос:</h3>
+							<div class="vote-result">
+								<strong>Какие из Карибских островов вам нравятся больше всего?</strong>
+								<ul>
+									<li><em><i style="width: 85%"></i></em>85%<span>Антигуа и Барбуда</span></li>
+									<li><em><i style="width: 65%"></i></em>65%<span>Барбадос</span></li>
+									<li><em><i style="width: 35%"></i></em>35%<span>Доминика</span></li>
+								</ul>
+								<p>
+									<button type="submit" class="btn btn-mini btn-primary">Завершить и опубликовать</button>
+								</p>
+								<p>При этом ранее опубликованный опрос автоматически удаляется</p>
+							</div>
+						</li>
+						<li class="span3">
+							<h3 class="h3">Предыдущий опрос:</h3>
+							<div class="vote-result">
+								<strong>Какие из Карибских островов вам нравятся больше всего?</strong>
+								<ul>
+									<li><em><i style="width: 85%"></i></em>85%<span>Антигуа и Барбуда</span></li>
+									<li><em><i style="width: 65%"></i></em>65%<span>Барбадос</span></li>
+									<li><em><i style="width: 35%"></i></em>35%<span>Доминика</span></li>
+								</ul>
+								<p>
+									<button type="submit" class="btn btn-mini btn-primary">Удалить</button>
+								</p>
+							</div>
+						</li>
+					</ul>
+					<h3 class="title-2">Лучшие места</h3>
+					<ul class="list row">
+						<li class="span3">
+							<h3 class="h3">Новый опрос:</h3>
+							<div class="vote-result">
+								<textarea rows="3"></textarea>
+								<p>Варианты ответа:</p>
+								<form class="form-inline">
+									<span class="help-inline">1.</span>
+									<input type="text">
+									<button class="close">&times;</button>
+								</form>
+								<form class="form-inline">
+									<span class="help-inline">2.</span>
+									<input type="text">
+									<button class="close">&times;</button>
+								</form>
+								<form class="form-inline">
+									<span class="help-inline">3.</span>
+									<input type="text">
+								</form>
+								<p>
+									<button type="submit" class="btn btn-mini btn-primary">Сохранить</button>
+								</p>
+								<p>При этом ранее опубликованный опрос автоматически завершается и публикуется.</p>
+							</div>
+						</li>
+						<li class="span3">
+							<h3 class="h3">Открытый опрос:</h3>
+							<div class="vote-result">
+								<strong>Какие из Карибских островов вам нравятся больше всего?</strong>
+								<ul>
+									<li><em><i style="width: 85%"></i></em>85%<span>Антигуа и Барбуда</span></li>
+									<li><em><i style="width: 65%"></i></em>65%<span>Барбадос</span></li>
+									<li><em><i style="width: 35%"></i></em>35%<span>Доминика</span></li>
+								</ul>
+								<p>
+									<button type="submit" class="btn btn-mini btn-primary">Завершить и опубликовать</button>
+								</p>
+								<p>При этом ранее опубликованный опрос автоматически удаляется</p>
+							</div>
+						</li>
+						<li class="span3">
+							<h3 class="h3">Предыдущий опрос:</h3>
+							<div class="vote-result">
+								<strong>Какие из Карибских островов вам нравятся больше всего?</strong>
+								<ul>
+									<li><em><i style="width: 85%"></i></em>85%<span>Антигуа и Барбуда</span></li>
+									<li><em><i style="width: 65%"></i></em>65%<span>Барбадос</span></li>
+									<li><em><i style="width: 35%"></i></em>35%<span>Доминика</span></li>
+								</ul>
+								<p>
+									<button type="submit" class="btn btn-mini btn-primary">Удалить</button>
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- /.vote -->
+
+		</div>
+	</div>
+	<!-- /.page -->
+</body>
+</html>

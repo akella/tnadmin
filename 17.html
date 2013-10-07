@@ -1,0 +1,884 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>tnadmin</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<script src="js/jquery.js"></script>
+	<script src="js/jscrollpane.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+	<!-- BEGIN .header -->
+	<div class="header">
+		<div class="container">
+			<div class="row">
+				<a href="#" class="header__logo span3">TravellersNests</a>
+				<div class="header__other span9 pull-right">
+					<div class="user">
+						<div class="user__name">Admin</div>
+						<div class="user__signout"><button type="submit" class="btn btn-mini btn-inverse">Выход</button></div>
+					</div>
+					<div class="language">
+						<a href="#" title="Русский" class="language__ru is-active"><i></i></a>
+						<a href="#" title="Английский" class="language__en"><i></i></a>
+					</div>
+					<div class="settings">
+						<a href="#" title="Настройки"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.header -->
+	<!-- BEGIN .navbar -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+				<ul class="nav">
+					<li>
+						<a href="#">Заблокированные</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Список заблокированных пользователей</a></li>
+								<li><a href="#">Список заблокированных объектов</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Модерация</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Запросы на получение профессионального статуса</a></li>
+								<li><a href="#">Постмодерация тегов</a></li>
+								<li><a href="#">Жалобы на пользовательский контент</a></li>
+								<li><a href="#">Жалобы на пользователей</a></li>
+								<li><a href="#">Жалобы на крупные тур.объекты/клубы</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Управление контентом</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Роботы рассылок</a></li>
+								<li><a href="#">Управление подсказками поиска</a></li>
+								<li><a href="#">Управление топами</a></li>
+								<li><a href="#">Управление фототестом</a></li>
+								<li><a href="#">Управление опросами</a></li>
+								<li><a href="#">Управление стоп-словами</a></li>
+								<li><a href="#">Управление тэгами-синонимами</a></li>
+								<li><a href="#">Загрузка и редактирование стран, регионов, городов</a></li>
+								<li><a href="#">Список клубов администрации</a></li>
+								<li><a href="#">Список клубов без администратора</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Управление админами</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Список административных пользователей</a></li>
+								<li><a href="#">Управление группами прав пользователей</a></li>
+								<li><a href="#">История действий административного пользователя</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Статистика</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Статистика-контроль</a></li>
+								<li><a href="#">Статистика-маркетинг</a></li>
+								<li><a href="#">Статистика-финансы</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /.navbar -->
+
+	<!-- BEGIN .page -->
+	<div class="page">
+		<div class="container">
+
+			<!-- BEGIN .top -->
+			<div class="top">
+				<h2 class="title"><i class="icon_top"></i>Управление топами</h2>
+				<div class="toolbar row">
+					<div class="toolbar__type span4">
+						<h3 class="toolbar__title h3">Тип:</h3>
+						<select>
+							<option>Все</option>
+						</select>
+					</div>
+				</div>
+				<ul class="list row">
+					<li class="span3">
+						<h3 class="title-2">Места</h3>
+						<div class="list__title"><span class="list__title-top">Топ-20</span> <span class="list__input-value">Мировых ближайших мастер-классов</span> <input type="text" class="list__input" value="Мировых ближайших мастер-классов"><i class="list__edit icon_edit"></i></div>
+						<div class="list__in">
+							<ul class="list__content">
+								<li>
+									<div class="list__position">
+										<button class="list__position_btn list__position_btn-up is-hidden"></button>
+										<button class="list__position_btn list__position_btn-down"></button>
+										<button class="list__position_btn list__position_btn-close"></button>
+										<span>1</span>
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Другая жизнь»</a></div>
+										<input type="text" class="list__info-input" value="«Другая жизнь»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class=""><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class="tabs__nav_object-btn is-active"><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item is-hidden">
+													<div class="tabs__object">
+														<a href="#" class="tabs__btn-file">Другая жизнь</a><i class="tabs__btn-edit"></i>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item is-hidden">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+												<div class="tabs__item tabs__object_btn">
+													<div class="">
+														<button class="object-btn">Прикрепить объект</button>
+														<input type="file" class="is-hidden">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list__position">
+										<button class="list__position_btn list__position_btn-up"></button>
+										<button class="list__position_btn list__position_btn-down"></button>
+										<button class="list__position_btn list__position_btn-close"></button>
+										<span>2</span>
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Лучший опыт в виноделии»</a></div>
+										<input type="text" class="list__info-input" value="«Лучший опыт в виноделии»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class=""><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class="is-active"><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item">
+													<div class="tabs__object">
+														<a href="#" class="tabs__btn-file">Лучший опыт в виноделии</a><i class="tabs__btn-edit"></i>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item is-hidden">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+												<div class="tabs__item tabs__object_btn is-hidden">
+													<div class="">
+														<button class="object-btn">Прикрепить объект</button>
+														<input type="file" class="is-hidden">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list__position">
+										<button class="list__position_btn list__position_btn-up"></button>
+										<button class="list__position_btn list__position_btn-down"></button>
+										<button class="list__position_btn list__position_btn-close"></button>
+										<span>3</span>
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Агротуризм в Калужской области»</a></div>
+										<input type="text" class="list__info-input" value="«Агротуризм в Калужской области»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class=""><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class="is-active"><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item">
+													<div class="tabs__object">
+														<a href="#" class="tabs__btn-file">Агротуризм в Калужской области</a><i class="tabs__btn-edit"></i>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item is-hidden">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list__position">
+										<button class="list__position_btn list__position_btn-up"></button>
+										<button class="list__position_btn list__position_btn-down"></button>
+										<button class="list__position_btn list__position_btn-close"></button>
+										<span>4</span>
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Путь пекаря»</a></div>
+										<input type="text" class="list__info-input" value="«Путь пекаря»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class="is-active"><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class=""><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item is-hidden">
+													<div class="tabs__object">
+														<a href="#" class="tabs__btn-file">Путь пекаря</a><i class="tabs__btn-edit"></i>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list__position">
+										<button class="list__position_btn list__position_btn-up"></button>
+										<button class="list__position_btn list__position_btn-down"></button>
+										<button class="list__position_btn list__position_btn-close"></button>
+										<span>5</span>
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Лучший опыт в виноделии»</a></div>
+										<input type="text" class="list__info-input" value="«Лучший опыт в виноделии»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class=""><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class="is-active"><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item">
+													<div class="tabs__object">
+														<a href="#" class="tabs__btn-file">Лучший опыт в виноделии</a><i class="tabs__btn-edit"></i>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item is-hidden">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list__position">
+										<button class="list__position_btn list__position_btn-up"></button>
+										<button class="list__position_btn list__position_btn-down"></button>
+										<button class="list__position_btn list__position_btn-close"></button>
+										<span>6</span>
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Лучший опыт в виноделии»</a></div>
+										<input type="text" class="list__info-input" value="«Лучший опыт в виноделии»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class=""><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class="is-active"><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item">
+													<div class="tabs__object">
+														<a href="#" class="tabs__btn-file">Лучший опыт в виноделии</a><i class="tabs__btn-edit"></i>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item is-hidden">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list__position">
+										<button class="list__position_btn list__position_btn-up"></button>
+										<button class="list__position_btn list__position_btn-down"></button>
+										<button class="list__position_btn list__position_btn-close"></button>
+										<span>7</span>
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Лучший опыт в виноделии»</a></div>
+										<input type="text" class="list__info-input" value="«Лучший опыт в виноделии»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class=""><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class="is-active"><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item">
+													<div class="tabs__object">
+														<a href="#" class="tabs__btn-file">Лучший опыт в виноделии</a><i class="tabs__btn-edit"></i>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item is-hidden">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list__position">
+										<button class="list__position_btn list__position_btn-up"></button>
+										<button class="list__position_btn list__position_btn-down"></button>
+										<button class="list__position_btn list__position_btn-close"></button>
+										<span>8</span>
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Лучший опыт в виноделии»</a></div>
+										<input type="text" class="list__info-input" value="«Лучший опыт в виноделии»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class=""><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class="is-active"><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item">
+													<div class="tabs__object">
+														<a href="#" class="tabs__btn-file">Лучший опыт в виноделии</a><i class="tabs__btn-edit"></i>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item is-hidden">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list__position">
+										<button class="list__position_btn list__position_btn-up"></button>
+										<button class="list__position_btn list__position_btn-down"></button>
+										<button class="list__position_btn list__position_btn-close"></button>
+										<span>9</span>
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Лучший опыт в виноделии»</a></div>
+										<input type="text" class="list__info-input" value="«Лучший опыт в виноделии»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class=""><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class="is-active"><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item">
+													<div class="tabs__object">
+														<a href="#" class="tabs__btn-file">Лучший опыт в виноделии</a><i class="tabs__btn-edit"></i>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item is-hidden">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list__position">
+										<button class="list__position_btn list__position_btn-up"></button>
+										<button class="list__position_btn list__position_btn-down is-hidden"></button>
+										<button class="list__position_btn list__position_btn-close"></button>
+										<span>10</span>
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Лучший опыт в виноделии»</a></div>
+										<input type="text" class="list__info-input" value="«Лучший опыт в виноделии»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class=""><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class="is-active"><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item">
+													<div class="tabs__object">
+														<a href="#" class="tabs__btn-file">Лучший опыт в виноделии</a><i class="tabs__btn-edit"></i>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item is-hidden">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="list__create">
+								<form class="form-horizontal">
+									<fieldset>
+										<legend>Добавить новую позицию:</legend>
+										<div class="control-group list__create-position">
+										  <label class="control-label">Позиция в рейтинге</label>
+										  <div class="controls">
+										    <input type="text" class="input-mini">
+										  </div>
+										</div>
+										<div class="control-group">
+										  <label class="control-label">
+										  	Название
+										  </label>
+										  <div class="controls">
+										    <input type="text" class="input-large">
+										  </div>
+										</div>
+										<div class="controls-group tabs">
+											<ul class="tabs__nav">
+												<li class="is-active"><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class=""><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item" style="display:none;">
+													<div class="tabs__object">
+														<button class="tabs__btn-file">Прикрепить объект</button>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="control-group list__create-btn">
+										     <button type="submit" class="btn btn-primary btn-small">Добавить</button>
+										 </div>
+									</fieldset>
+								</form>
+							</div>
+							<div class="list__buttons">
+								<button type="submit" class="btn btn-primary btn-small">Сохранить</button>
+								<button type="submit" class="btn btn-inverse btn-small">Отменить</button>
+							</div>
+						</div>
+					</li>
+					<li class="span3 is-editable">
+						<h3 class="title-2">Мастер-классы</h3>
+						<div class="list__title"><span class="list__title-top">Топ-20</span> <span class="list__input-value">Мировых ближайших мастер-классов</span> <input type="text" class="list__input" value="Мировых ближайших мастер-классов"><i class="list__edit icon_edit"></i></div>
+						<div class="list__in">
+							<ul class="list__content">
+								<li>
+									<div class="list__position">
+										<button class="list__position_btn list__position_btn-up is-hidden"></button>
+										<button class="list__position_btn list__position_btn-down"></button>
+										<button class="list__position_btn list__position_btn-close"></button>
+										<span>1</span>
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Другая жизнь»</a></div>
+										<input type="text" class="list__info-input" value="«Другая жизнь»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class=""><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class="tabs__nav_object-btn is-active"><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item is-hidden">
+													<div class="tabs__object">
+														<a href="#" class="tabs__btn-file">Другая жизнь</a><i class="tabs__btn-edit"></i>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item is-hidden">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+												<div class="tabs__item tabs__object_btn">
+													<div class="">
+														<button class="object-btn">Прикрепить объект</button>
+														<input type="file" class="is-hidden">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list__position">
+										<button class="list__position_btn list__position_btn-up"></button>
+										<button class="list__position_btn list__position_btn-down"></button>
+										<button class="list__position_btn list__position_btn-close"></button>
+										<span>2</span>
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Лучший опыт в виноделии»</a></div>
+										<input type="text" class="list__info-input" value="«Лучший опыт в виноделии»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class=""><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class="is-active"><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item">
+													<div class="tabs__object">
+														<a href="#" class="tabs__btn-file">Лучший опыт в виноделии</a><i class="tabs__btn-edit"></i>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item is-hidden">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+												<div class="tabs__item tabs__object_btn is-hidden">
+													<div class="">
+														<button class="object-btn">Прикрепить объект</button>
+														<input type="file" class="is-hidden">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list__position">
+										<button class="list__position_btn list__position_btn-up"></button>
+										<button class="list__position_btn list__position_btn-down"></button>
+										<button class="list__position_btn list__position_btn-close"></button>
+										<span>3</span>
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Агротуризм в Калужской области»</a></div>
+										<input type="text" class="list__info-input" value="«Агротуризм в Калужской области»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class=""><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class="is-active"><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item">
+													<div class="tabs__object">
+														<a href="#" class="tabs__btn-file">Агротуризм в Калужской области</a><i class="tabs__btn-edit"></i>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item is-hidden">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list__position">
+										<button class="list__position_btn list__position_btn-up"></button>
+										<button class="list__position_btn list__position_btn-down"></button>
+										<button class="list__position_btn list__position_btn-close"></button>
+										<span>4</span>
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Путь пекаря»</a></div>
+										<input type="text" class="list__info-input" value="«Путь пекаря»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class="is-active"><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class=""><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item is-hidden">
+													<div class="tabs__object">
+														<a href="#" class="tabs__btn-file">Путь пекаря</a><i class="tabs__btn-edit"></i>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list__position">
+										<button class="list__position_btn list__position_btn-up"></button>
+										<button class="list__position_btn list__position_btn-down"></button>
+										<button class="list__position_btn list__position_btn-close"></button>
+										<span>5</span>
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Лучший опыт в виноделии»</a></div>
+										<input type="text" class="list__info-input" value="«Лучший опыт в виноделии»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class=""><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class="is-active"><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item">
+													<div class="tabs__object">
+														<a href="#" class="tabs__btn-file">Лучший опыт в виноделии</a><i class="tabs__btn-edit"></i>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item is-hidden">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list__position">
+										<button class="list__position_btn list__position_btn-up"></button>
+										<button class="list__position_btn list__position_btn-down"></button>
+										<button class="list__position_btn list__position_btn-close"></button>
+										<span>6</span>
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Лучший опыт в виноделии»</a></div>
+										<input type="text" class="list__info-input" value="«Лучший опыт в виноделии»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class=""><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class="is-active"><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item">
+													<div class="tabs__object">
+														<a href="#" class="tabs__btn-file">Лучший опыт в виноделии</a><i class="tabs__btn-edit"></i>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item is-hidden">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list__position">
+										<button class="list__position_btn list__position_btn-up"></button>
+										<button class="list__position_btn list__position_btn-down"></button>
+										<button class="list__position_btn list__position_btn-close"></button>
+										<span>7</span>
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Лучший опыт в виноделии»</a></div>
+										<input type="text" class="list__info-input" value="«Лучший опыт в виноделии»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class=""><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class="is-active"><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item">
+													<div class="tabs__object">
+														<a href="#" class="tabs__btn-file">Лучший опыт в виноделии</a><i class="tabs__btn-edit"></i>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item is-hidden">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list__position">
+										<button class="list__position_btn list__position_btn-up"></button>
+										<button class="list__position_btn list__position_btn-down"></button>
+										<button class="list__position_btn list__position_btn-close"></button>
+										<span>8</span>
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Лучший опыт в виноделии»</a></div>
+										<input type="text" class="list__info-input" value="«Лучший опыт в виноделии»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class=""><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class="is-active"><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item">
+													<div class="tabs__object">
+														<a href="#" class="tabs__btn-file">Лучший опыт в виноделии</a><i class="tabs__btn-edit"></i>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item is-hidden">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list__position">
+										<button class="list__position_btn list__position_btn-up"></button>
+										<button class="list__position_btn list__position_btn-down"></button>
+										<button class="list__position_btn list__position_btn-close"></button>
+										<span>9</span>
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Лучший опыт в виноделии»</a></div>
+										<input type="text" class="list__info-input" value="«Лучший опыт в виноделии»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class=""><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class="is-active"><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item">
+													<div class="tabs__object">
+														<a href="#" class="tabs__btn-file">Лучший опыт в виноделии</a><i class="tabs__btn-edit"></i>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item is-hidden">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="list__position">
+										<button class="list__position_btn list__position_btn-up"></button>
+										<button class="list__position_btn list__position_btn-down is-hidden"></button>
+										<button class="list__position_btn list__position_btn-close"></button>
+										<span>10</span>
+									</div>
+									<div class="list__info">
+										<div class="list__info-value"><a href="#">«Лучший опыт в виноделии»</a></div>
+										<input type="text" class="list__info-input" value="«Лучший опыт в виноделии»">
+										<div class="tabs">
+											<ul class="tabs__nav">
+												<li class=""><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class="is-active"><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item">
+													<div class="tabs__object">
+														<a href="#" class="tabs__btn-file">Лучший опыт в виноделии</a><i class="tabs__btn-edit"></i>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item is-hidden">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="list__create">
+								<form class="form-horizontal">
+									<fieldset>
+										<legend>Добавить новую позицию:</legend>
+										<div class="control-group list__create-position">
+										  <label class="control-label">Позиция в рейтинге</label>
+										  <div class="controls">
+										    <input type="text" class="input-mini">
+										  </div>
+										</div>
+										<div class="control-group">
+										  <label class="control-label">
+										  	Название
+										  </label>
+										  <div class="controls">
+										    <input type="text" class="input-large">
+										  </div>
+										</div>
+										<div class="controls-group tabs">
+											<ul class="tabs__nav">
+												<li class="is-active"><a href="#"><span>Ссылка</span><i></i></a></li>
+												<li class=""><a href="#"><span>Объект</span><i></i></a></li>
+											</ul>
+											<div class="tabs__content">
+												<div class="tabs__item" style="display:none;">
+													<div class="tabs__object">
+														<button class="tabs__btn-file">Прикрепить объект</button>
+														<input type="file">
+													</div>
+												</div>
+												<div class="tabs__item">
+													<div class="tabs__link">
+														<input type="text" value="http://agroturism.ru/929737892">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="control-group list__create-btn">
+										     <button type="submit" class="btn btn-primary btn-small">Добавить</button>
+										 </div>
+									</fieldset>
+								</form>
+							</div>
+							<div class="list__buttons">
+								<button type="submit" class="btn btn-primary btn-small">Сохранить</button>
+								<button type="submit" class="btn btn-inverse btn-small">Отменить</button>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- /.top -->
+
+		</div>
+	</div>
+	<!-- /.page -->
+</body>
+</html>

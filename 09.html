@@ -1,0 +1,211 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>tnadmin</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<script src="js/jquery.js"></script>
+	<script src="js/jscrollpane.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+	<!-- BEGIN .header -->
+	<div class="header">
+		<div class="container">
+			<div class="row">
+				<a href="#" class="header__logo span3">TravellersNests</a>
+				<div class="header__other span9 pull-right">
+					<div class="user">
+						<div class="user__name">Admin</div>
+						<div class="user__signout"><button type="submit" class="btn btn-mini btn-inverse">Выход</button></div>
+					</div>
+					<div class="language">
+						<a href="#" title="Русский" class="language__ru is-active"><i></i></a>
+						<a href="#" title="Английский" class="language__en"><i></i></a>
+					</div>
+					<div class="settings">
+						<a href="#" title="Настройки"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.header -->
+	<!-- BEGIN .navbar -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+				<ul class="nav">
+					<li>
+						<a href="#">Заблокированные</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Список заблокированных пользователей</a></li>
+								<li><a href="#">Список заблокированных объектов</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Модерация</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Запросы на получение профессионального статуса</a></li>
+								<li><a href="#">Постмодерация тегов</a></li>
+								<li><a href="#">Жалобы на пользовательский контент</a></li>
+								<li><a href="#">Жалобы на пользователей</a></li>
+								<li><a href="#">Жалобы на крупные тур.объекты/клубы</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Управление контентом</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Роботы рассылок</a></li>
+								<li><a href="#">Управление подсказками поиска</a></li>
+								<li><a href="#">Управление топами</a></li>
+								<li><a href="#">Управление фототестом</a></li>
+								<li><a href="#">Управление опросами</a></li>
+								<li><a href="#">Управление стоп-словами</a></li>
+								<li><a href="#">Управление тэгами-синонимами</a></li>
+								<li><a href="#">Загрузка и редактирование стран, регионов, городов</a></li>
+								<li><a href="#">Список клубов администрации</a></li>
+								<li><a href="#">Список клубов без администратора</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Управление админами</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Список административных пользователей</a></li>
+								<li><a href="#">Управление группами прав пользователей</a></li>
+								<li><a href="#">История действий административного пользователя</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Статистика</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Статистика-контроль</a></li>
+								<li><a href="#">Статистика-маркетинг</a></li>
+								<li><a href="#">Статистика-финансы</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /.navbar -->
+
+	<!-- BEGIN .page -->
+	<div class="page">
+		<div class="container">
+
+			<!-- BEGIN .suggestions -->
+			<div class="suggestions">
+				<h2 class="title"><i class="icon_search"></i>Управление поисковыми подсказками</h2>
+				<table class="suggestions__table table table-bordered">
+					<thead>
+						<tr>
+							<th>Вид объекта</th>
+							<th>Подвид объекта</th>
+							<th>Ключевые слова/фразы</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Лучшее место</td>
+							<td>По умолчанию</td>
+							<td>
+								<div class="suggestions__field" contenteditable="true">
+									<p>Эйфелева башня</p>
+									<p>Водопад Виктория</p>
+									<p>Сейшелы</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Достопримечательность</td>
+							<td>
+								<div class="suggestions__field" contenteditable="true">
+									<p>Замок «Нойшванштайн»</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Природные красоты</td>
+							<td>
+								<div class="suggestions__field" contenteditable="true">
+									<p>Гранд Каньон</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Отдых с детьми</td>
+							<td>
+								<div class="suggestions__field" contenteditable="true">
+									<p>Диснейленд</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Маленькие красивые городки</td>
+							<td>
+								<div class="suggestions__field" contenteditable="true">
+									<p>Фонтен де Воклюз</p>
+									<p>Грюйер</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Событие</td>
+							<td>По умолчанию</td>
+							<td>
+								<div class="suggestions__field" contenteditable="true">
+									<p>Карнавал в Рио</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Фестиваль</td>
+							<td>
+								<div class="suggestions__field" contenteditable="true">
+									<p>Грушинский фестиваль</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Концерты/шоу/матчи</td>
+							<td>
+								<div class="suggestions__field" contenteditable="true">
+									<p>Концерт Мадонны</p>
+									<p>Концерт Red hot chili pappers</p>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="buttons">
+					<button type="submit" class="btn btn-small btn-primary">Сохранить</button>
+					<button type="submit" class="btn btn-small btn-inverse">Отменить</button>
+				</div>
+			</div>
+			<!-- /.suggestions -->
+
+		</div>
+	</div>
+	<!-- /.page -->
+</body>
+</html>

@@ -1,0 +1,783 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>tnadmin</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<script src="js/jquery.js"></script>
+	<script src="js/jscrollpane.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+	<!-- BEGIN .header -->
+	<div class="header">
+		<div class="container">
+			<div class="row">
+				<a href="#" class="header__logo span3">TravellersNests</a>
+				<div class="header__other span9 pull-right">
+					<div class="user">
+						<div class="user__name">Admin</div>
+						<div class="user__signout"><button type="submit" class="btn btn-mini btn-inverse">Выход</button></div>
+					</div>
+					<div class="language">
+						<a href="#" title="Русский" class="language__ru is-active"><i></i></a>
+						<a href="#" title="Английский" class="language__en"><i></i></a>
+					</div>
+					<div class="settings">
+						<a href="#" title="Настройки"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.header -->
+	<!-- BEGIN .navbar -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+				<ul class="nav">
+					<li>
+						<a href="#">Заблокированные</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Список заблокированных пользователей</a></li>
+								<li><a href="#">Список заблокированных объектов</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Модерация</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Запросы на получение профессионального статуса</a></li>
+								<li><a href="#">Постмодерация тегов</a></li>
+								<li><a href="#">Жалобы на пользовательский контент</a></li>
+								<li><a href="#">Жалобы на пользователей</a></li>
+								<li><a href="#">Жалобы на крупные тур.объекты/клубы</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Управление контентом</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Роботы рассылок</a></li>
+								<li><a href="#">Управление подсказками поиска</a></li>
+								<li><a href="#">Управление топами</a></li>
+								<li><a href="#">Управление фототестом</a></li>
+								<li><a href="#">Управление опросами</a></li>
+								<li><a href="#">Управление стоп-словами</a></li>
+								<li><a href="#">Управление тэгами-синонимами</a></li>
+								<li><a href="#">Загрузка и редактирование стран, регионов, городов</a></li>
+								<li><a href="#">Список клубов администрации</a></li>
+								<li><a href="#">Список клубов без администратора</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Управление админами</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Список административных пользователей</a></li>
+								<li><a href="#">Управление группами прав пользователей</a></li>
+								<li><a href="#">История действий административного пользователя</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Статистика</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Статистика-контроль</a></li>
+								<li><a href="#">Статистика-маркетинг</a></li>
+								<li><a href="#">Статистика-финансы</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /.navbar -->
+
+	<!-- BEGIN .page -->
+	<div class="page">
+		<div class="container">
+
+			<!-- BEGIN .blocked -->
+			<div class="blocked">
+				<h2 class="title"><i class="icon_blocked-obj"></i>Список заблокированных объектов</h2>
+				<div class="filters">
+					<div class="filters__in row">
+						<div class="filters__content span11">
+							<div class="row">
+								<div class="span5">
+									<form class="form-horizontal">
+										<div class="control-group">
+											<label class="control-label" for="inputName">Название объекта:</label>
+											<div class="controls">
+												<input type="text" id="inputName">
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="selectLocation">Вид:</label>
+											<div class="controls">
+												<select name="" id="selectLocation">
+													<option>Лучшее место</option>
+												</select>
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="selectLocation2">Подвид:</label>
+											<div class="controls">
+												<select name="" id="selectLocation2">
+													<option>Достопримечательность</option>
+												</select>
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label" for="inputGeos">Страна/город:</label>
+											<div class="controls">
+												<input type="text" id="inputGeos"> <i class="icon_geo"></i>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="span5">
+									<form class="form-horizontal">
+										<div class="control-group">
+											<label class="filters__date inline">
+												<span>Создан с:</span>
+											  <input type="text" id="inline1">
+											  <button class="calendar"></button>
+											</label>
+											<label class="filters__date inline">
+											  по:
+											  <input type="text" id="inline2">
+											  <button class="calendar"></button>
+											</label>
+										</div>
+										<div class="control-group">
+											<label class="filters__date inline">
+												<span>Заблокирован с:</span>
+											  <input type="text" id="inline1">
+											  <button class="calendar"></button>
+											</label>
+											<label class="filters__date inline">
+											  по:
+											  <input type="text" id="inline2">
+											  <button class="calendar"></button>
+											</label>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="buttons span11">
+							<button type="submit" class="btn btn-small btn-primary">Найти</button>
+						</div>
+					</div>
+					<div class="results">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Объект</th>
+									<th>История жалоб</th>
+									<th>Подробная информация</th>
+									<th>Административное действие к пользователю</th>
+									<th>Административное действие к объекту</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="results__object">
+											<a class="results__object-pic pull-left" href="#">
+												<img src="http://placehold.it/75x75" alt="img">
+											</a>
+											<div class="results__object-info">
+												<p><a href="#" class="results__object-name">«Агритуризм»</a></p>
+												<p>Клуб по интересам</p>
+												<p><strong>Рейтинг: 239</strong></p>
+												<div class="results__history-meta">
+													<p>Создан: 22.08.2013</p>
+													<ul class="user-menu">
+														<li><a href="#"><i class="icon_menu-4"></i><span>22</span></a></li>
+														<li><a href="#"><i class="icon_menu-2"></i><span>22</span></a></li>
+														<li><a href="#"><i class="icon_menu-3"></i><span>22</span></a></li>
+													</ul>
+													<p>Прикреплено туробъектов: 3</p>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="results__history scroll" style="height:420px">
+											<div class="results__history-in">
+												<p class="results__history-stats"><span>Всего жалоб: 4</span></p>
+												<ul class="results__history-thread">
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иванова</a></p>
+																<p class="results__history-userstats">12:15, 13.05.2013 жалоб: 10</p>
+																<p>Рассылка спама</p>
+															</div>
+															<div class="results__history-comment">
+																Посмотрите вот эту ссылку: <a href="#">http://trevelersnest.com/club/2345673.html</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username marked"><a href="#">Иван Симонов</a> <span>(модератор)</span></p>
+																<p class="results__history-userstats">10:45, 12.04.2013</p>
+																<p>Пользователь забанен до 15.04.13</p>
+															</div>
+															<div class="results__history-comment">
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username marked"><a href="#">Иван Симонов</a> <span>(модератор)</span></p>
+																<p class="results__history-userstats">10:45, 12.04.2013</p>
+																<p>Пользователь забанен до 15.04.13</p>
+															</div>
+															<div class="results__history-comment">
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="results__history">
+											<div class="results__history-meta">
+												<h3 class="h3">Создатель</h3>
+												<div class="results__object">
+													<a class="results__object-pic pull-left" href="#">
+														<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+													</a>
+													<div class="results__object-info">
+														<p><a href="#" class="results__object-name">Марина Беликова</a></p>
+														<p>Россия,  Москва</p>
+														<p>Зарегистрирован: 22.08.2013</p>
+													</div>
+												</div>
+											</div>
+											<div class="results__history-meta">
+												<p>Предупреждений: 1</p>
+												<p>Банов: 2, последний до 14.05.13</p>
+												<p>Блокировок: 0</p>
+											</div>
+											<div class="results__history-meta">
+												<p><strong>Жалоб на пользователя</strong></p>
+												<p><a href="#">2 новых, 4 всего</a></p>
+											</div>
+											<div class="results__history-meta">
+												<p><strong>Жалоб на объекты пользователя</strong></p>
+												<p><a href="#">2 новых, 4 всего</a></p>
+											</div>
+											<div class="results__history-meta">
+												<p><strong>Удалено пользовательских объектов:</strong> 4</p>
+											</div>
+											<button type="submit" class="btn btn-small btn-primary">Написать сообщение</button>
+										</div>
+									</td>
+									<td>
+										<div class="results__actions">
+											<div class="results__actions-in">
+												<label class="radio">
+												  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+												  Разблокировать
+												</label>
+												<label class="radio">
+												  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+												  Удалить
+												</label>
+												<label class="checkbox">
+												  <input type="checkbox" value="">
+												  Также удалить все записи, комментарии и фото пользователя
+												</label>
+												<label class="results__date radio">
+												  <input type="radio" name="optionsRadios4" id="optionsRadios4" value="option4">
+												  <span>
+												  	C: <input type="text" class="input-mini">
+												  	<button class="calendar"></button>
+												  </span>
+												</label>
+												<label class="radio">
+												  <input type="radio" name="optionsRadios4" id="optionsRadios4" value="option4">
+												  За всё время
+												</label>
+												<label class="checkbox">
+												  <input type="checkbox" value="">
+												  Также удалить все туристические объекты пользователя (клубы)
+												</label>
+												<label class="results__date radio">
+												  <input type="radio" name="optionsRadios5" id="optionsRadios5" value="option5">
+												  <span>
+												  	C: <input type="text" class="input-mini">
+												  	<button class="calendar"></button>
+												  </span>
+												</label>
+												<label class="radio">
+												  <input type="radio" name="optionsRadios5" id="optionsRadios5" value="option5">
+												  За всё время
+												</label>
+											</div>
+											<div class="results__actions-message">
+												<h2>Написать пользователю:</h2>
+												<textarea rows="4"></textarea>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="results__actions">
+											<div class="results__actions-in">
+												<label class="radio">
+												  <input type="radio" name="optionsRadios" id="optionsRadios7" value="option7">
+												  Разблокировать
+												</label>
+												<label class="radio">
+												  <input type="radio" name="optionsRadios" id="optionsRadios8" value="option8">
+												  Удалить
+												</label>
+											</div>
+											<button type="submit" class="results__actions-submit btn btn-small btn-primary pull-right">Применить действие</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="results">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Объекти</th>
+									<th>История жалоб</th>
+									<th>Подробная информация</th>
+									<th>Административное действие к пользователю</th>
+									<th>Административное действие к объекту</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="results__object">
+											<a class="results__object-pic pull-left" href="#">
+												<img src="http://placehold.it/75x75" alt="img">
+											</a>
+											<div class="results__object-info">
+												<p><a href="#" class="results__object-name">«Агритуризм»</a></p>
+												<p>Клуб по интересам</p>
+												<p><strong>Рейтинг: 239</strong></p>
+												<div class="results__history-meta">
+													<p>Создан: 22.08.2013</p>
+													<ul class="user-menu">
+														<li><a href="#"><i class="icon_menu-4"></i><span>22</span></a></li>
+														<li><a href="#"><i class="icon_menu-2"></i><span>22</span></a></li>
+														<li><a href="#"><i class="icon_menu-3"></i><span>22</span></a></li>
+													</ul>
+													<p>Прикреплено туробъектов: 3</p>
+												</div>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="results__history scroll" style="height:420px">
+											<div class="results__history-in">
+												<p class="results__history-stats"><span>Всего жалоб: 4</span></p>
+												<ul class="results__history-thread">
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иванова</a></p>
+																<p class="results__history-userstats">12:15, 13.05.2013 жалоб: 10</p>
+																<p>Рассылка спама</p>
+															</div>
+															<div class="results__history-comment">
+																Посмотрите вот эту ссылку: <a href="#">http://trevelersnest.com/club/2345673.html</a>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username marked"><a href="#">Иван Симонов</a> <span>(модератор)</span></p>
+																<p class="results__history-userstats">10:45, 12.04.2013</p>
+																<p>Пользователь забанен до 15.04.13</p>
+															</div>
+															<div class="results__history-comment">
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username marked"><a href="#">Иван Симонов</a> <span>(модератор)</span></p>
+																<p class="results__history-userstats">10:45, 12.04.2013</p>
+																<p>Пользователь забанен до 15.04.13</p>
+															</div>
+															<div class="results__history-comment">
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="results__history-content">
+															<a class="results__history-userpic pull-left" href="#">
+																<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+															</a>
+															<div class="results__history-userinfo">
+																<p class="results__history-username"><a href="#">Марина Иннокентьевна</a></p>
+																<p class="results__history-userstats">10:20, 12.04.2013 жалоб: 2</p>
+																<p>Оскорбительное поведение</p>
+															</div>
+															<div class="results__history-comment">
+																Оскорбляет пользователей, пишет матом в ленте клуба
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="results__history">
+											<div class="results__history-meta">
+												<h3 class="h3">Создатель</h3>
+												<div class="results__object">
+													<a class="results__object-pic pull-left" href="#">
+														<img src="http://placehold.it/50x50" width="50" height="50" alt="img">
+													</a>
+													<div class="results__object-info">
+														<p><a href="#" class="results__object-name">Марина Беликова</a></p>
+														<p>Россия,  Москва</p>
+														<p>Зарегистрирован: 22.08.2013</p>
+													</div>
+												</div>
+											</div>
+											<div class="results__history-meta">
+												<p>Предупреждений: 1</p>
+												<p>Банов: 2, последний до 14.05.13</p>
+												<p>Блокировок: 0</p>
+											</div>
+											<div class="results__history-meta">
+												<p><strong>Жалоб на пользователя</strong></p>
+												<p><a href="#">2 новых, 4 всего</a></p>
+											</div>
+											<div class="results__history-meta">
+												<p><strong>Жалоб на объекты пользователя</strong></p>
+												<p><a href="#">2 новых, 4 всего</a></p>
+											</div>
+											<div class="results__history-meta">
+												<p><strong>Удалено пользовательских объектов:</strong> 4</p>
+											</div>
+											<button type="submit" class="btn btn-small btn-primary">Написать сообщение</button>
+										</div>
+									</td>
+									<td>
+										<div class="results__actions">
+											<div class="results__actions-in">
+												<label class="radio">
+												  <input type="radio">
+												  Предупредить
+												</label>
+												<label class="radio">
+												  <input type="radio" checked>
+												  Забанить на 3 дня
+												</label>
+												<label class="radio">
+												  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+												  Заблокировать
+												</label>
+												<label class="radio">
+												  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+												  Удалить
+												</label>
+												<label class="checkbox">
+												  <input type="checkbox" value="">
+												  Также удалить все записи, комментарии и фото пользователя
+												</label>
+												<label class="results__date radio">
+												  <input type="radio" name="optionsRadios4" id="optionsRadios4" value="option4">
+												  <span>
+												  	C: <input type="text" class="input-mini">
+												  	<button class="calendar"></button>
+												  </span>
+												</label>
+												<label class="radio">
+												  <input type="radio" name="optionsRadios4" id="optionsRadios4" value="option4">
+												  За всё время
+												</label>
+												<label class="checkbox">
+												  <input type="checkbox" value="">
+												  Также удалить все туристические объекты пользователя (клубы)
+												</label>
+												<label class="results__date radio">
+												  <input type="radio" name="optionsRadios5" id="optionsRadios5" value="option5">
+												  <span>
+												  	C: <input type="text" class="input-mini">
+												  	<button class="calendar"></button>
+												  </span>
+												</label>
+												<label class="radio">
+												  <input type="radio" name="optionsRadios5" id="optionsRadios5" value="option5">
+												  За всё время
+												</label>
+											</div>
+											<div class="results__actions-message">
+												<h2>Написать пользователю:</h2>
+												<textarea rows="4"></textarea>
+											</div>
+										</div>
+									</td>
+									<td>
+										<div class="results__actions">
+											<div class="results__actions-in">
+												<label class="radio">
+												  <input type="radio" name="optionsRadios" id="optionsRadios7" value="option7">
+												  Разблокировать
+												</label>
+												<label class="radio">
+												  <input type="radio" name="optionsRadios" id="optionsRadios8" value="option8">
+												  Удалить
+												</label>
+											</div>
+											<button type="submit" class="results__actions-submit btn btn-small btn-primary pull-right">Применить действие</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- /.blocked -->
+
+		</div>
+	</div>
+	<!-- /.page -->
+</body>
+</html>

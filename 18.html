@@ -1,0 +1,411 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>tnadmin</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<script src="js/jquery.js"></script>
+	<script src="js/jscrollpane.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+	<!-- BEGIN .header -->
+	<div class="header">
+		<div class="container">
+			<div class="row">
+				<a href="#" class="header__logo span3">TravellersNests</a>
+				<div class="header__other span9 pull-right">
+					<div class="user">
+						<div class="user__name">Admin</div>
+						<div class="user__signout"><button type="submit" class="btn btn-mini btn-inverse">Выход</button></div>
+					</div>
+					<div class="language">
+						<a href="#" title="Русский" class="language__ru is-active"><i></i></a>
+						<a href="#" title="Английский" class="language__en"><i></i></a>
+					</div>
+					<div class="settings">
+						<a href="#" title="Настройки"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.header -->
+	<!-- BEGIN .navbar -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+				<ul class="nav">
+					<li>
+						<a href="#">Заблокированные</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Список заблокированных пользователей</a></li>
+								<li><a href="#">Список заблокированных объектов</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Модерация</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Запросы на получение профессионального статуса</a></li>
+								<li><a href="#">Постмодерация тегов</a></li>
+								<li><a href="#">Жалобы на пользовательский контент</a></li>
+								<li><a href="#">Жалобы на пользователей</a></li>
+								<li><a href="#">Жалобы на крупные тур.объекты/клубы</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Управление контентом</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Роботы рассылок</a></li>
+								<li><a href="#">Управление подсказками поиска</a></li>
+								<li><a href="#">Управление топами</a></li>
+								<li><a href="#">Управление фототестом</a></li>
+								<li><a href="#">Управление опросами</a></li>
+								<li><a href="#">Управление стоп-словами</a></li>
+								<li><a href="#">Управление тэгами-синонимами</a></li>
+								<li><a href="#">Загрузка и редактирование стран, регионов, городов</a></li>
+								<li><a href="#">Список клубов администрации</a></li>
+								<li><a href="#">Список клубов без администратора</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Управление админами</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Список административных пользователей</a></li>
+								<li><a href="#">Управление группами прав пользователей</a></li>
+								<li><a href="#">История действий административного пользователя</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Статистика</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Статистика-контроль</a></li>
+								<li><a href="#">Статистика-маркетинг</a></li>
+								<li><a href="#">Статистика-финансы</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /.navbar -->
+
+	<!-- BEGIN .page -->
+	<div class="page">
+		<div class="container">
+
+			<!-- BEGIN .sending -->
+			<div class="sending">
+				<h2 class="title"><i class="icon_sending"></i>Роботы рассылок</h2>
+				<div class="tabs">
+					<ul class="tabs__nav">
+						<li class="is-active"><a href="#"><span>Новости</span><i></i></a></li>
+						<li class=""><a href="#"><span>Обучение</span><i></i></a></li>
+					</ul>
+					<div class="tabs__content">
+						<ul class="sending__news">
+							<li>
+								<button class="sending__add"></button>
+								<table class="sending__table table">
+									<tbody>
+										<tr>
+											<td class="sending__datetime">
+												<form class="form-horizontal">
+													<div class="control-group">
+														<label class="control-label" for="inputDate">Дата:</label>
+														<div class="controls">
+															<input type="text" id="inputDate" value="13/08/2013"> <button class="calendar"></button>
+														</div>
+													</div>
+													<div class="control-group filters__time">
+														<label for="">
+															<span class="control-label">Время:</span>
+															<input type="text" class="input-mini" value="13">
+														</label>
+														<label for="">
+															<span>:</span>
+															<input type="text" class="input-mini" value="45">
+														</label>
+														<label for="">
+															<select>
+																<option value="AM">AM</option>
+																<option value="PM">PM</option>
+															</select>
+														</label>
+													</div>
+												</form>
+											</td>
+											<td>
+												<form class="form-horizontal form-textarea">
+													<div class="control-group">
+														<label class="control-label">Русский текст:</label>
+														<div class="controls">
+															<textarea rows="3"></textarea>
+														</div>
+													</div>
+												</form>
+											</td>
+											<td>
+												<form class="form-horizontal form-textarea">
+													<div class="control-group">
+														<label class="control-label">Английский текст:</label>
+														<div class="controls">
+															<textarea rows="3"></textarea>
+														</div>
+													</div>
+												</form>
+											</td>
+											<td class="sending__position">
+												<div class="sending__position-in">
+													<button class="sending__position-close"></button>
+													<button class="sending__position-up is-hidden"></button>
+													<button class="sending__position-down"></button>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<label class="checkbox">
+									<input type="checkbox" value="" checked>
+									Отправить на e-mail
+								</label>
+							</li>
+							<li>
+								<button class="sending__add"></button>
+								<table class="sending__table table">
+									<tbody>
+										<tr>
+											<td class="sending__datetime">
+												<form class="form-horizontal">
+													<div class="control-group">
+														<label class="control-label" for="inputDate">Дата:</label>
+														<div class="controls">
+															<input type="text" id="inputDate" value="13/08/2013"> <button class="calendar"></button>
+														</div>
+													</div>
+													<div class="control-group filters__time">
+														<label for="">
+															<span class="control-label">Время:</span>
+															<input type="text" class="input-mini" value="13">
+														</label>
+														<label for="">
+															<span>:</span>
+															<input type="text" class="input-mini" value="45">
+														</label>
+														<label for="">
+															<select>
+																<option value="AM">AM</option>
+																<option value="PM">PM</option>
+															</select>
+														</label>
+													</div>
+												</form>
+											</td>
+											<td>
+												<form class="form-horizontal form-textarea">
+													<div class="control-group">
+														<label class="control-label">Русский текст:</label>
+														<div class="controls">
+															<textarea rows="3"></textarea>
+														</div>
+													</div>
+												</form>
+											</td>
+											<td>
+												<form class="form-horizontal form-textarea">
+													<div class="control-group">
+														<label class="control-label">Английский текст:</label>
+														<div class="controls">
+															<textarea rows="3"></textarea>
+														</div>
+													</div>
+												</form>
+											</td>
+											<td class="sending__position">
+												<div class="sending__position-in">
+													<button class="sending__position-close"></button>
+													<button class="sending__position-up"></button>
+													<button class="sending__position-down"></button>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<label class="checkbox">
+									<input type="checkbox" value="" checked>
+									Отправить на e-mail
+								</label>
+							</li>
+							<li>
+								<button class="sending__add"></button>
+								<table class="sending__table table">
+									<tbody>
+										<tr>
+											<td class="sending__datetime">
+												<form class="form-horizontal">
+													<div class="control-group">
+														<label class="control-label" for="inputDate">Дата:</label>
+														<div class="controls">
+															<input type="text" id="inputDate" value="13/08/2013"> <button class="calendar"></button>
+														</div>
+													</div>
+													<div class="control-group filters__time">
+														<label for="">
+															<span class="control-label">Время:</span>
+															<input type="text" class="input-mini" value="13">
+														</label>
+														<label for="">
+															<span>:</span>
+															<input type="text" class="input-mini" value="45">
+														</label>
+														<label for="">
+															<select>
+																<option value="AM">AM</option>
+																<option value="PM">PM</option>
+															</select>
+														</label>
+													</div>
+												</form>
+											</td>
+											<td>
+												<form class="form-horizontal form-textarea">
+													<div class="control-group">
+														<label class="control-label">Русский текст:</label>
+														<div class="controls">
+															<textarea rows="3"></textarea>
+														</div>
+													</div>
+												</form>
+											</td>
+											<td>
+												<form class="form-horizontal form-textarea">
+													<div class="control-group">
+														<label class="control-label">Английский текст:</label>
+														<div class="controls">
+															<textarea rows="3"></textarea>
+														</div>
+													</div>
+												</form>
+											</td>
+											<td class="sending__position">
+												<div class="sending__position-in">
+													<button class="sending__position-close"></button>
+													<button class="sending__position-up"></button>
+													<button class="sending__position-down"></button>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<label class="checkbox">
+									<input type="checkbox" value="" checked>
+									Отправить на e-mail
+								</label>
+							</li>
+							<li>
+								<button class="sending__add"></button>
+								<table class="sending__table table">
+									<tbody>
+										<tr>
+											<td class="sending__datetime">
+												<form class="form-horizontal">
+													<div class="control-group">
+														<label class="control-label" for="inputDate">Дата:</label>
+														<div class="controls">
+															<input type="text" id="inputDate" value="13/08/2013"> <button class="calendar"></button>
+														</div>
+													</div>
+													<div class="control-group filters__time">
+														<label for="">
+															<span class="control-label">Время:</span>
+															<input type="text" class="input-mini" value="13">
+														</label>
+														<label for="">
+															<span>:</span>
+															<input type="text" class="input-mini" value="45">
+														</label>
+														<label for="">
+															<select>
+																<option value="AM">AM</option>
+																<option value="PM">PM</option>
+															</select>
+														</label>
+													</div>
+												</form>
+											</td>
+											<td>
+												<form class="form-horizontal form-textarea">
+													<div class="control-group">
+														<label class="control-label">Русский текст:</label>
+														<div class="controls">
+															<textarea rows="3"></textarea>
+														</div>
+													</div>
+												</form>
+											</td>
+											<td>
+												<form class="form-horizontal form-textarea">
+													<div class="control-group">
+														<label class="control-label">Английский текст:</label>
+														<div class="controls">
+															<textarea rows="3"></textarea>
+														</div>
+													</div>
+												</form>
+											</td>
+											<td class="sending__position">
+												<div class="sending__position-in">
+													<button class="sending__position-close"></button>
+													<button class="sending__position-up"></button>
+													<button class="sending__position-down is-hidden"></button>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<label class="checkbox">
+									<input type="checkbox" value="" checked>
+									Отправить на e-mail
+								</label>
+							</li>
+							<li>
+								<button class="sending__add"></button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="b-pagination">
+					<ul>
+						<li class="is-active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">6</a></li>
+						<li><a href="#">7</a></li>
+						<li><a href="#">8</a></li>
+						<li><a href="#">9</a></li>
+						<li><a href="#">10</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- /.sending -->
+
+		</div>
+	</div>
+	<!-- /.page -->
+</body>
+</html>

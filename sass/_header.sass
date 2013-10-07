@@ -65,6 +65,10 @@
 		font-size: 12px
 		font-weight: bold
 		li
+			position: relative
+			&:hover
+				.navbar__drop
+					display: block
 			a
 				padding: 0
 				margin-right: 43px
@@ -73,8 +77,27 @@
 				color: #453e8e
 				&:hover
 					color: #000
-
-
+		.navbar__drop
+			display: none
+			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8)
+			background: white
+			+border-radius(0 0 20px 20px)
+			position: absolute
+			left: -5px
+			top: 60px
+			width: 200px
+			padding: 13px 20px
+			z-index: 1001
+			ul
+				margin-left: 0
+			li
+				margin-bottom: 6px
+				line-height: 1.2
+			a
+				height: auto
+				line-height: 1.2
+				font-size: 12px
+				font-weight: normal
 
 
 

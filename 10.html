@@ -1,0 +1,180 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>tnadmin</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<script src="js/jquery.js"></script>
+	<script src="js/jscrollpane.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+	<!-- BEGIN .header -->
+	<div class="header">
+		<div class="container">
+			<div class="row">
+				<a href="#" class="header__logo span3">TravellersNests</a>
+				<div class="header__other span9 pull-right">
+					<div class="user">
+						<div class="user__name">Admin</div>
+						<div class="user__signout"><button type="submit" class="btn btn-mini btn-inverse">Выход</button></div>
+					</div>
+					<div class="language">
+						<a href="#" title="Русский" class="language__ru is-active"><i></i></a>
+						<a href="#" title="Английский" class="language__en"><i></i></a>
+					</div>
+					<div class="settings">
+						<a href="#" title="Настройки"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.header -->
+	<!-- BEGIN .navbar -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+				<ul class="nav">
+					<li>
+						<a href="#">Заблокированные</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Список заблокированных пользователей</a></li>
+								<li><a href="#">Список заблокированных объектов</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Модерация</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Запросы на получение профессионального статуса</a></li>
+								<li><a href="#">Постмодерация тегов</a></li>
+								<li><a href="#">Жалобы на пользовательский контент</a></li>
+								<li><a href="#">Жалобы на пользователей</a></li>
+								<li><a href="#">Жалобы на крупные тур.объекты/клубы</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Управление контентом</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Роботы рассылок</a></li>
+								<li><a href="#">Управление подсказками поиска</a></li>
+								<li><a href="#">Управление топами</a></li>
+								<li><a href="#">Управление фототестом</a></li>
+								<li><a href="#">Управление опросами</a></li>
+								<li><a href="#">Управление стоп-словами</a></li>
+								<li><a href="#">Управление тэгами-синонимами</a></li>
+								<li><a href="#">Загрузка и редактирование стран, регионов, городов</a></li>
+								<li><a href="#">Список клубов администрации</a></li>
+								<li><a href="#">Список клубов без администратора</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Управление админами</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Список административных пользователей</a></li>
+								<li><a href="#">Управление группами прав пользователей</a></li>
+								<li><a href="#">История действий административного пользователя</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#">Статистика</a>
+						<div class="navbar__drop">
+							<ul>
+								<li><a href="#">Статистика-контроль</a></li>
+								<li><a href="#">Статистика-маркетинг</a></li>
+								<li><a href="#">Статистика-финансы</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /.navbar -->
+
+	<!-- BEGIN .page -->
+	<div class="page">
+		<div class="container">
+
+			<!-- BEGIN .tags -->
+			<div class="tags">
+				<h2 class="title"><i class="icon_tick"></i>Постмодерация тэгов</h2>
+				<div class="tags__content">
+					<div class="row">
+						<div class="tags__media span4">
+							<a class="tags__pic pull-left" href="#">
+								<img src="http://placehold.it/75x75" alt="img">
+							</a>
+							<div class="tags__info">
+								<div class="tags__author"><a href="#">Иванов Иван Степанович</a></div>
+								<div class="tags__details">Маршрут <a href="#">«Поход на урал»</a></div>
+							</div>
+						</div>
+						<div class="tags__meta span7">
+							<form>
+								<fieldset>
+									<label class="checkbox">
+										<input type="checkbox" value="" checked>
+										Английский тэг
+									</label>
+								</fieldset>
+								<fieldset>
+									<legend class="h2">Новый тэг:</legend>
+									<div class="tags__language controls controls-row">
+									  <input class="span2" type="text" value="Альпинизм">
+									  <div class="controls">
+									    <span class="help-inline">Английская версия:</span>
+									    <input class="span2" type="text" value="Alpinism">
+									    <i class="tags__icon icon_eng"></i>
+									  </div>
+									</div>
+									<label class="radio">
+										<input type="radio" name="optionsRadios" id="optionsRadios1" value="">
+										Подтвердить
+									</label>
+									<label class="radio">
+										<input type="radio" name="optionsRadios" id="optionsRadios2" value="">
+										Отклонить
+									</label>
+									<div class="controls">
+										<label class="tags__inline radio">
+											<input type="radio" name="optionsRadios" id="optionsRadios3" value="">
+											Заменить на:
+										</label>
+										<input type="text">
+									</div>
+									<div class="controls">
+										<label class="tags__inline radio">
+											<input type="radio" name="optionsRadios" id="optionsRadios4" value="">
+											Тэг-синоним:
+										</label>
+										<input type="text">
+									</div>
+								</fieldset>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="buttons">
+					<button type="submit" class="btn btn-large">Выполнить и выйти</button>
+					<button type="submit" class="btn btn-large">Выполнить и загрузить следующие заявки</button>
+				</div>
+			</div>
+			<!-- /.tags -->
+
+		</div>
+	</div>
+	<!-- /.page -->
+</body>
+</html>
